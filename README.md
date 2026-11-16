@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** preparation/scaffolding only. No validated solver, trained AI model, or industrial performance claims yet.
+> **Status:** M1 physical 2D disk DEM implemented, with physics tests and solver-generated discharge/arching examples. Reference calibration (M2), AI prediction and optimization remain deferred. No industrial performance claims.
 
 ## The engineering problem
 
@@ -48,6 +48,18 @@ python scripts/inspect_reference.py
 python -m pytest -q
 ```
 
+The NumPy CPU solver requires no Taichi, PyTorch, CUDA toolkit, sudo or display.
+For optional acceleration, reference table inspection and tests:
+
+```bash
+python -m pip install -e '.[acceleration,reference,test]'
+```
+
+On this JupyterHub container, GLIBC is 2.31. The Taichi 1.7.4 wheel requests
+`GLIBC_2.32` and cannot import. The acceleration extra and environment file pin
+**Taichi 1.7.3**, verified with real CPU/CUDA kernels on the A100. Do not replace
+the container's system GLIBC. See the [upstream report](https://github.com/taichi-dev/taichi/issues/8768).
+
 If `conda` is unavailable, use a user-owned virtual environment and `pip install -e .` instead. In Jupyter choose the **Python (PharmaFlow-2D)** kernel after registering it.
 
 **PyTorch GPU installation:** This is intentionally deferred. First check the CUDA driver and installed PyTorch with `scripts/check_env.py`. For ML experiments, install a matching GPU-enabled PyTorch build from the [official selector](https://pytorch.org/get-started/locally/), then `pip install -r requirements-ml.txt`. Do not blindly replace the JupyterHub system torch installation.
@@ -71,6 +83,46 @@ python scripts/inspect_reference.py
 
 Data is downloaded **on the JupyterHub machine**, not into GitHub. The downloader uses Zenodo's public record API and checks MD5 checksums when supplied in the manifest.
 
+The Numbers parser now reads the actual sheets/tables, verifies the ZIP and MD5,
+and exports `outputs/metrics/reference_schema.json`. The inspected simulation
+file contains four aggregate profile/map tables for D=2 cm and D=3 cm; its headers
+do not provide particle IDs or timestamps. See [the schema audit](docs/REFERENCE_SCHEMA.md).
+
+## Run the M1 simulator
+
+```bash
+# Real 100-particle discharge; NPZ + JSON provenance and a headless Pillow GIF
+python scripts/run_hopper.py --backend cpu --particles 100 --duration 0.6 \
+  --output outputs/rollouts/m1_hopper.npz --gif outputs/animations/m1_hopper.gif
+
+# Narrow outlet: retain particles and examine a persistent contact bridge
+python scripts/run_hopper.py --config docs/m1_narrow.json --duration 0.8 \
+  --sample-every 500 --output outputs/rollouts/m1_narrow.npz \
+  --gif outputs/animations/m1_narrow.gif
+python scripts/validate_m1.py
+
+# Optional explicit CUDA; fails clearly if CUDA is unavailable
+python scripts/run_hopper.py --backend cuda --particles 50 --duration 0.002 \
+  --output outputs/rollouts/m1_cuda_smoke.npz
+
+# --backend auto tries CUDA and reports a NumPy fallback on failure
+# Include strict optional Taichi CPU and CUDA physics parity tests
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+```
+
+Each run starts from a seeded nonoverlapping fill, settles behind a finite gate,
+opens the actual outlet, and integrates particle/wall contact forces. The GIF is
+generated from those trajectories and shows particle spin, speed and discharge
+count. Simulation time and animation playback time are distinct.
+
+CUDA currently evaluates the contact law in f64; spatial hashing, contact memory,
+force reduction and integration stay on CPU. It is a tested hybrid backend and
+does not promise a speedup at 50–200 particles. CPU is the default.
+
+Read [the physical model and numerical limits](docs/M1_METHODS.md) and
+[node680 verification evidence](docs/M1_VERIFICATION.md). Generated outputs stay
+in ignored local folders; nothing is automatically committed or uploaded.
+
 ## Repository layout
 
 ```text
@@ -88,15 +140,26 @@ PharmaFlow-2D/
 ├── scripts/
 │   ├── check_env.py
 │   ├── download_reference.py
-│   └── inspect_reference.py
+│   ├── inspect_reference.py
+│   ├── run_hopper.py
+│   └── validate_m1.py
 ├── src/pharmaflow/
 │   ├── __init__.py
 │   ├── config.py
-│   └── dataio.py
-└── tests/test_config.py
+│   ├── dataio.py
+│   ├── dem.py                     # State, contact assembly, integration, outlet
+│   ├── contact.py                 # History friction and normal contact
+│   ├── geometry.py                # Finite walls and wall-crossing detection
+│   ├── neighbors.py               # Uniform cells / Verlet skin
+│   ├── taichi_backend.py          # Optional f64 CPU/CUDA contact kernel
+│   ├── diagnostics.py             # Finite-window arch observation
+│   ├── run.py                     # Reproducible NPZ / JSON metadata
+│   └── visualize.py               # Headless solver trajectory GIF
+└── tests/                         # Configuration and physical validation
 ```
 
-The DEM solver, AI modeling, notebooks, visualizer, and optimizer will be implemented in subsequent, independently tested milestones.
+The physical DEM solver and headless visualizer are implemented. Reference
+calibration, AI modeling, interactive dashboards and optimization remain future work.
 
 ## Planned milestones
 
@@ -117,4 +180,6 @@ The DEM solver, AI modeling, notebooks, visualizer, and optimizer will be implem
 
 ## Next step for Codex
 
-Open [AGENTS.md](AGENTS.md) and implement **M1 only**, with physical tests and a headless 2D animation export. Do not start AI training until M1/M2 quality gates are satisfied.
+Review the M1 evidence and pursue **M2 only**: timestep/contact sensitivity and
+scientifically comparable aggregate measurements after units and geometry are
+verified. Do not start AI training until M1/M2 quality gates are satisfied.

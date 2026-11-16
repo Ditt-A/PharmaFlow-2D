@@ -1,2 +1,2 @@
-"""PharmaFlow-2D: research scaffold, not a validated solver."""
-__version__ = '0.0.1'
+"""PharmaFlow-2D: uncalibrated physical DEM, not an industrial process model."""
+__version__ = '0.1.0'
