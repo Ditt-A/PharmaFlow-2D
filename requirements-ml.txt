@@ -1,6 +1,7 @@
-# Install a CUDA-compatible PyTorch build FIRST using the official PyTorch selector.
-# These are phase-3 optional packages; not needed for environment smoke checks.
-scikit-learn>=1.4,<2
-xgboost>=2,<4
-torch-geometric>=2.5,<3
-tensorboard>=2.16,<3
+# M4A CPU baselines in the existing pharmaflow-2d environment. No torch/CUDA wheels.
+scikit-learn==1.6.1
+xgboost-cpu==2.1.4
+joblib==1.4.2
+pandas>=2.2,<3
+pyarrow>=19,<20
+matplotlib>=3.8,<4

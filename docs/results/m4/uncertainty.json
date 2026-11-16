@@ -1,0 +1,394 @@
+{
+  "configuration_holdout_h050_baseline_rule_test": {
+    "cluster_key": "physical_group_id",
+    "independent_clusters": 2,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 236,
+        "lower": 0.9332467532467531,
+        "total_replicates": 300,
+        "upper": 0.9332467532467531
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 6.7423606220925635e-06,
+        "total_replicates": 300,
+        "upper": 0.09358630460734162
+      },
+      "event_recall": {
+        "defined_replicates": 236,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 2.1505376344086025
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 236,
+        "lower": 0.9903614457831325,
+        "total_replicates": 300,
+        "upper": 0.9949367088607595
+      },
+      "useful_event_recall": {
+        "defined_replicates": 236,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "configuration_holdout_h050_baseline_rule_validation": {
+    "cluster_key": "physical_group_id",
+    "independent_clusters": 2,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 219,
+        "lower": 0.8895770895770895,
+        "total_replicates": 300,
+        "upper": 0.8895770895770896
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.008274599344102521,
+        "total_replicates": 300,
+        "upper": 0.12432210534293492
+      },
+      "event_recall": {
+        "defined_replicates": 219,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.6949152542372878
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 219,
+        "lower": 0.9833333333333333,
+        "total_replicates": 300,
+        "upper": 0.9922413793103448
+      },
+      "useful_event_recall": {
+        "defined_replicates": 219,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "configuration_holdout_h100_B_current_xgboost_test": {
+    "cluster_key": "physical_group_id",
+    "independent_clusters": 2,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 236,
+        "lower": 0.9926190476190476,
+        "total_replicates": 300,
+        "upper": 0.9926190476190476
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.0037727429122776848,
+        "total_replicates": 300,
+        "upper": 0.020599986706307163
+      },
+      "event_recall": {
+        "defined_replicates": 236,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 236,
+        "lower": 0.9986301369863014,
+        "total_replicates": 300,
+        "upper": 0.9993243243243244
+      },
+      "useful_event_recall": {
+        "defined_replicates": 236,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "configuration_holdout_h100_B_current_xgboost_validation": {
+    "cluster_key": "physical_group_id",
+    "independent_clusters": 2,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 219,
+        "lower": 0.7698216736966738,
+        "total_replicates": 300,
+        "upper": 0.7698216736966738
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.002008144013125661,
+        "total_replicates": 300,
+        "upper": 0.09082269097038859
+      },
+      "event_recall": {
+        "defined_replicates": 219,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 3.3898305084745757
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "roc_auc": {
+        "defined_replicates": 219,
+        "lower": 0.9558673469387755,
+        "total_replicates": 300,
+        "upper": 0.9805180180180181
+      },
+      "useful_event_recall": {
+        "defined_replicates": 219,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "run_grouped_h050_D_full_xgboost_test": {
+    "cluster_key": "run_id",
+    "independent_clusters": 6,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 275,
+        "lower": 0.7332412946829423,
+        "total_replicates": 300,
+        "upper": 0.9183372183372185
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.0010573946300917257,
+        "total_replicates": 300,
+        "upper": 0.05868830022153417
+      },
+      "event_recall": {
+        "defined_replicates": 275,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.4441322984244669
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 299,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 275,
+        "lower": 0.9710845475460124,
+        "total_replicates": 300,
+        "upper": 0.9978528396150174
+      },
+      "useful_event_recall": {
+        "defined_replicates": 275,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "run_grouped_h050_D_full_xgboost_validation": {
+    "cluster_key": "run_id",
+    "independent_clusters": 6,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 274,
+        "lower": 0.03700618820868851,
+        "total_replicates": 300,
+        "upper": 0.768054298642534
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.02227919480812118,
+        "total_replicates": 300,
+        "upper": 0.18793715420185192
+      },
+      "event_recall": {
+        "defined_replicates": 274,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.843781855249745
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 274,
+        "lower": 0.6322395195195195,
+        "total_replicates": 300,
+        "upper": 0.9952386635348096
+      },
+      "useful_event_recall": {
+        "defined_replicates": 274,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "run_grouped_h100_B_current_forest_test": {
+    "cluster_key": "run_id",
+    "independent_clusters": 6,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 275,
+        "lower": 0.773684428577452,
+        "total_replicates": 300,
+        "upper": 1.0000000000000002
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.0031423277877719816,
+        "total_replicates": 300,
+        "upper": 0.08783936512769765
+      },
+      "event_recall": {
+        "defined_replicates": 275,
+        "lower": 1.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 299,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 275,
+        "lower": 0.9219941348973607,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "useful_event_recall": {
+        "defined_replicates": 275,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  },
+  "run_grouped_h100_B_current_forest_validation": {
+    "cluster_key": "run_id",
+    "independent_clusters": 6,
+    "intervals": {
+      "average_precision": {
+        "defined_replicates": 274,
+        "lower": 0.49733431576489207,
+        "total_replicates": 300,
+        "upper": 1.0000000000000002
+      },
+      "brier": {
+        "defined_replicates": 300,
+        "lower": 0.01294630160576205,
+        "total_replicates": 300,
+        "upper": 0.18924136920057977
+      },
+      "event_recall": {
+        "defined_replicates": 274,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "false_alerts_per_eligible_s": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "false_alerts_per_non_event_run": {
+        "defined_replicates": 300,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 0.0
+      },
+      "roc_auc": {
+        "defined_replicates": 274,
+        "lower": 0.7059896604524941,
+        "total_replicates": 300,
+        "upper": 1.0
+      },
+      "useful_event_recall": {
+        "defined_replicates": 274,
+        "lower": 0.0,
+        "total_replicates": 300,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Descriptive cluster percentile intervals; sparse-event/2-cluster holdouts cannot establish generalization."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_SCHEDULED_OR_AUTHORIZED",
+  "maximum_new_dem_attempts": 48,
+  "preserve_m3_release_and_test_cohort": true,
+  "allocation": {"development_pilot": 12, "adaptive_development": 24, "locked_unseen_configuration_test": 12},
+  "test_plan": "Reserve four new physical configurations, three packing families per configuration, new independent seeds. Freeze configurations and seeds before any new outcome is inspected. Never adapt this cohort.",
+  "development_plan": "Pilot transition D/d 2.1-3.4 at fixed inclination; use 24 additional attempts only after pilot validity/event review, varying inclination and friction in controlled comparisons. Cross all three packing families with fresh seeds across configurations.",
+  "proposed_observation_s": 2.5,
+  "maximum_observation_with_continuation_s": 3.5,
+  "desired_new_development_events": 20,
+  "event_target_is_not_guaranteed": true,
+  "stopping_rule": "Stop at 48 attempts including failures; no silent retries, outcome-driven test changes or budget extension. If event/independent-configuration coverage is inadequate, report insufficiency.",
+  "numerics": "Preserve M3 selected contact parameters and guard initially; any numerical changes require paired validation outside the frozen evaluation cohort.",
+  "priority": "Independent transition events, resumed temporary interruptions, naturally censored trajectories, crossed packing/seed variation, unseen configurations; no advanced model yet."
+}

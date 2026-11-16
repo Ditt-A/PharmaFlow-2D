@@ -1,0 +1,76 @@
+candidate_id,feature,validation_equal_run_ap_loss_mean,std,perturbation
+run_grouped_h100_B_current_forest,active_count,0.010396851321359582,0.00186726188192677,within-run circular shift
+run_grouped_h100_B_current_forest,remaining_count,0.010644294895263287,0.0013827452574557112,within-run circular shift
+run_grouped_h100_B_current_forest,near_count,0.01930640242294729,0.001583506543587992,within-run circular shift
+run_grouped_h100_B_current_forest,near_occupancy_estimate,0.0192623030147632,0.004362686166186095,within-run circular shift
+run_grouped_h100_B_current_forest,speed_mean_m_s,0.008972431578470793,0.02171581837609355,within-run circular shift
+run_grouped_h100_B_current_forest,speed_p50_m_s,-0.007210969707510034,0.018205340645253285,within-run circular shift
+run_grouped_h100_B_current_forest,speed_p95_m_s,0.01033125738348247,0.027405837152622466,within-run circular shift
+run_grouped_h100_B_current_forest,near_vx_mean_m_s,-0.0042752640911003685,0.0020108479187233162,within-run circular shift
+run_grouped_h100_B_current_forest,near_vy_mean_m_s,-0.023116625747987025,0.023262479018970977,within-run circular shift
+run_grouped_h100_B_current_forest,near_speed_mean_m_s,0.016795451402217,0.030592625312264258,within-run circular shift
+run_grouped_h100_B_current_forest,near_max_speed_m_s,0.008915250974774719,0.026102623053679393,within-run circular shift
+run_grouped_h100_B_current_forest,near_stationary_fraction,-0.021012085018886757,0.008222060015019511,within-run circular shift
+run_grouped_h100_B_current_forest,near_coordination_mean,-0.018634146831739074,0.02795632876234397,within-run circular shift
+run_grouped_h100_B_current_forest,near_coordination_p95,-0.00956065098046612,0.0014813219145715026,within-run circular shift
+run_grouped_h100_B_current_forest,spanning_arch_now,0.0052911278808959,0.0011151793432768236,within-run circular shift
+run_grouped_h100_B_current_forest,near_missing,0.0,0.0,within-run circular shift
+run_grouped_h100_B_current_forest,active_missing,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,active_count,-0.015181642556365066,0.0024937434096290742,within-run circular shift
+run_grouped_h050_D_full_xgboost,remaining_count,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_count,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_occupancy_estimate,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,speed_mean_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,speed_p50_m_s,-0.019502374479631584,0.030680942715143714,within-run circular shift
+run_grouped_h050_D_full_xgboost,speed_p95_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_vx_mean_m_s,-0.01551927293932708,0.018928386012398928,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_vy_mean_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_speed_mean_m_s,0.009759112205937176,0.0018014796851370059,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_max_speed_m_s,0.08955663166140103,0.02823774141348717,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_stationary_fraction,-0.031047826357526093,0.01996156532282054,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_coordination_mean,0.030591793135661748,0.0004608090771821718,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_coordination_p95,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,spanning_arch_now,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_missing,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,active_missing,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,time_s,-0.04047880262913248,0.02053543232112728,within-run circular shift
+run_grouped_h050_D_full_xgboost,discharged_fraction,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,outlet_ratio,-0.024390591668772943,0.0,between-run static
+run_grouped_h050_D_full_xgboost,friction,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,wall_friction,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,wall_angle_deg,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,initial_particle_count,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,particle_radius_m,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,normal_stiffness_n_m,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,tangential_stiffness_n_m,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,packing_family,0.0,0.0,between-run static
+run_grouped_h050_D_full_xgboost,since_last_crossing_s,0.06907417023933798,0.06485404090611754,within-run circular shift
+run_grouped_h050_D_full_xgboost,has_observed_crossing,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,flow_rate_50ms_particles_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_speed_rolling_mean_50ms_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_speed_rolling_std_50ms_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,occupancy_change_50ms,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,history_coverage_50ms_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,flow_rate_100ms_particles_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_speed_rolling_mean_100ms_m_s,-0.014801316005592527,0.01724873056992269,within-run circular shift
+run_grouped_h050_D_full_xgboost,near_speed_rolling_std_100ms_m_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,occupancy_change_100ms,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,history_coverage_100ms_s,0.0,0.0,within-run circular shift
+run_grouped_h050_D_full_xgboost,recent_interruption_50ms,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,active_count,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,remaining_count,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_count,-2.7755575615628914e-17,4.8074067159589095e-17,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_occupancy_estimate,-0.014586333388244896,0.0685963185027993,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,speed_mean_m_s,0.05256266710856699,0.10320394407087702,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,speed_p50_m_s,-0.009230045684060348,0.026700250037643914,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,speed_p95_m_s,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_vx_mean_m_s,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_vy_mean_m_s,0.002802105313696651,0.02913404916794256,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_speed_mean_m_s,0.002290623862484964,0.03156075280548061,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_max_speed_m_s,0.28114256289626965,0.12113658096304886,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_stationary_fraction,0.026638277381467734,0.04504731521515251,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_coordination_mean,0.07231426385581319,0.03275770778833029,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_coordination_p95,0.05877347215760672,0.025421537405337775,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,spanning_arch_now,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,near_missing,0.0,0.0,within-run circular shift
+configuration_holdout_h100_B_current_xgboost,active_missing,0.0,0.0,within-run circular shift

@@ -21,6 +21,7 @@ dependencies = [
 acceleration = ["taichi==1.7.3"]
 reference = ["numbers-parser==4.22.2"]
 dataset = ["pyarrow>=19,<20"]
+ml = ["scikit-learn==1.6.1", "xgboost-cpu==2.1.4", "joblib==1.4.2", "pyarrow>=19,<20"]
 test = ["pytest>=8,<10"]
 
 [tool.setuptools.packages.find]

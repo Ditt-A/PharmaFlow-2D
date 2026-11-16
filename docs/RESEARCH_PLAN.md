@@ -58,8 +58,9 @@ Two synced panes: solver-generated 2D hopper animation with particles colored by
 - **M0**: reproducible environment; accessible verified reference data; source layout and basic tests.
 - **M1**: actual DEM integration; contact tests; stable gravity flow and arching in some regimes; animated solver output.
 - **M2**: convergence/sensitivity and physically comparable reference analyses (or explicitly document non-comparability).
-- **M3**: no-leakage ML with strong baselines and event-level early-warning evaluation.
-- **M4**: polished demo, methods report, reproducible GitHub README and limitations.
+- **M3**: budgeted scientific dataset, finite first-event labels, causal features, grouped splits and QA.
+- **M4A**: CPU baselines with train-only grouped selection, frame/event warning evaluation and readiness decision. See the M4 reports for the frozen protocol and insufficient-generalization conclusion.
+- **M4B (proposed)**: acquire independent transition events and unseen-configuration evidence under a separately authorized budget before advanced modeling or a polished prediction demo.
 
 ## I. Industry translation
 

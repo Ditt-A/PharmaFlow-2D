@@ -1,0 +1,13 @@
+{
+  "reason": "Post-evaluation audit correction only: parallel Random Forest summation differed by 2.22e-16; use rtol/atol 1e-12 and require identical alert threshold decisions. No model, preprocessing, feature, threshold, metric definition or M3 data changed. Original freeze and held-out predictions preserved.",
+  "files": {
+    "m4_audit.py": {
+      "before": "d945510961100e75851c7046e50b20ffb7c6bd06e9608b0cfdba7a21bbcbd09c",
+      "after": "4ff1a74edcd11caf9dbe95488ed45238b233d616739fb3fa69578b75fabf3029"
+    },
+    "m4_evaluation.py": {
+      "before": "aab944486f71c3d12242b5ac6f74d3c053a3974a8b37461d3c77c8705d34df06",
+      "after": "4d2e1fdb4c68eaebd250a295b120b1ca95ff034b3dd8e1d67919edf4198255aa"
+    }
+  }
+}

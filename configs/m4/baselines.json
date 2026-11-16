@@ -1,0 +1,19 @@
+{
+  "protocol": "m4a-frozen-first-event-v1",
+  "m3_commit": "a3e28072dcd738cb70f99a38d2c3d2c0f162114c",
+  "seed": 20261117,
+  "threads": 2,
+  "horizons_s": [0.10, 0.05],
+  "benchmarks": ["run_grouped", "configuration_holdout"],
+  "cv_folds": 3,
+  "bootstrap_repeats": 300,
+  "permutation_repeats": 12,
+  "thresholds": [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95, 1.01],
+  "alerts": {"consecutive_frames": 2, "cooldown_s": 0.05, "sample_s": 0.005, "minimum_lead_s": 0.02},
+  "selection": {"false_per_non_event_penalty": 0.25, "false_per_second_penalty": 0.02},
+  "models": {
+    "logistic": {"C": 1.0, "solver": "liblinear", "max_iter": 2000},
+    "forest": {"n_estimators": 120, "max_depth": 4, "min_samples_leaf": 8, "max_features": "sqrt"},
+    "xgboost": {"n_estimators": 100, "max_depth": 2, "learning_rate": 0.05, "min_child_weight": 5, "reg_lambda": 5.0, "subsample": 1.0, "colsample_bytree": 1.0, "tree_method": "hist"}
+  }
+}

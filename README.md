@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1 DEM, M2 physics benchmarks and M3 synthetic dataset/first-event labeling are implemented. 64 tests pass, including strict CUDA checks. Published-data calibration remains unresolved. No model training, optimization or industrial performance claims.
+> **Status:** M1-M3 and M4A early-warning baselines are implemented. 89 tests pass, including strict CUDA checks. M4A is complete, but independent-event data is insufficient for generalization. Published-data calibration remains unresolved; no industrial performance or deployment claim.
 
 ## The engineering problem
 
@@ -62,7 +62,10 @@ the container's system GLIBC. See the [upstream report](https://github.com/taich
 
 If `conda` is unavailable, use a user-owned virtual environment and `pip install -e .` instead. In Jupyter choose the **Python (PharmaFlow-2D)** kernel after registering it.
 
-**PyTorch GPU installation:** This is intentionally deferred. First check the CUDA driver and installed PyTorch with `scripts/check_env.py`. For ML experiments, install a matching GPU-enabled PyTorch build from the [official selector](https://pytorch.org/get-started/locally/), then `pip install -r requirements-ml.txt`. Do not blindly replace the JupyterHub system torch installation.
+**M4A machine learning:** Use `pip install -e '.[ml,test]'` or
+`pip install -r requirements-ml.txt` in the existing environment. These CPU
+baselines use scikit-learn and XGBoost CPU; PyTorch/GPU training is unnecessary.
+Taichi remains pinned to 1.7.3.
 
 ## Data commands
 
@@ -171,8 +174,8 @@ feature rows and 18060 time/horizon label rows, with targets for H=0.05/0.10 s.
 Future-only confirmation uses a 0.4 s common-contact persistence window; predictors
 are instantaneous or trailing-only. Post-onset and empty states are excluded.
 
-Run-grouped and complete-configuration holdouts are both supplied. No encoder,
-normalizer or predictive model is fitted. Naturally censored runs are absent
+Run-grouped and complete-configuration holdouts are both supplied. The M3 release
+fits no encoder, normalizer or predictive model. Naturally censored runs are absent
 in this small cohort; censoring is tested with toy cases and 11 truncated real
 prefixes, without adding duplicated training trajectories.
 
@@ -194,6 +197,52 @@ published. See [dataset design/reproduction](docs/M3_DATASET.md),
 and [lightweight results](docs/results/m3/). The strict validation/test sets each
 contain only one event-bearing run; this release supports data-pipeline research,
 not strong claims about predictive performance.
+
+## M4A AI early-warning baselines
+
+**M4A_BASELINE_COMPLETE_BUT_DATA_INSUFFICIENT_FOR_GENERALIZATION**
+
+M4A preserves all 30 M3 runs, 11 first events, labels/checksums and published
+splits. It fits logistic regression, Random Forest and XGBoost across six
+static/current/temporal/proxy-removal ablations, plus constant and current-state
+rule baselines. Both H=0.10/0.05s and both grouped benchmarks are evaluated.
+Training-only grouped OOF predictions select models and episode thresholds;
+all choices are frozen before validation/test scoring. Models and full
+predictions remain local.
+
+| Frozen H=.10 candidate | Validation AP | Test AP | Test useful warnings >=.02s | Test false episodes |
+| --- | ---: | ---: | --- | ---: |
+| Run-grouped: current-state Random Forest | .7593 | .8900 | 1/2 events | 0 |
+| Configuration holdout: current-state XGBoost | .7698 | .9926 | 1/1 event | 0 |
+
+Run-grouped test leads are .040s and .005s; the latter is imminent detection.
+The strict test lead is .080s on a single event, giving weak generalization
+evidence. At H=.05, selected candidates warn too early or miss the test events,
+giving **zero valid test-event warnings despite high frame AP**. Static-only
+models localize onset poorly, and the simple physics rule remains competitive.
+More complex ML is not justified by this cohort.
+
+![Frozen scores, valid warning windows and false-alert examples](docs/results/m4/false_alarm_diagnostics.png)
+
+```bash
+conda activate pharmaflow-2d
+python -m pip install -e '.[ml,test]'
+export OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
+python scripts/train_m4.py
+python scripts/evaluate_m4.py
+python scripts/analyze_m4_errors.py
+python scripts/audit_m4.py
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+# Existing completed experiment: audit or regenerate plots, never overwrite its freeze.
+python scripts/evaluate_m4.py --plots-only
+```
+
+The local frozen M3 Parquet files are required; these commands launch no DEM
+simulations. See [baseline/data protocol](docs/M4_BASELINES.md),
+[quantitative frame/event evaluation](docs/M4_EVALUATION.md),
+[readiness and proposed M4B budget](docs/M4_READINESS.md), and
+[compact results/figures](docs/results/m4/). M4B proposes at most 48 new attempts
+with a separately locked unseen-configuration cohort; none has been launched.
 
 ## Repository layout
 
@@ -230,9 +279,9 @@ PharmaFlow-2D/
 └── tests/                         # Configuration and physical validation
 ```
 
-The DEM solver, M2 experiment runner, M3 dataset/label/feature pipeline and
-headless visualizers are implemented. Reference calibration, model training,
-interactive dashboards and optimization remain future work.
+The DEM solver, M2 runner, M3 dataset pipeline, M4A CPU baselines and headless
+visualizers are implemented. Reference calibration, expanded independent event
+coverage, interactive dashboards and optimization remain future work.
 
 ## Planned milestones
 
@@ -240,7 +289,7 @@ interactive dashboards and optimization remain future work.
 2. **M1 — Physical DEM:** explicit timestep integrator; gravity; normal/tangential damping; Coulomb friction; particle rotation; wall/particle contacts; hopper geometry; save particle trajectories. Unit/integration tests must pass.
 3. **M2 — Validation:** reference data schema audit; dimensional consistency; particle conservation; contact stability; discharge-rate and velocity comparisons where valid. Record any non-comparable reference variables.
 4. **M3 — Scientific synthetic dataset:** numerical preparation, budgeted generation, first-event labels, censoring, causal features, grouped splits and QA. Implemented without training.
-5. **M4 — Future modeling:** only under a separate request; fit preprocessing on training groups, use independent-event evaluation and document small-sample limitations before an interactive prediction demo.
+5. **M4A — Research baselines:** implemented with train-only preprocessing/OOF selection, frozen held-out evaluation, independent-event warnings and small-sample limitations. Acquire more evidence before advanced modeling.
 
 ## Research integrity
 
@@ -253,6 +302,7 @@ interactive dashboards and optimization remain future work.
 
 ## Next step for Codex
 
-Preserve M1/M2/M3 tests, source hashes and frozen splits. Resolve calibration and
-expand independent event/configuration/censoring coverage only under an explicit
-new experiment budget. Do not begin ML training without a separate request.
+Preserve M1-M4A tests, M3 source hashes/splits, frozen M4A artifacts and test
+results. Resolve calibration and expand independent event/configuration/censoring
+coverage only under a separately authorized experiment budget. Do not use M4A
+test outcomes to retune the frozen warning policy or launch the proposed M4B.

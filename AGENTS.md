@@ -6,10 +6,11 @@ Implement **PharmaFlow-2D**, a physically explicit **2D Discrete Element Method 
 
 Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVIDIA A100 80GB if exposed by container. Keep a CPU fallback.
 
-**Current stage:** M1 implemented, M2 evaluated, M3 scientific dataset/labels built.
-Verify claims against tests and docs/M3_DATASET.md, M3_LABELING_PROTOCOL.md and
-M3_QUALITY_REPORT.md. Calibration remains unresolved. No model training, deep
-learning, optimization or recommendation engine is authorized in this stage.
+**Current stage:** M4A CPU early-warning baseline research is authorized by the
+explicit M4A request. Preserve the M3 release, labels, checksums and frozen splits.
+Read docs/M4_BASELINES.md, M4_EVALUATION.md and M4_READINESS.md as well as the M3
+reports. Calibration remains unresolved. No new DEM campaign, neural models,
+optimization or recommendation engine is authorized by M4A.
 
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
@@ -43,9 +44,11 @@ M2: visual and quantitative DEM validation, sensitivity to contact stiffness and
 M3: preserve the budgeted synthetic dataset, future-only first-event labels,
 right-censoring policy, causal features and run/configuration grouped splits.
 Do not change future labels into model inputs or quietly retry failed cases.
-M4: future modeling requires a separate user request. Fit preprocessing only on
-training groups and report independent-event/configuration limitations before
-any prediction demo or recommendation system. Use real solver trajectories.
+M4A: fit preprocessing and class weights only on training groups, including each
+grouped CV fold. Freeze models/features/alert thresholds from training OOF scores
+before validation/test evaluation. Do not reshuffle M3 splits or silently retune
+against held-out results. Keep models/predictions local; report independent-event
+limitations. M4B is a proposed budget only until separately requested.
 
 ## Quality rules
 
