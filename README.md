@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1 DEM and M2 numerical/benchmark campaign implemented and tested. 41 tests pass, including optional strict CUDA checks. Published-data calibration remains unresolved; AI prediction and optimization remain deferred. No industrial performance claims.
+> **Status:** M1 DEM, M2 physics benchmarks and M3 synthetic dataset/first-event labeling are implemented. 64 tests pass, including strict CUDA checks. Published-data calibration remains unresolved. No model training, optimization or industrial performance claims.
 
 ## The engineering problem
 
@@ -155,6 +155,46 @@ python scripts/benchmark_m2.py --cuda
 These are a small research pilot, not a permanent-clogging classifier, an
 industrial material calibration, or a full reproduction of the published DEM.
 
+## M3 scientific dataset and first-event labels
+
+![Real DEM pre-onset, onset and future-confirmation frames](docs/results/m3/particle_event_sequence.png)
+
+The bounded M3 campaign performs **6 stiffness checks + 18 pilot + 12 adaptive
+runs**, then stops. All 36 attempts succeed; 30 independent runs enter the
+dataset, with 11 finite-duration first-arch events. Geometry-controlled outlet
+studies keep the requested wall angle fixed. Three structurally different packing
+families, five seeds and transition cases avoid using only trivial anchors.
+
+Selected numerics are kn=4000 N/m, kt=1000 N/m and dt=5e-6 s. Maximum dataset
+overlap is 0.0834 R, below the unchanged 0.15 R guard. The dataset contains 9030
+feature rows and 18060 time/horizon label rows, with targets for H=0.05/0.10 s.
+Future-only confirmation uses a 0.4 s common-contact persistence window; predictors
+are instantaneous or trailing-only. Post-onset and empty states are excluded.
+
+Run-grouped and complete-configuration holdouts are both supplied. No encoder,
+normalizer or predictive model is fitted. Naturally censored runs are absent
+in this small cohort; censoring is tested with toy cases and 11 truncated real
+prefixes, without adding duplicated training trajectories.
+
+```bash
+python -m pip install -e '.[dataset,acceleration,test]'
+python scripts/run_m3.py --plan configs/m3/pilot.json --jobs 4
+# Review the pilot before the documented 12-run adaptive expansion.
+python scripts/run_m3.py --plan configs/m3/production.json --jobs 4
+python scripts/build_m3_dataset.py
+python scripts/audit_m3.py
+python scripts/plot_m3.py
+```
+
+Raw trajectories stay in `data/simulated/m3/`; Parquet tables, labels, feature
+dictionary and splits stay in `data/processed/m3/`. Both directories are ignored
+by Git. Only compact checksum manifests, reports and selected figures are
+published. See [dataset design/reproduction](docs/M3_DATASET.md),
+[labeling protocol](docs/M3_LABELING_PROTOCOL.md), [quality report](docs/M3_QUALITY_REPORT.md)
+and [lightweight results](docs/results/m3/). The strict validation/test sets each
+contain only one event-bearing run; this release supports data-pipeline research,
+not strong claims about predictive performance.
+
 ## Repository layout
 
 ```text
@@ -190,17 +230,17 @@ PharmaFlow-2D/
 └── tests/                         # Configuration and physical validation
 ```
 
-The physical DEM solver, M2 experiment runner and headless visualizers are
-implemented. Reference calibration, AI modeling, interactive dashboards and
-optimization remain future work.
+The DEM solver, M2 experiment runner, M3 dataset/label/feature pipeline and
+headless visualizers are implemented. Reference calibration, model training,
+interactive dashboards and optimization remain future work.
 
 ## Planned milestones
 
 1. **M0 — Setup:** environment, repeatable downloads, checksum validation, format inspection, smoke tests.
 2. **M1 — Physical DEM:** explicit timestep integrator; gravity; normal/tangential damping; Coulomb friction; particle rotation; wall/particle contacts; hopper geometry; save particle trajectories. Unit/integration tests must pass.
 3. **M2 — Validation:** reference data schema audit; dimensional consistency; particle conservation; contact stability; discharge-rate and velocity comparisons where valid. Record any non-comparable reference variables.
-4. **M3 — ML:** define pre-clog horizon; group train/validation/test by complete simulation runs and operating configurations; compare feature-based classifiers with temporal models. Evaluate precision-recall, F1, calibration, lead time, and generalization.
-5. **M4 — Interactive 2D demo:** actual solver trajectories vs model warnings; outlet density, flow rate, risk-over-time, configurable outlet/particle/friction conditions and solver-backed counterfactual runs.
+4. **M3 — Scientific synthetic dataset:** numerical preparation, budgeted generation, first-event labels, censoring, causal features, grouped splits and QA. Implemented without training.
+5. **M4 — Future modeling:** only under a separate request; fit preprocessing on training groups, use independent-event evaluation and document small-sample limitations before an interactive prediction demo.
 
 ## Research integrity
 
@@ -213,6 +253,6 @@ optimization remain future work.
 
 ## Next step for Codex
 
-Resolve the published data's numeric alignment and units, expand material and
-stiffness sensitivity, and test more independent fills before quantitative
-calibration or ML. Preserve M1/M2 tests and documented reproduction boundaries.
+Preserve M1/M2/M3 tests, source hashes and frozen splits. Resolve calibration and
+expand independent event/configuration/censoring coverage only under an explicit
+new experiment budget. Do not begin ML training without a separate request.

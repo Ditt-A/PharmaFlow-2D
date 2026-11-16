@@ -1,0 +1,11 @@
+{
+  "maximum_distinct_solver_attempts":36,
+  "stiffness_preparation_attempts":6,
+  "pilot_attempts":18,
+  "adaptive_production_attempts_maximum":12,
+  "maximum_campaign_simulated_seconds_including_preparation":51.3,
+  "maximum_workers":4,
+  "pilot_review_required_before_production":true,
+  "retry_policy":"Do not silently retry/replace failed runs; failures remain separate. A changed plan requires a new phase and a revised explicit budget.",
+  "scope":"Small scientific dataset, not broad parameter calibration or a model benchmark"
+}

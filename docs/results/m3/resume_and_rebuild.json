@@ -1,0 +1,6 @@
+{
+  "campaign_resume_verified": true,
+  "raw_trajectories_not_rewritten": 30,
+  "parquet_rebuild_bitwise_identical": true,
+  "new_solver_attempts": 0
+}

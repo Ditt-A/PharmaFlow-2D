@@ -1,0 +1,155 @@
+{
+  "seed": 20261117,
+  "ratios": [
+    0.6,
+    0.2,
+    0.2
+  ],
+  "normalization": "none; M4 must fit preprocessing using training groups only",
+  "benchmarks": {
+    "run_grouped": {
+      "group_key": "run_id",
+      "assignments": {
+        "pilot_0151aedb5166ad43_hexagonal_s202": "train",
+        "pilot_e1f4d3a9881523f2_hexagonal_s202": "train",
+        "pilot_2725e563ac45ea54_random_sequential_s303": "train",
+        "pilot_e62ede8f14e20666_staggered_s101": "train",
+        "pilot_0151aedb5166ad43_staggered_s101": "train",
+        "pilot_2725e563ac45ea54_hexagonal_s202": "train",
+        "pilot_e62ede8f14e20666_random_sequential_s303": "train",
+        "pilot_e62ede8f14e20666_hexagonal_s202": "validation",
+        "pilot_2725e563ac45ea54_staggered_s101": "validation",
+        "pilot_4fb2421c2854241d_staggered_s101": "validation",
+        "pilot_e1f4d3a9881523f2_random_sequential_s303": "test",
+        "pilot_0151aedb5166ad43_random_sequential_s303": "test",
+        "pilot_e1f4d3a9881523f2_staggered_s101": "test",
+        "pilot_380f2ad10b2b21bd_hexagonal_s202": "train",
+        "pilot_380f2ad10b2b21bd_random_sequential_s303": "train",
+        "pilot_4fb2421c2854241d_hexagonal_s202": "train",
+        "pilot_4fb2421c2854241d_random_sequential_s303": "validation",
+        "pilot_380f2ad10b2b21bd_staggered_s101": "test"
+      },
+      "run_assignments": {
+        "pilot_0151aedb5166ad43_hexagonal_s202": "train",
+        "pilot_0151aedb5166ad43_random_sequential_s303": "test",
+        "pilot_0151aedb5166ad43_staggered_s101": "train",
+        "pilot_2725e563ac45ea54_hexagonal_s202": "train",
+        "pilot_2725e563ac45ea54_random_sequential_s303": "train",
+        "pilot_2725e563ac45ea54_staggered_s101": "validation",
+        "pilot_380f2ad10b2b21bd_hexagonal_s202": "train",
+        "pilot_380f2ad10b2b21bd_random_sequential_s303": "train",
+        "pilot_380f2ad10b2b21bd_staggered_s101": "test",
+        "pilot_4fb2421c2854241d_hexagonal_s202": "train",
+        "pilot_4fb2421c2854241d_random_sequential_s303": "validation",
+        "pilot_4fb2421c2854241d_staggered_s101": "validation",
+        "pilot_e1f4d3a9881523f2_hexagonal_s202": "train",
+        "pilot_e1f4d3a9881523f2_random_sequential_s303": "test",
+        "pilot_e1f4d3a9881523f2_staggered_s101": "test",
+        "pilot_e62ede8f14e20666_hexagonal_s202": "validation",
+        "pilot_e62ede8f14e20666_random_sequential_s303": "train",
+        "pilot_e62ede8f14e20666_staggered_s101": "train"
+      },
+      "statistics": {
+        "train": {
+          "independent_runs": 10,
+          "configurations": 6,
+          "event_runs": 3,
+          "right_censored_runs": 0,
+          "eligible_examples": 1004,
+          "positive_examples": 90,
+          "negative_examples": 914,
+          "censored_examples": 0,
+          "event_run_fraction": 0.3
+        },
+        "validation": {
+          "independent_runs": 4,
+          "configurations": 3,
+          "event_runs": 1,
+          "right_censored_runs": 0,
+          "eligible_examples": 464,
+          "positive_examples": 30,
+          "negative_examples": 434,
+          "censored_examples": 0,
+          "event_run_fraction": 0.25
+        },
+        "test": {
+          "independent_runs": 4,
+          "configurations": 3,
+          "event_runs": 1,
+          "right_censored_runs": 0,
+          "eligible_examples": 302,
+          "positive_examples": 30,
+          "negative_examples": 272,
+          "censored_examples": 0,
+          "event_run_fraction": 0.25
+        }
+      }
+    },
+    "configuration_holdout": {
+      "group_key": "physical_group_id",
+      "assignments": {
+        "b9f4a5bca6f2aeebf11f": "train",
+        "d66a2f7c449ee33f16f1": "train",
+        "bec94fab474e57bcdcb4": "validation",
+        "078a6fa71b71f6120cbf": "test",
+        "b3545226ea17f193dbd2": "train",
+        "e9580c00287810e0e1d5": "test"
+      },
+      "run_assignments": {
+        "pilot_0151aedb5166ad43_hexagonal_s202": "train",
+        "pilot_0151aedb5166ad43_random_sequential_s303": "train",
+        "pilot_0151aedb5166ad43_staggered_s101": "train",
+        "pilot_2725e563ac45ea54_hexagonal_s202": "test",
+        "pilot_2725e563ac45ea54_random_sequential_s303": "test",
+        "pilot_2725e563ac45ea54_staggered_s101": "test",
+        "pilot_380f2ad10b2b21bd_hexagonal_s202": "train",
+        "pilot_380f2ad10b2b21bd_random_sequential_s303": "train",
+        "pilot_380f2ad10b2b21bd_staggered_s101": "train",
+        "pilot_4fb2421c2854241d_hexagonal_s202": "test",
+        "pilot_4fb2421c2854241d_random_sequential_s303": "test",
+        "pilot_4fb2421c2854241d_staggered_s101": "test",
+        "pilot_e1f4d3a9881523f2_hexagonal_s202": "validation",
+        "pilot_e1f4d3a9881523f2_random_sequential_s303": "validation",
+        "pilot_e1f4d3a9881523f2_staggered_s101": "validation",
+        "pilot_e62ede8f14e20666_hexagonal_s202": "train",
+        "pilot_e62ede8f14e20666_random_sequential_s303": "train",
+        "pilot_e62ede8f14e20666_staggered_s101": "train"
+      },
+      "statistics": {
+        "train": {
+          "independent_runs": 9,
+          "configurations": 3,
+          "event_runs": 3,
+          "right_censored_runs": 0,
+          "eligible_examples": 1012,
+          "positive_examples": 90,
+          "negative_examples": 922,
+          "censored_examples": 0,
+          "event_run_fraction": 0.3333333333333333
+        },
+        "validation": {
+          "independent_runs": 3,
+          "configurations": 1,
+          "event_runs": 0,
+          "right_censored_runs": 0,
+          "eligible_examples": 248,
+          "positive_examples": 0,
+          "negative_examples": 248,
+          "censored_examples": 0,
+          "event_run_fraction": 0.0
+        },
+        "test": {
+          "independent_runs": 6,
+          "configurations": 2,
+          "event_runs": 2,
+          "right_censored_runs": 0,
+          "eligible_examples": 510,
+          "positive_examples": 60,
+          "negative_examples": 450,
+          "censored_examples": 0,
+          "event_run_fraction": 0.3333333333333333
+        }
+      }
+    }
+  }
+}

@@ -6,9 +6,10 @@ Implement **PharmaFlow-2D**, a physically explicit **2D Discrete Element Method 
 
 Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVIDIA A100 80GB if exposed by container. Keep a CPU fallback.
 
-**Current stage:** M1 implemented and M2 numerical/benchmark campaign evaluated.
-Verify claims against tests and docs/M2_VALIDATION.md. Published-data calibration
-remains unresolved; no AI models or optimization are implemented or authorized.
+**Current stage:** M1 implemented, M2 evaluated, M3 scientific dataset/labels built.
+Verify claims against tests and docs/M3_DATASET.md, M3_LABELING_PROTOCOL.md and
+M3_QUALITY_REPORT.md. Calibration remains unresolved. No model training, deep
+learning, optimization or recommendation engine is authorized in this stage.
 
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
@@ -39,8 +40,12 @@ Reference: Yogi & Khakhar, Physical Review E (2026), DOI 10.1103/1ryw-6q89. Dist
 ## Subsequent milestones
 
 M2: visual and quantitative DEM validation, sensitivity to contact stiffness and dt, outlet/particle ratio, friction and hopper angle.
-M3: train ML baselines across independent runs with grouped holdout configurations, multiple horizons and robust calibration. Define clogging via near-zero flux for a duration plus stable arch/particle persistence, *not* simply one frame with no particles crossing.
-M4: interactive visualization with actual solver-generated runs, time-series risk overlays; proposed changes must be solver-tested rather than unsupported advice.
+M3: preserve the budgeted synthetic dataset, future-only first-event labels,
+right-censoring policy, causal features and run/configuration grouped splits.
+Do not change future labels into model inputs or quietly retry failed cases.
+M4: future modeling requires a separate user request. Fit preprocessing only on
+training groups and report independent-event/configuration limitations before
+any prediction demo or recommendation system. Use real solver trajectories.
 
 ## Quality rules
 

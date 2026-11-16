@@ -1,0 +1,23 @@
+{
+  "phase":"pilot",
+  "max_attempts":18,
+  "max_simulated_seconds":28.5,
+  "duration_s":1.5,
+  "max_duration_s":2.0,
+  "sample_interval_s":0.005,
+  "numerical":{"normal_stiffness_n_m":4000,"tangential_stiffness_n_m":1000,"normal_damping_kg_s":0.3,"tangential_damping_kg_s":0.06,"dt_s":0.000005},
+  "protocol":{"persistence_s":0.4,"stationary_speed_m_s":0.003,"gate_buffer_s":0.02,"minimum_remaining":2},
+  "replicates":[
+    {"seed":101,"packing_family":"staggered"},
+    {"seed":202,"packing_family":"hexagonal"},
+    {"seed":303,"packing_family":"random_sequential"}
+  ],
+  "cases":[
+    {"name":"d2","physical":{"outlet_ratio":2.0,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}},
+    {"name":"d2p5","allow_continuation":true,"physical":{"outlet_ratio":2.5,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}},
+    {"name":"d3","allow_continuation":true,"physical":{"outlet_ratio":3.0,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}},
+    {"name":"d3p5","allow_continuation":true,"physical":{"outlet_ratio":3.5,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}},
+    {"name":"d4","physical":{"outlet_ratio":4.0,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}},
+    {"name":"d6","physical":{"outlet_ratio":6.0,"wall_angle_deg":35,"friction":0.4,"wall_friction":0.4,"n_particles":40}}
+  ]
+}

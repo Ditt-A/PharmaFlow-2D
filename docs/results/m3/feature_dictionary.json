@@ -1,0 +1,362 @@
+{
+  "active_count": {
+    "units": "particles",
+    "meaning": "active count",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "remaining_count": {
+    "units": "particles",
+    "meaning": "remaining count",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_count": {
+    "units": "particles",
+    "meaning": "near count",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_occupancy_estimate": {
+    "units": "dimensionless",
+    "meaning": "Center-assigned disk area / actual 0\u20130.025 m trapezoid area; not exact packing or 3D solid fraction",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "speed_mean_m_s": {
+    "units": "m/s",
+    "meaning": "speed mean m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "speed_p50_m_s": {
+    "units": "m/s",
+    "meaning": "speed p50 m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "speed_p95_m_s": {
+    "units": "m/s",
+    "meaning": "speed p95 m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_vx_mean_m_s": {
+    "units": "m/s",
+    "meaning": "near vx mean m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_vy_mean_m_s": {
+    "units": "m/s",
+    "meaning": "near vy mean m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_speed_mean_m_s": {
+    "units": "m/s",
+    "meaning": "near speed mean m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_max_speed_m_s": {
+    "units": "m/s",
+    "meaning": "near max speed m s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_stationary_fraction": {
+    "units": "dimensionless",
+    "meaning": "near stationary fraction",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_coordination_mean": {
+    "units": "contacts/particle",
+    "meaning": "near coordination mean",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_coordination_p95": {
+    "units": "contacts/particle",
+    "meaning": "near coordination p95",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "spanning_arch_now": {
+    "units": "dimensionless",
+    "meaning": "Instantaneous geometric contact path connecting both sloped walls; not future-confirmed arch label",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_missing": {
+    "units": "dimensionless",
+    "meaning": "near missing",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "active_missing": {
+    "units": "dimensionless",
+    "meaning": "active missing",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "frame_index": {
+    "units": "dimensionless",
+    "meaning": "frame index",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "identifier_not_predictor"
+  },
+  "time_s": {
+    "units": "s",
+    "meaning": "time s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "discharged_fraction": {
+    "units": "dimensionless",
+    "meaning": "discharged fraction",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "outlet_ratio": {
+    "units": "dimensionless",
+    "meaning": "outlet ratio",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "friction": {
+    "units": "dimensionless",
+    "meaning": "friction",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "wall_friction": {
+    "units": "dimensionless",
+    "meaning": "wall friction",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "wall_angle_deg": {
+    "units": "degrees from vertical",
+    "meaning": "wall angle deg",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "initial_particle_count": {
+    "units": "particles",
+    "meaning": "initial particle count",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "particle_radius_m": {
+    "units": "m",
+    "meaning": "particle radius m",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "normal_stiffness_n_m": {
+    "units": "N/m",
+    "meaning": "normal stiffness n m",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "tangential_stiffness_n_m": {
+    "units": "N/m",
+    "meaning": "tangential stiffness n m",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "packing_family": {
+    "units": "category",
+    "meaning": "packing family",
+    "availability": "static experiment configuration",
+    "window_s": 0,
+    "missing_policy": "required configuration value; never imputed",
+    "role": "predictor"
+  },
+  "since_last_crossing_s": {
+    "units": "s",
+    "meaning": "since last crossing s",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "has_observed_crossing": {
+    "units": "dimensionless",
+    "meaning": "has observed crossing",
+    "availability": "at or before time_s",
+    "window_s": 0,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "flow_rate_50ms_particles_s": {
+    "units": "particles/s",
+    "meaning": "flow rate 50ms particles s",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_speed_rolling_mean_50ms_m_s": {
+    "units": "m/s",
+    "meaning": "near speed rolling mean 50ms m s",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_speed_rolling_std_50ms_m_s": {
+    "units": "m/s",
+    "meaning": "near speed rolling std 50ms m s",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "occupancy_change_50ms": {
+    "units": "dimensionless",
+    "meaning": "occupancy change 50ms",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "history_coverage_50ms_s": {
+    "units": "s",
+    "meaning": "history coverage 50ms s",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "flow_rate_100ms_particles_s": {
+    "units": "particles/s",
+    "meaning": "flow rate 100ms particles s",
+    "availability": "at or before time_s",
+    "window_s": 0.1,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_speed_rolling_mean_100ms_m_s": {
+    "units": "m/s",
+    "meaning": "near speed rolling mean 100ms m s",
+    "availability": "at or before time_s",
+    "window_s": 0.1,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "near_speed_rolling_std_100ms_m_s": {
+    "units": "m/s",
+    "meaning": "near speed rolling std 100ms m s",
+    "availability": "at or before time_s",
+    "window_s": 0.1,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "occupancy_change_100ms": {
+    "units": "dimensionless",
+    "meaning": "occupancy change 100ms",
+    "availability": "at or before time_s",
+    "window_s": 0.1,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "history_coverage_100ms_s": {
+    "units": "s",
+    "meaning": "history coverage 100ms s",
+    "availability": "at or before time_s",
+    "window_s": 0.1,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "recent_interruption_50ms": {
+    "units": "dimensionless",
+    "meaning": "recent interruption 50ms",
+    "availability": "at or before time_s",
+    "window_s": 0.05,
+    "missing_policy": "zero for empty regions/zero history; use near_missing, active_missing and history_coverage flags",
+    "role": "predictor"
+  },
+  "run_id": {
+    "role": "identifier_not_predictor",
+    "units": "identifier",
+    "meaning": "join/group key; do not use for learning",
+    "availability": "static",
+    "window_s": 0,
+    "missing_policy": "never missing"
+  },
+  "configuration_id": {
+    "role": "identifier_not_predictor",
+    "units": "identifier",
+    "meaning": "join/group key; do not use for learning",
+    "availability": "static",
+    "window_s": 0,
+    "missing_policy": "never missing"
+  },
+  "physical_group_id": {
+    "role": "identifier_not_predictor",
+    "units": "identifier",
+    "meaning": "join/group key; do not use for learning",
+    "availability": "static",
+    "window_s": 0,
+    "missing_policy": "never missing"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "reviewed_before_production":true,
+  "pilot_attempted":18,"pilot_valid":18,"pilot_failed":0,
+  "confirmed_first_events":5,"right_censored_runs":0,
+  "eligible_positive_fraction_H005":0.05649717514124294,
+  "eligible_positive_fraction_H010":0.11299435028248588,
+  "maximum_overlap_over_radius":0.07995581033190026,
+  "event_coverage":"D/d=2: 3/3 event runs; D/d=2.5: 2/3; D/d>=3: 0/12. All events support both requested prediction horizons.",
+  "quality":"Checksums, causal-prefix tests, label consistency and grouped splits passed; no missing/nonfinite features or duplicate trajectories.",
+  "identified_limit":"Only two event-bearing physical groups; configuration-holdout validation has no positive pilot group. More transition configurations are needed; do not fit any model.",
+  "decision":"Use the remaining 12 attempts, then stop. Concentrate on D/d=2.25–3.0 and vary friction, wall angle and fill. Keep wall angle explicitly fixed per configuration.",
+  "no_indefinite_clogging_claim":true,
+  "evidence":"data/processed/m3/quality_report.json from the completed pilot, prior to launching production"
+}

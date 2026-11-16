@@ -141,6 +141,8 @@ class DEMSystem:
         scale = np.concatenate((scale, s.radius[wi]))
         mu = np.concatenate((mu, np.full(len(wi), c.wall_friction)))
         i, j = np.concatenate((i, wi)), np.concatenate((j, -wall - 1))
+        if self.monitor is not None and hasattr(self.monitor, "contact_pairs"):
+            self.monitor.contact_pairs(self, i, j)
         if not len(i):
             if self.monitor is not None:
                 self.monitor.contacts(self, overlap, scale, np.empty(0), np.empty(0), np.empty(0), j)

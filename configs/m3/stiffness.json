@@ -1,0 +1,85 @@
+{
+  "description": "M3 preparation: fixed 35 degree walls, identical fills within outlet, damping ratios and kt/kn preserved; overlap guard unchanged",
+  "base": {
+    "n_particles": 50
+  },
+  "seeds": [
+    101
+  ],
+  "duration_s": 0.8,
+  "sample_interval_s": 0.005,
+  "cases": [
+    {
+      "name": "d2_k1000",
+      "outlet_ratio": 2,
+      "parameters": {
+        "funnel_height_m": 0.10853924851240071,
+        "normal_stiffness_n_m": 1000,
+        "tangential_stiffness_n_m": 250,
+        "normal_damping_kg_s": 0.15,
+        "tangential_damping_kg_s": 0.03,
+        "dt_s": 1e-05
+      }
+    },
+    {
+      "name": "d2_k2000",
+      "outlet_ratio": 2,
+      "parameters": {
+        "funnel_height_m": 0.10853924851240071,
+        "normal_stiffness_n_m": 2000,
+        "tangential_stiffness_n_m": 500,
+        "normal_damping_kg_s": 0.21213203435596426,
+        "tangential_damping_kg_s": 0.042426406871192854,
+        "dt_s": 5e-06
+      }
+    },
+    {
+      "name": "d2_k4000",
+      "outlet_ratio": 2,
+      "parameters": {
+        "funnel_height_m": 0.10853924851240071,
+        "normal_stiffness_n_m": 4000,
+        "tangential_stiffness_n_m": 1000,
+        "normal_damping_kg_s": 0.3,
+        "tangential_damping_kg_s": 0.06,
+        "dt_s": 5e-06
+      }
+    },
+    {
+      "name": "d3_k1000",
+      "outlet_ratio": 3,
+      "parameters": {
+        "funnel_height_m": 0.10568295249891647,
+        "normal_stiffness_n_m": 1000,
+        "tangential_stiffness_n_m": 250,
+        "normal_damping_kg_s": 0.15,
+        "tangential_damping_kg_s": 0.03,
+        "dt_s": 1e-05
+      }
+    },
+    {
+      "name": "d3_k2000",
+      "outlet_ratio": 3,
+      "parameters": {
+        "funnel_height_m": 0.10568295249891647,
+        "normal_stiffness_n_m": 2000,
+        "tangential_stiffness_n_m": 500,
+        "normal_damping_kg_s": 0.21213203435596426,
+        "tangential_damping_kg_s": 0.042426406871192854,
+        "dt_s": 5e-06
+      }
+    },
+    {
+      "name": "d3_k4000",
+      "outlet_ratio": 3,
+      "parameters": {
+        "funnel_height_m": 0.10568295249891647,
+        "normal_stiffness_n_m": 4000,
+        "tangential_stiffness_n_m": 1000,
+        "normal_damping_kg_s": 0.3,
+        "tangential_damping_kg_s": 0.06,
+        "dt_s": 5e-06
+      }
+    }
+  ]
+}

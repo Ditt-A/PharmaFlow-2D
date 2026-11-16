@@ -1,0 +1,83 @@
+{
+  "attempts_including_stiffness": 36,
+  "successful_including_stiffness": 36,
+  "failed_including_stiffness": 0,
+  "dataset_runs": 30,
+  "confirmed_first_events": 11,
+  "right_censored_dataset_runs": 0,
+  "feature_rows": 9030,
+  "feature_columns": 45,
+  "label_rows": 18060,
+  "horizon_statistics": {
+    "0.05": {
+      "positive": 110,
+      "negative": 1566,
+      "positive_fraction": 0.06563245823389022,
+      "censored": 0
+    },
+    "0.1": {
+      "positive": 220,
+      "negative": 1456,
+      "positive_fraction": 0.13126491646778043,
+      "censored": 0
+    }
+  },
+  "measured_worker_wall_s": 3842.9305942426436,
+  "raw_bytes": 7752516,
+  "processed_bytes": 691036,
+  "selected_numerics": {
+    "normal_stiffness_n_m": 4000,
+    "tangential_stiffness_n_m": 1000,
+    "normal_damping_kg_s": 0.3,
+    "tangential_damping_kg_s": 0.06,
+    "dt_s": 5e-06,
+    "max_overlap_ratio": 0.15,
+    "reason": "Keep kt/kn=0.25 and dimensionless damping ratios. 4000 N/m reduces peak overlap to 0.043-0.049 R in the two controlled preparation cases at almost the same runtime as 2000 N/m using the same dt.",
+    "evidence": "outputs/metrics/m3/stiffness/results.json; exact plan configs/m3/stiffness.json",
+    "limitations": "Numerical softness selection, not material calibration; discharge counts in the narrow case are not monotonic in stiffness. M2 data is preserved."
+  },
+  "parameter_ranges": {
+    "outlet_ratio": [
+      2.0,
+      6.0
+    ],
+    "friction": [
+      0.15,
+      0.65
+    ],
+    "wall_friction": [
+      0.15,
+      0.65
+    ],
+    "wall_angle_deg": [
+      28.0,
+      42.0
+    ],
+    "initial_particle_count": [
+      30.0,
+      50.0
+    ]
+  },
+  "packing_families": [
+    "hexagonal",
+    "random_sequential",
+    "staggered"
+  ],
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "maximum_dataset_overlap_radius": 0.08341397013471384,
+  "persistence_sensitivity": {
+    "0.2": 11,
+    "0.4": 11,
+    "0.6": 11
+  },
+  "stage_elapsed_estimates_s": {
+    "pilot": 426.580024,
+    "production": 484.562908
+  }
+}
