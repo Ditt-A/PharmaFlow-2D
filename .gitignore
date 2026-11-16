@@ -1,0 +1,42 @@
+# Python/Jupyter
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.venv/
+.env
+.env.*
+!.env.example
+# Conda local environments / kernels
+.conda/
+# Runtime data, never push raw archives or trajectories
+data/raw/
+data/processed/
+data/simulated/
+outputs/figures/
+outputs/animations/
+outputs/rollouts/
+outputs/checkpoints/
+outputs/metrics/
+logs/
+wandb/
+runs/
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.parquet
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.mp4
+*.gif
+# IDE
+.vscode/
+.idea/
