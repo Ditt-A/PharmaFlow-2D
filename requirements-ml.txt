@@ -1,0 +1,6 @@
+# Install a CUDA-compatible PyTorch build FIRST using the official PyTorch selector.
+# These are phase-3 optional packages; not needed for environment smoke checks.
+scikit-learn>=1.4,<2
+xgboost>=2,<4
+torch-geometric>=2.5,<3
+tensorboard>=2.16,<3
