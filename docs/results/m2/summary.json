@@ -1,0 +1,477 @@
+{
+  "run_counts": {
+    "pilot": {
+      "total": 10,
+      "passed": 9
+    },
+    "pilot_fill": {
+      "total": 1,
+      "passed": 1
+    },
+    "sweep": {
+      "total": 24,
+      "passed": 24
+    },
+    "convergence": {
+      "total": 6,
+      "passed": 6
+    }
+  },
+  "sweep_aggregate": [
+    {
+      "case": "low_particle_friction",
+      "successful_seeds": 3,
+      "fraction_mean": 1.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "completed_discharge": 3
+      },
+      "runtime_mean_s": 40.88728931189204
+    },
+    {
+      "case": "low_wall_friction",
+      "successful_seeds": 3,
+      "fraction_mean": 1.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "completed_discharge": 3
+      },
+      "runtime_mean_s": 41.123181474550314
+    },
+    {
+      "case": "outlet1p25",
+      "successful_seeds": 3,
+      "fraction_mean": 0.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "persistent_clogging_observed": 3
+      },
+      "runtime_mean_s": 57.61709167513376
+    },
+    {
+      "case": "outlet2",
+      "successful_seeds": 3,
+      "fraction_mean": 0.09999999999999999,
+      "fraction_sample_sd": 0.07211102550927978,
+      "states": {
+        "persistent_clogging_observed": 3
+      },
+      "runtime_mean_s": 55.05795073028033
+    },
+    {
+      "case": "outlet3",
+      "successful_seeds": 3,
+      "fraction_mean": 0.7533333333333333,
+      "fraction_sample_sd": 0.4272391992003231,
+      "states": {
+        "completed_discharge": 2,
+        "persistent_clogging_observed": 1
+      },
+      "runtime_mean_s": 47.169489975553006
+    },
+    {
+      "case": "outlet7p5",
+      "successful_seeds": 3,
+      "fraction_mean": 1.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "completed_discharge": 3
+      },
+      "runtime_mean_s": 36.55961516189078
+    },
+    {
+      "case": "smaller_fill",
+      "successful_seeds": 3,
+      "fraction_mean": 1.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "completed_discharge": 3
+      },
+      "runtime_mean_s": 38.728968279746674
+    },
+    {
+      "case": "steeper_walls",
+      "successful_seeds": 3,
+      "fraction_mean": 1.0,
+      "fraction_sample_sd": 0.0,
+      "states": {
+        "completed_discharge": 3
+      },
+      "runtime_mean_s": 40.62717493468275
+    }
+  ],
+  "convergence": [
+    {
+      "run_id": "wide_seed11_dt1",
+      "case": "wide",
+      "seed": 11,
+      "dt_s": 1e-05,
+      "duration_s": 0.4,
+      "particles": 50,
+      "outlet_diameter_ratio": 7.5,
+      "friction": 0.4,
+      "wall_friction": 0.4,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 33.02386755579665,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 50,
+      "fraction": 1.0,
+      "time_to_empty_s": 0.17989223675645247,
+      "flow_state": "completed_discharge",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.18215156596142468,
+      "speed_p95_m_s": 0.8937027347746858,
+      "max_overlap_over_radius": 0.08262405773645386,
+      "overlap_p95_upper": 0.048,
+      "max_force_n": 0.17130101243367385,
+      "max_omega_rad_s": 176.5773159806205,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 19.493027664721012,
+      "initial_state_sha256": "ee58c513d60ef89fbde9bcefe0abb8272c2c6236ea97e32c93c5719450529741",
+      "trajectory_sha256": "7d9ad789b7c1f30bddfec5c37ee306e03187e14bf2eec3770954e92bac0c9872",
+      "position_rmse_diameters": 0.10126756926800012,
+      "count_rmse_particles": 0.47286624374346037,
+      "final_count_difference_vs_finest": 0
+    },
+    {
+      "run_id": "wide_seed11_dt2",
+      "case": "wide",
+      "seed": 11,
+      "dt_s": 5e-06,
+      "duration_s": 0.4,
+      "particles": 50,
+      "outlet_diameter_ratio": 7.5,
+      "friction": 0.4,
+      "wall_friction": 0.4,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 33.02386755579665,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 50,
+      "fraction": 1.0,
+      "time_to_empty_s": 0.1752641269017842,
+      "flow_state": "completed_discharge",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.18106246840709625,
+      "speed_p95_m_s": 0.8963291647831108,
+      "max_overlap_over_radius": 0.08284586950323776,
+      "overlap_p95_upper": 0.048,
+      "max_force_n": 0.17120541519394492,
+      "max_omega_rad_s": 171.7765787372894,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 39.20229132613167,
+      "initial_state_sha256": "ee58c513d60ef89fbde9bcefe0abb8272c2c6236ea97e32c93c5719450529741",
+      "trajectory_sha256": "791449d67ccfddf8734c694e1dd59aa73201ba3d411400ea9edea081ee546648",
+      "position_rmse_diameters": 0.06132503193348274,
+      "count_rmse_particles": 0.31524416249564025,
+      "final_count_difference_vs_finest": 0
+    },
+    {
+      "run_id": "wide_seed11_dt4",
+      "case": "wide",
+      "seed": 11,
+      "dt_s": 2.5e-06,
+      "duration_s": 0.4,
+      "particles": 50,
+      "outlet_diameter_ratio": 7.5,
+      "friction": 0.4,
+      "wall_friction": 0.4,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 33.02386755579665,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 50,
+      "fraction": 1.0,
+      "time_to_empty_s": 0.17399961789574794,
+      "flow_state": "completed_discharge",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.18069943588898676,
+      "speed_p95_m_s": 0.8962727611742377,
+      "max_overlap_over_radius": 0.08291324201665086,
+      "overlap_p95_upper": 0.048,
+      "max_force_n": 0.17141184628691117,
+      "max_omega_rad_s": 171.83273229313815,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 78.29251734912395,
+      "initial_state_sha256": "ee58c513d60ef89fbde9bcefe0abb8272c2c6236ea97e32c93c5719450529741",
+      "trajectory_sha256": "3a34b754122b8e3268a30fceed0da489634721ed9aa39ccfeaf567b92185230c",
+      "position_rmse_diameters": 0.0,
+      "count_rmse_particles": 0.0,
+      "final_count_difference_vs_finest": 0
+    },
+    {
+      "run_id": "narrow_seed11_dt1",
+      "case": "narrow",
+      "seed": 11,
+      "dt_s": 1e-05,
+      "duration_s": 0.6,
+      "particles": 50,
+      "outlet_diameter_ratio": 1.25,
+      "friction": 0.65,
+      "wall_friction": 0.65,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 37.775684305954655,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 0,
+      "fraction": 0.0,
+      "time_to_empty_s": null,
+      "flow_state": "unresolved_transient",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.8066844328193524,
+      "speed_p95_m_s": 0.12687157380696718,
+      "max_overlap_over_radius": 0.09530915035856069,
+      "overlap_p95_upper": 0.017,
+      "max_force_n": 0.19252230646443771,
+      "max_omega_rad_s": 177.92710100158024,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 41.55354418233037,
+      "initial_state_sha256": "e76dd7b3fd73367d04282e7422867252306fcedb9820770523da1220bf97336e",
+      "trajectory_sha256": "f31ce5d084f80ebfab3c3b21bfa5a5ded3e416fc834a7db3d7b2990bbde5cf0e",
+      "position_rmse_diameters": 0.20011626914424094,
+      "count_rmse_particles": 0.0,
+      "final_count_difference_vs_finest": 0
+    },
+    {
+      "run_id": "narrow_seed11_dt2",
+      "case": "narrow",
+      "seed": 11,
+      "dt_s": 5e-06,
+      "duration_s": 0.6,
+      "particles": 50,
+      "outlet_diameter_ratio": 1.25,
+      "friction": 0.65,
+      "wall_friction": 0.65,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 37.775684305954655,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 0,
+      "fraction": 0.0,
+      "time_to_empty_s": null,
+      "flow_state": "unresolved_transient",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.8068116099331503,
+      "speed_p95_m_s": 0.1232134050060285,
+      "max_overlap_over_radius": 0.09575800909553686,
+      "overlap_p95_upper": 0.016,
+      "max_force_n": 0.19337850665594153,
+      "max_omega_rad_s": 177.8407662428825,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 79.92646287521347,
+      "initial_state_sha256": "e76dd7b3fd73367d04282e7422867252306fcedb9820770523da1220bf97336e",
+      "trajectory_sha256": "ddaa699917ffc8cd8a9bf946d65177032e342ffb3df62b3b322387a23fe777b6",
+      "position_rmse_diameters": 0.0648170674295309,
+      "count_rmse_particles": 0.0,
+      "final_count_difference_vs_finest": 0
+    },
+    {
+      "run_id": "narrow_seed11_dt4",
+      "case": "narrow",
+      "seed": 11,
+      "dt_s": 2.5e-06,
+      "duration_s": 0.6,
+      "particles": 50,
+      "outlet_diameter_ratio": 1.25,
+      "friction": 0.65,
+      "wall_friction": 0.65,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 37.775684305954655,
+      "initial_lift_m": 0.0,
+      "status": "ok",
+      "error": "",
+      "discharged": 0,
+      "fraction": 0.0,
+      "time_to_empty_s": null,
+      "flow_state": "unresolved_transient",
+      "interior_pause": false,
+      "near_outlet_area_fraction": 0.8068116099331503,
+      "speed_p95_m_s": 0.1229417617243019,
+      "max_overlap_over_radius": 0.09549030164122713,
+      "overlap_p95_upper": 0.017,
+      "max_force_n": 0.19265403466558217,
+      "max_omega_rad_s": 177.7187661760245,
+      "boundary_leak_samples": 0,
+      "conserved": true,
+      "runtime_s": 163.80453332699835,
+      "initial_state_sha256": "e76dd7b3fd73367d04282e7422867252306fcedb9820770523da1220bf97336e",
+      "trajectory_sha256": "6ece1c579b2e1d807a5c8715effbbf2c9f4331e091c0db3f0508822f4ea84840",
+      "position_rmse_diameters": 0.0,
+      "count_rmse_particles": 0.0,
+      "final_count_difference_vs_finest": 0
+    }
+  ],
+  "benchmarks": {
+    "hardware": {
+      "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.31",
+      "python": "3.11.18",
+      "numpy": "1.26.4",
+      "processor": "x86_64",
+      "libc": [
+        "glibc",
+        "2.31"
+      ],
+      "packages": {
+        "taichi": "1.7.3",
+        "matplotlib": "3.11.2",
+        "pillow": "12.3.0"
+      },
+      "gpu": "NVIDIA A100-SXM4-80GB, 580.126.20"
+    },
+    "elastic": [
+      {
+        "dt_s": 1e-05,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 3.141592653589794e-06,
+        "final_energy_j": 3.1420925954935e-06,
+        "final_energy_fraction": 1.0001591364504672,
+        "max_energy_change_fraction": 0.012774566755077845,
+        "final_position_error_m": 2.522287571036022e-08,
+        "max_omega_rad_s": 0.0,
+        "max_overlap_over_radius": 0.03963561230112223
+      },
+      {
+        "dt_s": 5e-06,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 3.141592653589794e-06,
+        "final_energy_j": 3.141603195260743e-06,
+        "final_energy_fraction": 1.0000033555180798,
+        "max_energy_change_fraction": 0.006347381391184901,
+        "final_position_error_m": 1.287639155456849e-09,
+        "max_omega_rad_s": 0.0,
+        "max_overlap_over_radius": 0.03963330658964892
+      },
+      {
+        "dt_s": 2.5e-06,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 3.141592653589794e-06,
+        "final_energy_j": 3.1415980904348864e-06,
+        "final_energy_fraction": 1.0000017306015425,
+        "max_energy_change_fraction": 0.003163880018986357,
+        "final_position_error_m": 4.4473860314961366e-10,
+        "max_omega_rad_s": 0.0,
+        "max_overlap_over_radius": 0.03963346968789087
+      }
+    ],
+    "damped_frictional": [
+      {
+        "dt_s": 1e-05,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 6.350884841043638e-06,
+        "final_energy_j": 6.0404121755478664e-06,
+        "final_energy_fraction": 0.9511134789455965,
+        "max_energy_change_fraction": 0.048886521054403505,
+        "final_position_error_m": null,
+        "max_omega_rad_s": 16.600624625361938,
+        "max_overlap_over_radius": 0.05116319755362809
+      },
+      {
+        "dt_s": 5e-06,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 6.350884841043638e-06,
+        "final_energy_j": 6.055430399865807e-06,
+        "final_energy_fraction": 0.9534782241258086,
+        "max_energy_change_fraction": 0.04652177587419133,
+        "final_position_error_m": null,
+        "max_omega_rad_s": 16.51394094642707,
+        "max_overlap_over_radius": 0.051237750052336196
+      },
+      {
+        "dt_s": 2.5e-06,
+        "duration_s": 0.005,
+        "backend": "numpy-cpu",
+        "initial_energy_j": 6.350884841043638e-06,
+        "final_energy_j": 6.063109891016749e-06,
+        "final_energy_fraction": 0.9546874243149401,
+        "max_energy_change_fraction": 0.045312575685059836,
+        "final_position_error_m": null,
+        "max_omega_rad_s": 16.47230302244055,
+        "max_overlap_over_radius": 0.05127507574623886
+      }
+    ],
+    "free_fall": [
+      {
+        "dt_s": 1e-05,
+        "position_error_m": 9.80999999677934e-07
+      },
+      {
+        "dt_s": 5e-06,
+        "position_error_m": 4.904999996169224e-07
+      },
+      {
+        "dt_s": 2.5e-06,
+        "position_error_m": 2.4524999986397233e-07
+      }
+    ],
+    "cpu_cuda": {
+      "backend": "taichi-cuda",
+      "duration_s": 0.004,
+      "steps": 400,
+      "passed": true,
+      "absolute_tolerances": {
+        "position": 1e-10,
+        "velocity": 1e-08,
+        "omega": 1e-06
+      },
+      "position_max_abs_error": 0.0,
+      "velocity_max_abs_error": 0.0,
+      "omega_max_abs_error": 3.552713678800501e-15
+    }
+  },
+  "max_sweep_overlap_radius": 0.14745547143841314,
+  "total_boundary_leak_samples": 0,
+  "all_successful_runs_conserve_particles": true,
+  "source_sha256": [
+    "d6ee77b5c5f109fdc0d031d5a6bcc12816d1dacb63cdccd2e4de6cd412d7da77"
+  ],
+  "failures": [
+    {
+      "run_id": "raised_fill_seed11_dt1",
+      "case": "raised_fill",
+      "seed": 11,
+      "dt_s": 1e-05,
+      "duration_s": 0.45,
+      "particles": 50,
+      "outlet_diameter_ratio": 3.0,
+      "friction": 0.4,
+      "wall_friction": 0.4,
+      "funnel_height_m": 0.1,
+      "wall_angle_from_vertical_deg": 36.501441120506314,
+      "initial_lift_m": 0.01,
+      "status": "failed",
+      "error": "RuntimeError: excessive overlap 0.1506 radii (limit 0.15)",
+      "discharged": null,
+      "fraction": null,
+      "time_to_empty_s": null,
+      "flow_state": null,
+      "interior_pause": null,
+      "near_outlet_area_fraction": null,
+      "speed_p95_m_s": null,
+      "max_overlap_over_radius": null,
+      "overlap_p95_upper": null,
+      "max_force_n": null,
+      "max_omega_rad_s": null,
+      "boundary_leak_samples": null,
+      "conserved": null,
+      "runtime_s": 3.0126058468595147,
+      "initial_state_sha256": null,
+      "trajectory_sha256": null
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "description":"Identical initial state hashes, common 0.0025 s sample times, same physical duration at dt/dt2/dt4",
+  "base":{"n_particles":50,"dt_s":0.00001,"seed":11},
+  "seeds":[11],
+  "dt_factors":[1,2,4],
+  "duration_s":0.4,
+  "sample_interval_s":0.0025,
+  "cases":[
+    {"name":"wide", "outlet_ratio":7.5},
+    {"name":"narrow", "outlet_ratio":1.25,"duration_s":0.6,"parameters":{"friction":0.65,"wall_friction":0.65}}
+  ]
+}

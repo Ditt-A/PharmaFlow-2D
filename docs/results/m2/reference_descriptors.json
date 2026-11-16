@@ -1,0 +1,18 @@
+[
+  {
+    "sheet": "D=2 cm: Profiles",
+    "velocity_numeric_range": 2.0223180000000003,
+    "velocity_coefficient_of_variation": 0.08325202583128996,
+    "parsed_pair_count": 63,
+    "total_data_rows": 200,
+    "comparison": "Parseable subset only; fragmented cells excluded without reconstruction. Not an accuracy metric or a complete reference profile."
+  },
+  {
+    "sheet": "D=3 cm: Profiles",
+    "velocity_numeric_range": 1.8301739999999995,
+    "velocity_coefficient_of_variation": 0.07093911704848242,
+    "parsed_pair_count": 63,
+    "total_data_rows": 200,
+    "comparison": "Parseable subset only; fragmented cells excluded without reconstruction. Not an accuracy metric or a complete reference profile."
+  }
+]

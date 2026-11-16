@@ -1,0 +1,20 @@
+{
+  "description": "One-factor pilots: seeded 50-disk fills, 0.45 s, before selecting repeated cases",
+  "base": {"n_particles": 50, "dt_s": 0.00001},
+  "seeds": [11],
+  "duration_s": 0.45,
+  "sample_interval_s": 0.0025,
+  "backend": "cpu",
+  "cases": [
+    {"name":"outlet1p25", "outlet_ratio":1.25, "parameters":{"friction":0.65,"wall_friction":0.65}},
+    {"name":"outlet2", "outlet_ratio":2.0},
+    {"name":"outlet2p5", "outlet_ratio":2.5},
+    {"name":"outlet3", "outlet_ratio":3.0},
+    {"name":"outlet5", "outlet_ratio":5.0},
+    {"name":"outlet7p5", "outlet_ratio":7.5},
+    {"name":"low_particle_friction", "outlet_ratio":3.0, "parameters":{"friction":0.1}},
+    {"name":"low_wall_friction", "outlet_ratio":3.0, "parameters":{"wall_friction":0.1}},
+    {"name":"steeper_walls", "outlet_ratio":3.0, "parameters":{"funnel_height_m":0.16}},
+    {"name":"raised_fill", "outlet_ratio":3.0, "parameters":{"initial_lift_m":0.01}}
+  ]
+}

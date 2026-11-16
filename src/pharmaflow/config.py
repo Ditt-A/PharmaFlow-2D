@@ -25,6 +25,7 @@ class HopperConfig:
     removal_y_m: float = -0.04
     neighbor_skin_m: float = 0.001
     max_overlap_ratio: float = 0.15
+    initial_lift_m: float = 0.0
 
     @property
     def particle_mass_kg(self):
@@ -60,6 +61,8 @@ class HopperConfig:
             raise ValueError("n_particles must be a positive integer")
         if not isinstance(self.seed, int) or self.seed < 0:
             raise ValueError("seed must be a nonnegative integer")
+        if not 0 <= self.initial_lift_m < self.height_m / 2:
+            raise ValueError("initial lift must be nonnegative and below half the height")
         if not 0 < self.max_overlap_ratio <= 0.25 or self.removal_y_m >= -2 * self.particle_radius_m:
             raise ValueError("invalid overlap tolerance or removal plane")
         if self.dt_s > self.timestep_limit_s():

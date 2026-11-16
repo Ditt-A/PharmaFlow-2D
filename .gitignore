@@ -40,3 +40,7 @@ runs/
 # IDE
 .vscode/
 .idea/
+
+# Only the compact solver-generated README animation is published.
+assets/*
+!assets/m2_demo.gif

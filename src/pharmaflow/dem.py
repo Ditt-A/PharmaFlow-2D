@@ -52,7 +52,7 @@ def initial_state(config):
     r, spacing = config.particle_radius_m, 2.2 * config.particle_radius_m
     positions = []
     walls = hopper_walls(config, 0)
-    for row, y in enumerate(np.arange(3 * r, config.height_m - 2 * r, spacing)):
+    for row, y in enumerate(np.arange(3 * r, config.height_m - 2 * r - config.initial_lift_m, spacing)):
         half = min(config.width_m / 2, config.outlet_width_m / 2 +
                    (config.width_m - config.outlet_width_m) / 2 * y / config.funnel_height_m)
         xs = np.arange(-half + 2 * r, half - 2 * r, spacing) + (row % 2) * spacing / 2
@@ -60,7 +60,7 @@ def initial_state(config):
             point = np.array([x, y]) + rng.uniform(-0.025 * r, 0.025 * r, 2)
             distance, _, _ = segment_contacts(point[None], walls)
             if np.min(distance) >= 1.05 * r:
-                positions.append(point)
+                positions.append(point + [0, config.initial_lift_m])
             if len(positions) == config.n_particles:
                 return ParticleState.create(positions, r, config.particle_mass_kg)
     raise ValueError("particle count does not fit initial hopper fill")
@@ -85,6 +85,7 @@ class DEMSystem:
         self.response = contact_response
         self.backend = "numpy-cpu"
         self.backend_note = None
+        self.monitor = None
         if backend not in ("cpu", "auto", "cuda", "taichi-cpu"):
             raise ValueError("backend must be cpu, auto, cuda or taichi-cpu")
         if backend != "cpu":
@@ -141,6 +142,8 @@ class DEMSystem:
         mu = np.concatenate((mu, np.full(len(wi), c.wall_friction)))
         i, j = np.concatenate((i, wi)), np.concatenate((j, -wall - 1))
         if not len(i):
+            if self.monitor is not None:
+                self.monitor.contacts(self, overlap, scale, np.empty(0), np.empty(0), np.empty(0), j)
             self.history = {}
             return force, torque
         ratio = float(np.max(overlap / scale))
@@ -158,6 +161,8 @@ class DEMSystem:
                                   c.normal_stiffness_n_m, c.tangential_stiffness_n_m,
                                   c.normal_damping_kg_s, c.tangential_damping_kg_s)
         contact_force = fn[:, None] * normal + ft[:, None] * tangent
+        if self.monitor is not None:
+            self.monitor.contacts(self, overlap, scale, fn, vn, ft * vt, j)
         np.add.at(force, i, contact_force)
         np.add.at(torque, i, -li * ft)
         np.add.at(force, j[:pair_count], -contact_force[:pair_count])
@@ -192,8 +197,12 @@ class DEMSystem:
             removed = s.active & (s.position[:, 1] < c.removal_y_m)
             if np.any(removed & np.isnan(self.crossing_time)):
                 raise RuntimeError("particle left domain without crossing outlet")
+            if self.monitor is not None:
+                self.monitor.remove(self, removed)
             s.active[removed] = False
         self.step_index += 1
+        if self.monitor is not None:
+            self.monitor.after_step(self, force, torque)
 
     def advance(self, steps):
         for _ in range(steps):

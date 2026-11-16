@@ -1,0 +1,6 @@
+{
+  "description":"Follow-up pilot after 10 mm raised-fill impact exceeded overlap guard; evaluate reduced fill without changing material or tolerance",
+  "base":{"n_particles":35,"dt_s":0.00001},
+  "seeds":[11],"duration_s":0.45,"sample_interval_s":0.0025,
+  "cases":[{"name":"smaller_fill","outlet_ratio":3.0}]
+}

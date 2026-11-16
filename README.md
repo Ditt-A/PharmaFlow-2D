@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1 physical 2D disk DEM implemented, with physics tests and solver-generated discharge/arching examples. Reference calibration (M2), AI prediction and optimization remain deferred. No industrial performance claims.
+> **Status:** M1 DEM and M2 numerical/benchmark campaign implemented and tested. 41 tests pass, including optional strict CUDA checks. Published-data calibration remains unresolved; AI prediction and optimization remain deferred. No industrial performance claims.
 
 ## The engineering problem
 
@@ -120,8 +120,40 @@ force reduction and integration stay on CPU. It is a tested hybrid backend and
 does not promise a speedup at 50–200 particles. CPU is the default.
 
 Read [the physical model and numerical limits](docs/M1_METHODS.md) and
-[node680 verification evidence](docs/M1_VERIFICATION.md). Generated outputs stay
-in ignored local folders; nothing is automatically committed or uploaded.
+[node680 verification evidence](docs/M1_VERIFICATION.md). Generated trajectories
+and full animations stay in ignored local folders.
+
+## M2 numerical validation and controlled experiments
+
+![Real DEM discharge, 50 disks, speed in SI units](assets/m2_demo.gif)
+
+This optimized preview contains 36 actual solver frames. Full-size wide/arch
+GIFs and PNG snapshots are generated locally. The M2 campaign includes 24
+repeated cases (8 configurations × 3 seeds), 6 paired timestep runs, controlled
+analytic energy/contact benchmarks, independent replay checks and an audit of
+all 14 published Numbers tables.
+
+- Elastic maximum energy error decreases **1.277% → 0.635% → 0.316%** at dt,
+  dt/2 and dt/4. Individual many-body trajectories retain measurable errors.
+- The wide outlet empties for all three seeds. At D/d=3, two seeds empty and
+  one retains a finite-window arch; another completed run temporarily pauses.
+- All 24 repeated runs conserve particles and pass sidewall leak checks.
+- One deliberately reported pilot fails the unchanged overlap guard.
+- Published data contains fragmented numeric strings and unresolved units;
+  the reference comparison is explicitly partial and qualitative.
+
+Read [M2 validation and exact reproduction commands](docs/M2_VALIDATION.md),
+[reference comparison limits](docs/M2_REFERENCE_COMPARISON.md), and
+[quantitative CSV/JSON/PNG results](docs/results/m2/).
+
+```bash
+python scripts/run_m2.py --suite configs/m2/sweep.json --output outputs/metrics/m2/sweep --jobs 4
+python scripts/run_m2.py --suite configs/m2/convergence.json --output outputs/metrics/m2/convergence --jobs 3
+python scripts/benchmark_m2.py --cuda
+```
+
+These are a small research pilot, not a permanent-clogging classifier, an
+industrial material calibration, or a full reproduction of the published DEM.
 
 ## Repository layout
 
@@ -158,8 +190,9 @@ PharmaFlow-2D/
 └── tests/                         # Configuration and physical validation
 ```
 
-The physical DEM solver and headless visualizer are implemented. Reference
-calibration, AI modeling, interactive dashboards and optimization remain future work.
+The physical DEM solver, M2 experiment runner and headless visualizers are
+implemented. Reference calibration, AI modeling, interactive dashboards and
+optimization remain future work.
 
 ## Planned milestones
 
@@ -180,6 +213,6 @@ calibration, AI modeling, interactive dashboards and optimization remain future 
 
 ## Next step for Codex
 
-Review the M1 evidence and pursue **M2 only**: timestep/contact sensitivity and
-scientifically comparable aggregate measurements after units and geometry are
-verified. Do not start AI training until M1/M2 quality gates are satisfied.
+Resolve the published data's numeric alignment and units, expand material and
+stiffness sensitivity, and test more independent fills before quantitative
+calibration or ML. Preserve M1/M2 tests and documented reproduction boundaries.

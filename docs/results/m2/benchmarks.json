@@ -1,0 +1,122 @@
+{
+  "hardware": {
+    "platform": "Linux-6.8.0-106-generic-x86_64-with-glibc2.31",
+    "python": "3.11.18",
+    "numpy": "1.26.4",
+    "processor": "x86_64",
+    "libc": [
+      "glibc",
+      "2.31"
+    ],
+    "packages": {
+      "taichi": "1.7.3",
+      "matplotlib": "3.11.2",
+      "pillow": "12.3.0"
+    },
+    "gpu": "NVIDIA A100-SXM4-80GB, 580.126.20"
+  },
+  "elastic": [
+    {
+      "dt_s": 1e-05,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 3.141592653589794e-06,
+      "final_energy_j": 3.1420925954935e-06,
+      "final_energy_fraction": 1.0001591364504672,
+      "max_energy_change_fraction": 0.012774566755077845,
+      "final_position_error_m": 2.522287571036022e-08,
+      "max_omega_rad_s": 0.0,
+      "max_overlap_over_radius": 0.03963561230112223
+    },
+    {
+      "dt_s": 5e-06,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 3.141592653589794e-06,
+      "final_energy_j": 3.141603195260743e-06,
+      "final_energy_fraction": 1.0000033555180798,
+      "max_energy_change_fraction": 0.006347381391184901,
+      "final_position_error_m": 1.287639155456849e-09,
+      "max_omega_rad_s": 0.0,
+      "max_overlap_over_radius": 0.03963330658964892
+    },
+    {
+      "dt_s": 2.5e-06,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 3.141592653589794e-06,
+      "final_energy_j": 3.1415980904348864e-06,
+      "final_energy_fraction": 1.0000017306015425,
+      "max_energy_change_fraction": 0.003163880018986357,
+      "final_position_error_m": 4.4473860314961366e-10,
+      "max_omega_rad_s": 0.0,
+      "max_overlap_over_radius": 0.03963346968789087
+    }
+  ],
+  "damped_frictional": [
+    {
+      "dt_s": 1e-05,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 6.350884841043638e-06,
+      "final_energy_j": 6.0404121755478664e-06,
+      "final_energy_fraction": 0.9511134789455965,
+      "max_energy_change_fraction": 0.048886521054403505,
+      "final_position_error_m": null,
+      "max_omega_rad_s": 16.600624625361938,
+      "max_overlap_over_radius": 0.05116319755362809
+    },
+    {
+      "dt_s": 5e-06,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 6.350884841043638e-06,
+      "final_energy_j": 6.055430399865807e-06,
+      "final_energy_fraction": 0.9534782241258086,
+      "max_energy_change_fraction": 0.04652177587419133,
+      "final_position_error_m": null,
+      "max_omega_rad_s": 16.51394094642707,
+      "max_overlap_over_radius": 0.051237750052336196
+    },
+    {
+      "dt_s": 2.5e-06,
+      "duration_s": 0.005,
+      "backend": "numpy-cpu",
+      "initial_energy_j": 6.350884841043638e-06,
+      "final_energy_j": 6.063109891016749e-06,
+      "final_energy_fraction": 0.9546874243149401,
+      "max_energy_change_fraction": 0.045312575685059836,
+      "final_position_error_m": null,
+      "max_omega_rad_s": 16.47230302244055,
+      "max_overlap_over_radius": 0.05127507574623886
+    }
+  ],
+  "free_fall": [
+    {
+      "dt_s": 1e-05,
+      "position_error_m": 9.80999999677934e-07
+    },
+    {
+      "dt_s": 5e-06,
+      "position_error_m": 4.904999996169224e-07
+    },
+    {
+      "dt_s": 2.5e-06,
+      "position_error_m": 2.4524999986397233e-07
+    }
+  ],
+  "cpu_cuda": {
+    "backend": "taichi-cuda",
+    "duration_s": 0.004,
+    "steps": 400,
+    "passed": true,
+    "absolute_tolerances": {
+      "position": 1e-10,
+      "velocity": 1e-08,
+      "omega": 1e-06
+    },
+    "position_max_abs_error": 0.0,
+    "velocity_max_abs_error": 0.0,
+    "omega_max_abs_error": 3.552713678800501e-15
+  }
+}

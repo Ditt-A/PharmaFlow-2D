@@ -6,7 +6,9 @@ Implement **PharmaFlow-2D**, a physically explicit **2D Discrete Element Method 
 
 Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVIDIA A100 80GB if exposed by container. Keep a CPU fallback.
 
-**Current stage:** M0 preparation and data access. Do not claim M1 solver or AI models already work.
+**Current stage:** M1 implemented and M2 numerical/benchmark campaign evaluated.
+Verify claims against tests and docs/M2_VALIDATION.md. Published-data calibration
+remains unresolved; no AI models or optimization are implemented or authorized.
 
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
@@ -14,7 +16,7 @@ Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVID
 3. Avoid installing CUDA/PyTorch wheels until kernel/driver version is known.
 4. Never commit raw reference data, downloaded archives, generated particle trajectories, model weights or large figures.
 
-## Immediate next task: M1 DEM engine
+## M1 DEM engine requirements (preserve during further work)
 
 Build a reproducible self-contained 2D disk-based DEM implementation, not just trajectory playback.
 - Coordinates and forces use SI units; document masses, stiffness, damping, friction coefficients, and collision time.

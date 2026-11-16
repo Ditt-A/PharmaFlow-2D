@@ -32,13 +32,14 @@ def hardware_info():
     return info
 
 
-def simulate(config, duration_s=0.5, sample_every=250, backend="cpu"):
+def simulate(config, duration_s=0.5, sample_every=250, backend="cpu", monitor=None):
     if not math.isfinite(duration_s) or duration_s <= 0:
         raise ValueError("duration must be finite and positive")
     if not isinstance(sample_every, int) or sample_every < 1:
         raise ValueError("sample_every must be a positive integer")
     start = time.perf_counter()
     system = DEMSystem(config, backend=backend)
+    system.monitor = monitor
     arrays = {key: [] for key in ("time_s", "position_m", "velocity_m_s", "angle_rad", "omega_rad_s", "active", "discharged_count")}
     def sample():
         s = system.state
@@ -47,6 +48,8 @@ def simulate(config, duration_s=0.5, sample_every=250, backend="cpu"):
                            ("angle_rad", s.angle), ("omega_rad_s", s.omega), ("active", s.active)):
             arrays[key].append(value.copy())
         arrays["discharged_count"].append(int(np.isfinite(system.crossing_time).sum()))
+        if monitor is not None:
+            monitor.sample(system)
     steps = int(math.ceil(duration_s / config.dt_s - 1e-10))
     sample()
     for index in range(1, steps + 1):
@@ -55,11 +58,14 @@ def simulate(config, duration_s=0.5, sample_every=250, backend="cpu"):
             sample()
     # Check final contacts without advancing contact history or integration.
     history = system.history.copy()
+    system.monitor = None
     system.forces()
     system.history = history
     result = {key: np.asarray(value) for key, value in arrays.items()}
     result.update(radius_m=system.state.radius.copy(), mass_kg=system.state.mass.copy(),
                   crossing_time_s=system.crossing_time.copy(), particle_id=np.arange(config.n_particles))
+    if monitor is not None:
+        result.update(monitor.arrays())
     checks = {"finite": all(np.all(np.isfinite(result[key])) for key in
               ("position_m", "velocity_m_s", "angle_rad", "omega_rad_s", "time_s")),
               "max_overlap_over_radius": system.max_overlap_ratio,
@@ -94,6 +100,8 @@ def simulate(config, duration_s=0.5, sample_every=250, backend="cpu"):
                 "created_utc": datetime.now(timezone.utc).isoformat(),
                 "trajectory_sha256": fingerprint.hexdigest(), "accuracy_checks": checks,
                 "scope": "uncalibrated dry 2D disks; no CFD, AI or published trajectory reconstruction"}
+    if monitor is not None:
+        metadata["physics_monitor"] = monitor.summary()
     return result, metadata
 
 
