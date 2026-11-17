@@ -1,0 +1,31 @@
+{
+  "changed_historical_files": [],
+  "core_versions": {
+    "joblib": "1.4.2",
+    "matplotlib": "3.11.2",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pillow": "12.3.0",
+    "plotly": "5.24.1",
+    "pyarrow": "19.0.1",
+    "requests": "2.34.2",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.1",
+    "streamlit": "1.67.0",
+    "taichi": "1.7.3",
+    "xgboost-cpu": "2.1.4"
+  },
+  "frozen_candidates_verified": 86,
+  "historical_baseline_passed": 149,
+  "historical_files_verified": 805,
+  "m5_attempts_at_end": 2,
+  "m5_attempts_at_start": 2,
+  "m5_ledger_unchanged": true,
+  "m6_solver_attempts": 0,
+  "m6_tests_passed": 23,
+  "ml_training": false,
+  "new_dependencies_installed": false,
+  "physical_fitting": false,
+  "strict_taichi_cpu_cuda": true,
+  "total_tests_passed": 172
+}

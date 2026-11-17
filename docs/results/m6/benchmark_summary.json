@@ -1,0 +1,19 @@
+{
+  "cohort_counts": {
+    "m3": 12,
+    "m4b": 27
+  },
+  "decision": "M6A_LIMITED_COMPARISON_ONLY",
+  "example_run_id": "pilot_0151aedb5166ad43_hexagonal_s202",
+  "external_agreement_metric_computed": false,
+  "fitting_performed": false,
+  "held_out_runs_used_for_fitting": 0,
+  "limitation": "Short finite fills and arch tails do not establish sustained free-flow scaling; no test cohort used for parameter or policy selection",
+  "maximum_initial_particles": 50,
+  "maximum_post_buffer_crossings": 29,
+  "new_solver_attempts": 0,
+  "parameters_fitted": 0,
+  "physical_configurations": 15,
+  "qualified_scaling_runs": 0,
+  "training_runs_screened": 39
+}

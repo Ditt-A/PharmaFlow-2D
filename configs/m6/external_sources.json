@@ -1,0 +1,509 @@
+{
+  "version": "m6-external-audit-v1",
+  "download_policy": {
+    "maximum_total_new_bytes": 3000000,
+    "maximum_file_bytes": 1000000,
+    "forbidden_archives": [
+      ".zip",
+      ".7z",
+      ".numbers"
+    ],
+    "solver_attempts": 0,
+    "fit_parameters": false,
+    "notes": "Small text/metadata only; reuse checksum-verified local Zenodo files. Never consume M5 demo budget."
+  },
+  "sources": [
+    {
+      "id": "dryad",
+      "doi": "10.5061/dryad.cvdncjtb5",
+      "title": "Cornerstones experimental circular-grain hopper",
+      "license": "CC0-1.0 (dataset API); article/preprint licenses are separate",
+      "metadata_version": "Dryad API version 376462, versionNumber 9",
+      "data_format": "Three ZIP archives of MATLAB structures, four small text/README files",
+      "advertised_bytes": 17411556118,
+      "public_metadata": true,
+      "public_file_access": "Advertised public; tested small file endpoints return 403, API download returns 401",
+      "particle_geometry": "Tridisperse circular UHMW polyethylene disks; quasi-2D confined monolayer",
+      "diameters_m": [
+        0.006,
+        0.0074,
+        0.0086
+      ],
+      "thickness_m": 0.00318,
+      "density_kg_m3": 940.0,
+      "front_back_gap_m": 0.0044,
+      "hopper_width_m": 0.227,
+      "hopper_height_m": 0.5,
+      "fill_height_m_approx": 0.35,
+      "outlet_ratio_reference": "largest diameter dL=8.6mm, not mean diameter",
+      "outlet_ratios": [
+        3.61,
+        3.74,
+        3.86,
+        3.98,
+        4.15
+      ],
+      "wall_angle_deg_from_vertical": null,
+      "friction_particle": null,
+      "friction_wall": null,
+      "restitution": null,
+      "sampling_hz": 130,
+      "tracking_precision_m_reported": 0.00014,
+      "uncertainty_note": "Methods give 0.14mm tracking precision; preprint Appendix uses 0.3mm final-position criterion. Definitions differ; do not merge.",
+      "protocol": "Vibration breaks prior arch; airflow recirculates grains outside the outlet ROI; stable clog requires 5s without exit",
+      "mass_definition": "Preprint counts mass passing a semicircular boundary spanning the outlet, not the DEM outlet-plane count",
+      "event_warning": "External Emptied means remaining flow stops after an arch, not an empty hopper. Labels are not M3/M5 labels.",
+      "evidence": [
+        "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.cvdncjtb5",
+        "https://arxiv.org/html/2407.05491v1#S2.SS1",
+        "https://arxiv.org/html/2407.05491v1#A1"
+      ],
+      "unknown": [
+        "MATLAB field names and units (README inaccessible)",
+        "species number fractions",
+        "numeric hopper-floor angle and detailed boundary dimensions",
+        "friction/restitution and wall roughness",
+        "frame coverage of startup and final 5s",
+        "mass uncertainty and run-level independence under recirculation"
+      ],
+      "interpretation": "Closest particle geometry, but no matched quantitative validation with current monodisperse wedge runs"
+    },
+    {
+      "id": "delft",
+      "doi": "10.4121/C.6415736",
+      "resolved_doi": "10.4121/fa7544d6-14fd-4372-a81f-e2e1b4a44832.v1",
+      "title": "TU Delft gravel hopper collection",
+      "license": "CC BY-SA 4.0 on each of seven inspected child datasets; collection license not separately stated",
+      "data_format": "TIFF image sequences and calibration images in .7z, README/info text",
+      "inspected_child_datasets": 7,
+      "inspected_files": 56,
+      "inspected_child_bytes": 183047314185,
+      "advertised_experiments": 201,
+      "sum_of_collection_listed_repetitions": 231,
+      "linked_100mm_repetitions": 35,
+      "particle_geometry": "3D irregular gravel, surface imaging/PIV rather than strict 2D disks",
+      "diameters_m": null,
+      "density_kg_m3": null,
+      "thickness_m": null,
+      "hopper_width_m": null,
+      "hopper_height_m": null,
+      "nominal_outlet_widths_m": [
+        0.05,
+        0.075,
+        0.1,
+        0.15,
+        0.2
+      ],
+      "inspected_outlet_width_m": 0.1,
+      "nominal_angles_deg": [
+        20,
+        30,
+        45,
+        60,
+        75,
+        82.5,
+        90
+      ],
+      "angle_reference": null,
+      "friction_particle": null,
+      "friction_wall": null,
+      "restitution": null,
+      "sampling_hz": "Catalog values include 300 and 400Hz; headered per-run info includes 300/400/600; reconcile per run",
+      "protocol": "Finite hopper discharge, repeated geometries; collection promises load cells and high-speed images",
+      "measured_observables": "Images suitable for future calibrated PIV. No load-cell time-series file or ready velocity table in 56 inspected file entries.",
+      "evidence": [
+        "https://data.4tu.nl/collections/fa7544d6-14fd-4372-a81f-e2e1b4a44832",
+        "https://data.4tu.nl/datasets/e3e48335-3a2f-4c10-88c4-54b9473d3927",
+        "https://doi.org/10.4233/uuid:ad7999d2-5058-4a9d-8688-be6c91f41485"
+      ],
+      "unknown": [
+        "gravel size distribution and material constants in retrieved dataset files",
+        "angle reference and full 3D geometry",
+        "location, units and calibration of promised load-cell time series",
+        "PIV calibration uncertainty and synchronization",
+        "whether every archive contains complete startup/emptying or any clogging events"
+      ],
+      "interpretation": "Qualitative bulk-flow comparator; projected gravel surface velocity/density are not disk center velocity/area fraction"
+    },
+    {
+      "id": "yogi",
+      "doi": "10.5281/zenodo.20554446",
+      "title": "Yogi & Khakhar wedge exit-region profiles/maps",
+      "license": "CC BY 4.0 (verified record API)",
+      "data_format": "Apple Numbers ZIP containers: quasi2D experiment, quasi2D simulation and 3D simulation",
+      "advertised_bytes": 30393158,
+      "particle_geometry": "Experimental quasi-2D system / 3D particle DEM; not strictly 2D disks",
+      "diameters_m": null,
+      "density_kg_m3": null,
+      "thickness_m": null,
+      "hopper_width_m": null,
+      "hopper_height_m": null,
+      "outlet_widths_m": [
+        0.02,
+        0.03
+      ],
+      "wall_angle_deg_from_vertical": null,
+      "friction_particle": null,
+      "friction_wall": null,
+      "restitution": null,
+      "sampling_hz": null,
+      "experimental_tables": 4,
+      "total_tables": 14,
+      "columns": [
+        "y",
+        "phi",
+        "dphi",
+        "uy",
+        "duy",
+        "ay",
+        "day",
+        "x",
+        "vx",
+        "vy"
+      ],
+      "evidence": [
+        "https://zenodo.org/api/records/20554446",
+        "https://doi.org/10.1103/1ryw-6q89",
+        "docs/results/m2/reference_audit.json"
+      ],
+      "unknown": [
+        "physical units, coordinate origin/sign and normalization",
+        "fragmented numeric string cells",
+        "density/fraction and error-column definitions",
+        "averaging windows and repetitions",
+        "material and geometry match"
+      ],
+      "interpretation": "Native profile shapes only; no particle IDs/time series, arch labels or direct discharge-rate table"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "dryad_dataset",
+      "source": "dryad",
+      "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.cvdncjtb5",
+      "path": "dryad/dataset.json",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "dryad_version",
+      "source": "dryad",
+      "url": "https://datadryad.org/api/v2/versions/376462",
+      "path": "dryad/version.json",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "dryad_files",
+      "source": "dryad",
+      "url": "https://datadryad.org/api/v2/versions/376462/files",
+      "path": "dryad/files.json",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "dryad_BinCenters.txt",
+      "source": "dryad",
+      "url": "https://datadryad.org/downloads/file_stream/4172576",
+      "path": "dryad/BinCenters.txt",
+      "role": "small_data",
+      "maximum_bytes": 10000,
+      "expected_bytes": 425,
+      "published_checksum": "sha256:d4d983b80f5b35592aca1024d71e507de7ef861bdfdb1e2179b043723a9e3ec4"
+    },
+    {
+      "id": "dryad_Dimensionless_M_std_error.txt",
+      "source": "dryad",
+      "url": "https://datadryad.org/downloads/file_stream/4172577",
+      "path": "dryad/Dimensionless_M_std_error.txt",
+      "role": "small_data",
+      "maximum_bytes": 10000,
+      "expected_bytes": 425,
+      "published_checksum": "sha256:528a57b77f8ef14ea83123ac0614d63a3a6c6c91db7d6e2daa23ea0e60b8cba3"
+    },
+    {
+      "id": "dryad_Dimensionless_M.txt",
+      "source": "dryad",
+      "url": "https://datadryad.org/downloads/file_stream/4172578",
+      "path": "dryad/Dimensionless_M.txt",
+      "role": "small_data",
+      "maximum_bytes": 10000,
+      "expected_bytes": 425,
+      "published_checksum": "sha256:a8afd9b86ccd7180b027d8556fb804db4a90795a89d4f12cf6ac3f54451c189f"
+    },
+    {
+      "id": "dryad_README.md",
+      "source": "dryad",
+      "url": "https://datadryad.org/downloads/file_stream/4172597",
+      "path": "dryad/README.md",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 5424,
+      "published_checksum": "sha256:d84a2a16eac6a1e8d34d9425375063a3a6fbbcad9cfa14993f7c0ce7ed397fe3"
+    },
+    {
+      "id": "delft_collection",
+      "source": "delft",
+      "url": "https://data.4tu.nl/collections/fa7544d6-14fd-4372-a81f-e2e1b4a44832",
+      "path": "delft/collection.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_0ff14e21-b7ff-4797-92a7-13fc13313d1a",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/0ff14e21-b7ff-4797-92a7-13fc13313d1a",
+      "path": "delft/0ff14e21-b7ff-4797-92a7-13fc13313d1a/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_22e0dc1b-a337-4ae6-8026-be57c10cad7a",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/22e0dc1b-a337-4ae6-8026-be57c10cad7a",
+      "path": "delft/22e0dc1b-a337-4ae6-8026-be57c10cad7a/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_4921447f-1a07-41db-aec3-7d147ac08906",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/4921447f-1a07-41db-aec3-7d147ac08906",
+      "path": "delft/4921447f-1a07-41db-aec3-7d147ac08906/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_8ef58d5c-12ff-4e32-9127-66c7f3e63b5f",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f",
+      "path": "delft/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_d84e4301-d94c-4e8f-ad10-77febeebd71f",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/d84e4301-d94c-4e8f-ad10-77febeebd71f",
+      "path": "delft/d84e4301-d94c-4e8f-ad10-77febeebd71f/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_e3e48335-3a2f-4c10-88c4-54b9473d3927",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/e3e48335-3a2f-4c10-88c4-54b9473d3927",
+      "path": "delft/e3e48335-3a2f-4c10-88c4-54b9473d3927/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8",
+      "source": "delft",
+      "url": "https://data.4tu.nl/datasets/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8",
+      "path": "delft/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8/record.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "delft_0ff14e21-b7ff-4797-92a7-13fc13313d1a_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/0ff14e21-b7ff-4797-92a7-13fc13313d1a/f524d51a-7842-49c7-b27a-b3764138418f",
+      "path": "delft/0ff14e21-b7ff-4797-92a7-13fc13313d1a/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:ec5d6d873c4357007ef5ea062af4bb92"
+    },
+    {
+      "id": "delft_0ff14e21-b7ff-4797-92a7-13fc13313d1a_info_alp_90_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/0ff14e21-b7ff-4797-92a7-13fc13313d1a/95390f52-1b9c-4766-8309-8b5feb3245e1",
+      "path": "delft/0ff14e21-b7ff-4797-92a7-13fc13313d1a/info_alp_90_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 345,
+      "published_checksum": "md5:49ad9f353bc4b8cec8e56b63ae197368"
+    },
+    {
+      "id": "delft_22e0dc1b-a337-4ae6-8026-be57c10cad7a_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/22e0dc1b-a337-4ae6-8026-be57c10cad7a/13bf5046-ec88-40d8-958f-5970bbc20f83",
+      "path": "delft/22e0dc1b-a337-4ae6-8026-be57c10cad7a/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:28d6d78aa18cf9731a6d8d66c97c4388"
+    },
+    {
+      "id": "delft_22e0dc1b-a337-4ae6-8026-be57c10cad7a_info_alp_60_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/22e0dc1b-a337-4ae6-8026-be57c10cad7a/2d4865a1-8562-41d0-8d9b-f53abcfaa351",
+      "path": "delft/22e0dc1b-a337-4ae6-8026-be57c10cad7a/info_alp_60_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 345,
+      "published_checksum": "md5:5ba98516ffd371a599ba503caec86bd4"
+    },
+    {
+      "id": "delft_4921447f-1a07-41db-aec3-7d147ac08906_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/4921447f-1a07-41db-aec3-7d147ac08906/90b2e7e4-772b-47cb-9390-9831fff8aaba",
+      "path": "delft/4921447f-1a07-41db-aec3-7d147ac08906/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1715,
+      "published_checksum": "md5:aa9f6fd857bdffa64b2763a8bc94072f"
+    },
+    {
+      "id": "delft_4921447f-1a07-41db-aec3-7d147ac08906_info_alp_82.5_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/4921447f-1a07-41db-aec3-7d147ac08906/950d7612-232c-4295-9de8-ce02d5383bed",
+      "path": "delft/4921447f-1a07-41db-aec3-7d147ac08906/info_alp_82.5_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 345,
+      "published_checksum": "md5:49ad9f353bc4b8cec8e56b63ae197368"
+    },
+    {
+      "id": "delft_8ef58d5c-12ff-4e32-9127-66c7f3e63b5f_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f/de6091ec-0ca4-45d7-ba0d-7e8a23ac70fb",
+      "path": "delft/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:01bf2a01a14b762934353eed52c3a700"
+    },
+    {
+      "id": "delft_8ef58d5c-12ff-4e32-9127-66c7f3e63b5f_info_alp_45_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f/885ca46e-0501-46f6-af26-cc8b64129879",
+      "path": "delft/8ef58d5c-12ff-4e32-9127-66c7f3e63b5f/info_alp_45_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 38,
+      "published_checksum": "md5:9b4e0ebf526b97029642c0425120467d"
+    },
+    {
+      "id": "delft_d84e4301-d94c-4e8f-ad10-77febeebd71f_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/d84e4301-d94c-4e8f-ad10-77febeebd71f/07d13d0c-b23f-446f-8cae-87ad1b6d5103",
+      "path": "delft/d84e4301-d94c-4e8f-ad10-77febeebd71f/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:73ac285af86375320b271ef5c26ce5a7"
+    },
+    {
+      "id": "delft_d84e4301-d94c-4e8f-ad10-77febeebd71f_info_alp_75_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/d84e4301-d94c-4e8f-ad10-77febeebd71f/888fafe8-dbe5-4af9-8992-29d109af533c",
+      "path": "delft/d84e4301-d94c-4e8f-ad10-77febeebd71f/info_alp_75_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 345,
+      "published_checksum": "md5:a42f4650cbc0f8089a0855ffe84868e5"
+    },
+    {
+      "id": "delft_e3e48335-3a2f-4c10-88c4-54b9473d3927_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/e3e48335-3a2f-4c10-88c4-54b9473d3927/be415b02-9118-48b9-b100-7ea2a8abc0c1",
+      "path": "delft/e3e48335-3a2f-4c10-88c4-54b9473d3927/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:4f9955a52c3e59c4eb200b47ac2e8ecc"
+    },
+    {
+      "id": "delft_e3e48335-3a2f-4c10-88c4-54b9473d3927_info_alp_20_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/e3e48335-3a2f-4c10-88c4-54b9473d3927/a5fe9aeb-b4ff-44c7-a3ed-07fb8dbea35b",
+      "path": "delft/e3e48335-3a2f-4c10-88c4-54b9473d3927/info_alp_20_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 345,
+      "published_checksum": "md5:da45f2071241856a0173b2ecd9732dbb"
+    },
+    {
+      "id": "delft_eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8_README.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8/8b8d8f6e-c577-4075-a1ed-3b74dd7cb12c",
+      "path": "delft/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8/README.txt",
+      "role": "readme",
+      "maximum_bytes": 10000,
+      "expected_bytes": 1713,
+      "published_checksum": "md5:535610e51deb4782493c17ae56aa57f9"
+    },
+    {
+      "id": "delft_eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8_info_alp_30_d_100.txt",
+      "source": "delft",
+      "url": "https://data.4tu.nl/file/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8/8f288c22-1466-4a60-82cb-17c6630e8398",
+      "path": "delft/eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8/info_alp_30_d_100.txt",
+      "role": "acquisition_metadata",
+      "maximum_bytes": 10000,
+      "expected_bytes": 38,
+      "published_checksum": "md5:4db6aa3983b3af77f2edfbb07e32ffd6"
+    },
+    {
+      "id": "zenodo_record",
+      "source": "yogi",
+      "url": "https://zenodo.org/api/records/20554446",
+      "path": "yogi/record.json",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    },
+    {
+      "id": "cornerstones_methods",
+      "source": "dryad",
+      "url": "https://arxiv.org/html/2407.05491v1",
+      "path": "dryad/methods_preprint.html",
+      "role": "metadata",
+      "maximum_bytes": 1000000,
+      "expected_bytes": null,
+      "published_checksum": null
+    }
+  ],
+  "references": [
+    {
+      "url": "https://arxiv.org/html/2407.05491v1",
+      "role": "Cornerstones primary author preprint; distinguish from final paper"
+    },
+    {
+      "url": "https://www.frontiersin.org/journals/soft-matter/articles/10.3389/frsfm.2024.1340744/full",
+      "role": "2D bulk areal density and disk discharge scaling"
+    },
+    {
+      "url": "https://arxiv.org/abs/2103.09144",
+      "role": "Friction-dependent scaling exponent caution"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10035-021-01159-6",
+      "role": "Quasi-2D confinement and model-form discrepancy"
+    }
+  ]
+}

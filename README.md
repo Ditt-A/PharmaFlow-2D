@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1-M4B are implemented. 116 tests pass, including strict CUDA checks. M4B adds 48 valid DEM runs and an independent locked evaluation: the physics-rule baseline remains competitive. Published-data calibration remains unresolved; no industrial performance or deployment claim.
+> **Status:** M1-M6A are implemented. 172 tests pass, including strict CUDA checks. M4B's frozen physics rule remains competitive; M5 provides an interactive research dashboard. M6A audits three external sources and establishes **limited comparison only**: quantitative physical calibration remains unresolved. No industrial performance or deployment claim.
 
 ## The engineering problem
 
@@ -360,6 +360,53 @@ See [operational taxonomy](docs/M5_OPERATIONAL_EVENTS.md),
 [dashboard and exports](docs/M5_DASHBOARD.md), and the separate
 [physics calibration gap analysis](docs/M5_CALIBRATION_GAPS.md).
 
+## M6A — External physics benchmarking and calibration feasibility
+
+**M6A_LIMITED_COMPARISON_ONLY**
+
+Three independent external sources are audited: [Dryad Cornerstones](https://doi.org/10.5061/dryad.cvdncjtb5),
+[Delft hopper experiments](https://doi.org/10.4121/C.6415736), and the existing
+[Yogi & Khakhar reference](https://zenodo.org/records/20554446).
+Seven benchmark specifications distinguish number/mass/normalized discharge,
+time histories, velocity, occupancy definitions, operational events, controlled
+inclination/friction effects and intermittency.
+
+![External observable compatibility, with all quantitative validation gates closed](docs/results/m6/compatibility_matrix.png)
+
+- Successful new metadata/text/preprint cache: **480,530 bytes**, including
+  fourteen MD5-verified Delft README/info files (**13,794 bytes**). No large
+  archive downloads. Existing Zenodo data (**30,393,158 bytes**) are reverified.
+- Dryad metadata and published SHA-256 values are accessible, but four tested
+  small file downloads return HTTP 403; raw measurement schema/units remain
+  unverified. Its tridisperse confined disks are not our monodisperse wedge.
+- Delft's collection total (201 experiments) conflicts with its listed repeat
+  counts (sum 231). Six headered acquisition rows conflict with their catalogs;
+  ten headerless annotations remain provisional. Irregular 3D gravel and its
+  surface imaging cannot be equated with complete disk trajectories.
+- Experimental Yogi profiles yield only **43/160 parseable y/uy pairs per outlet**,
+  with units/averaging unresolved. Native plots have separate axes and no
+  claimed physical agreement.
+- **39 training-only runs screened; 0 qualify for sustained-flow scaling**.
+  Fills are ≤50 particles, with at most 29 post-buffer crossings. No Beverloo
+  coefficient/exponent or physical parameter is fitted. Zero-flow arches are
+  never treated as free-flow regression points.
+
+```bash
+conda activate pharmaflow-2d
+python scripts/audit_m6_sources.py --fetch-small  # bounded first ingest
+python scripts/audit_m6_sources.py               # offline provenance/checksums
+python scripts/benchmark_m6.py                   # existing training data only
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+```
+
+**172 tests pass** (149 historical + 23 M6). No new campaign/demo DEM, ML training, historical
+relabeling or M5 demo-budget consumption. Source and raw data remain separate;
+all numerical/model-form/material/experimental uncertainties are distinguished.
+See [external audit](docs/M6_EXTERNAL_DATA_AUDIT.md),
+[benchmark definitions](docs/M6_PHYSICS_BENCHMARKS.md),
+[calibration feasibility](docs/M6_CALIBRATION_FEASIBILITY.md), and
+[readiness / bounded M6B proposal](docs/M6_READINESS.md). M6B is not launched.
+
 ## Repository layout
 
 ```text
@@ -409,6 +456,7 @@ Optimization is outside the current scope.
 5. **M4A — Research baselines:** implemented with train-only preprocessing/OOF selection, frozen held-out evaluation, independent-event warnings and small-sample limitations. Acquire more evidence before advanced modeling.
 6. **M4B — Targeted expansion:** implemented with 48 new runs, independent configuration testing and causal online replay. Physics rules remain competitive; no neural complexity is justified yet.
 7. **M5 — Operational diagnostics:** implemented with a separate causal taxonomy, interactive actual-state viewer, bounded CPU demos, frozen warning comparison and explicit calibration gaps.
+8. **M6A — External physics:** implemented with bounded independent-source audits, explicit physical benchmark gates and a conditional calibration plan. Limited comparison only; no fitted material parameters or new campaign.
 
 ## Research integrity
 
@@ -421,7 +469,9 @@ Optimization is outside the current scope.
 
 ## Next step for Codex
 
-Preserve M1-M5 tests, historical source hashes/splits, frozen artifacts and test
+Preserve M1-M6A tests, historical source hashes/splits, frozen artifacts and test
 results. Resolve calibration and event-type/policy limitations using development
 groups. Any new campaign requires a separate budget; do not recycle the locked
 M4B cohort for tuning or silently exceed its completed 48-attempt ceiling.
+The data-first M6B proposal requires separate authorization; do not launch it
+or use the remaining M5 dashboard attempts for external benchmarking.

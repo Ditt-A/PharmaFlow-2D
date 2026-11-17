@@ -1,0 +1,41 @@
+{
+  "figure_policy": "Measured/simulated native data labeled explicitly; conceptual diagrams marked conceptual; no agreement overlay or fit",
+  "files": [
+    {
+      "path": "docs/results/m6/acquisition_uncertainty.png",
+      "sha256": "7d1e2dafdff7af99ca732e1e6327d68ef6da505a358172833e3c403b0828b95a"
+    },
+    {
+      "path": "docs/results/m6/available_discharge_observables.png",
+      "sha256": "a5a0e1f3509e0c8df1f58347c45aed639d37016812b24d06ab9d055574b816f3"
+    },
+    {
+      "path": "docs/results/m6/compatibility_matrix.png",
+      "sha256": "1f5ee7f922a07a4bb63fb0f10404d9e11ed4b1827375bddc697e7b2df48aed08"
+    },
+    {
+      "path": "docs/results/m6/native_profile_limits.png",
+      "sha256": "cc8c2d770234d79b0e26b27cd3ed33bb06dd0f5b16049745981c670458782ec3"
+    },
+    {
+      "path": "docs/results/m6/numerical_evidence.png",
+      "sha256": "6124d4e2e976840ab3e62ca897bae1caaed0ceb6ed52cb6028b38f5b3ca149ca"
+    },
+    {
+      "path": "docs/results/m6/parameter_identifiability.png",
+      "sha256": "ec7c41a43523c756d208655c0dc8940ca2d27a6eab25a2da6189f01a96c8121b"
+    },
+    {
+      "path": "docs/results/m6/readiness_summary.png",
+      "sha256": "3dd02f99f7fb5fc1877b86abb723c1f335e7e2dcd30f427ee50ae1c178b4ca55"
+    },
+    {
+      "path": "docs/results/m6/scaling_applicability.png",
+      "sha256": "efa2a1fcc9630e07d55d5e678cd71241fdc07ca4b25790d50f09b4cd35cbbe20"
+    },
+    {
+      "path": "docs/results/m6/uncertainty_diagram.png",
+      "sha256": "b880a3dd8a9a165b8ea6c8eda82825130744bdde5579b03cb2a57c713779660c"
+    }
+  ]
+}

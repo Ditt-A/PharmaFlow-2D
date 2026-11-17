@@ -23,6 +23,19 @@ outside online monitors. No new training, policy tuning or test-based selection.
 Keep local dashboard caches, demo outputs, HTML trajectories and artifacts out
 of Git; publish only selected compact actual DEM screenshots/animations.
 
+M6A is an external-source/benchmark audit: no new campaign/demo DEM integration, ML training,
+physical fitting, neural architecture or design optimization. The result is
+M6A_LIMITED_COMPARISON_ONLY. Preserve M1-M5 evidence and the remaining M5 demo
+budget for dashboard use. Read docs/M6_EXTERNAL_DATA_AUDIT.md,
+M6_PHYSICS_BENCHMARKS.md, M6_CALIBRATION_FEASIBILITY.md and M6_READINESS.md.
+Use only the bounded metadata/small-file allowlist in configs/m6; do not download
+the 17.41GB Dryad release. Unknown units/geometry/definitions fail quantitative
+comparison gates. Separate number and mass flow, 2D areal and 3D bulk density,
+numerical convergence and physical calibration. Never fit free-flow scaling to
+clogged zeros or use historical held-out results for fitting/selection. M6B's
+conditional budget is a proposal, not authorization to execute it.
+Existing physics verification tests remain required and are separate from campaign attempts.
+
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
 2. Run scripts/check_env.py, python -m pytest -q, scripts/download_reference.py --list.

@@ -1,0 +1,19 @@
+source,category,observability,observed_event_count,definition
+dryad,startup_blockage,Startup/vibration coverage and sampling denominator unverified,,M5 operational-observation-v1 unchanged; no external relabeling performed
+dryad,post_discharge_arch,Flow-ending clogs reported; 5s exit-stop definition differs from M3,,M5 operational-observation-v1 unchanged; no external relabeling performed
+dryad,established_flow_arch,Potential with raw crossing histories and reconciled boundaries; not yet established,,M5 operational-observation-v1 unchanged; no external relabeling performed
+dryad,temporary_interruption,Metastable pauses reported; original ML cleaning excludes some static flow frames,,M5 operational-observation-v1 unchanged; no external relabeling performed
+dryad,completed_discharge,External Emptied is not an empty hopper; recirculating operation,,M5 operational-observation-v1 unchanged; no external relabeling performed
+dryad,unresolved_or_censored,Raw duration and truncated/nonclogging inclusion need inspection,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,startup_blockage,Requires full startup images plus retained-grain evidence,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,post_discharge_arch,No event annotations or interior 3D contact graph supplied,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,established_flow_arch,PIV surface flow alone does not establish individual crossing criterion,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,temporary_interruption,Potential in complete videos after timing/calibration verification,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,completed_discharge,Requires full fill/mass history; outlet ROI alone is insufficient,,M5 operational-observation-v1 unchanged; no external relabeling performed
+delft,unresolved_or_censored,Coverage and observation endpoints unresolved,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,startup_blockage,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,post_discharge_arch,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,established_flow_arch,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,temporary_interruption,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,completed_discharge,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed
+yogi,unresolved_or_censored,Not observable from static profiles/maps,,M5 operational-observation-v1 unchanged; no external relabeling performed

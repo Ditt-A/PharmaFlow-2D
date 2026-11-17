@@ -1,0 +1,36 @@
+dataset,nominal_angle_deg,angle_reference,outlet_m,catalog_sampling_hz,run_index,recorded_rate_value,sampling_hz,header_verified,note,catalog_conflict
+0ff14e21-b7ff-4797-92a7-13fc13313d1a,90.0,unresolved,0.1,300.0,1,300.0,300.0,True,Frame-rate header present,False
+0ff14e21-b7ff-4797-92a7-13fc13313d1a,90.0,unresolved,0.1,300.0,2,300.0,300.0,True,Frame-rate header present,False
+0ff14e21-b7ff-4797-92a7-13fc13313d1a,90.0,unresolved,0.1,300.0,3,300.0,300.0,True,Frame-rate header present,False
+0ff14e21-b7ff-4797-92a7-13fc13313d1a,90.0,unresolved,0.1,300.0,4,300.0,300.0,True,Frame-rate header present,False
+0ff14e21-b7ff-4797-92a7-13fc13313d1a,90.0,unresolved,0.1,300.0,5,300.0,300.0,True,Frame-rate header present,False
+22e0dc1b-a337-4ae6-8026-be57c10cad7a,60.0,unresolved,0.1,400.0,1,300.0,300.0,True,Frame-rate header present,True
+22e0dc1b-a337-4ae6-8026-be57c10cad7a,60.0,unresolved,0.1,400.0,2,400.0,400.0,True,Frame-rate header present,False
+22e0dc1b-a337-4ae6-8026-be57c10cad7a,60.0,unresolved,0.1,400.0,3,400.0,400.0,True,Frame-rate header present,False
+22e0dc1b-a337-4ae6-8026-be57c10cad7a,60.0,unresolved,0.1,400.0,4,400.0,400.0,True,Frame-rate header present,False
+22e0dc1b-a337-4ae6-8026-be57c10cad7a,60.0,unresolved,0.1,400.0,5,400.0,400.0,True,Frame-rate header present,False
+4921447f-1a07-41db-aec3-7d147ac08906,82.5,unresolved,0.1,300.0,1,300.0,300.0,True,Frame-rate header present,False
+4921447f-1a07-41db-aec3-7d147ac08906,82.5,unresolved,0.1,300.0,2,300.0,300.0,True,Frame-rate header present,False
+4921447f-1a07-41db-aec3-7d147ac08906,82.5,unresolved,0.1,300.0,3,300.0,300.0,True,Frame-rate header present,False
+4921447f-1a07-41db-aec3-7d147ac08906,82.5,unresolved,0.1,300.0,4,300.0,300.0,True,Frame-rate header present,False
+4921447f-1a07-41db-aec3-7d147ac08906,82.5,unresolved,0.1,300.0,5,300.0,300.0,True,Frame-rate header present,False
+8ef58d5c-12ff-4e32-9127-66c7f3e63b5f,45.0,unresolved,0.1,400.0,1,300.0,,False,Headerless annotation; frequency interpretation provisional,False
+8ef58d5c-12ff-4e32-9127-66c7f3e63b5f,45.0,unresolved,0.1,400.0,2,400.0,,False,Headerless annotation; frequency interpretation provisional,False
+8ef58d5c-12ff-4e32-9127-66c7f3e63b5f,45.0,unresolved,0.1,400.0,3,400.0,,False,Headerless annotation; frequency interpretation provisional,False
+8ef58d5c-12ff-4e32-9127-66c7f3e63b5f,45.0,unresolved,0.1,400.0,4,400.0,,False,Headerless annotation; frequency interpretation provisional,False
+8ef58d5c-12ff-4e32-9127-66c7f3e63b5f,45.0,unresolved,0.1,400.0,5,400.0,,False,Headerless annotation; frequency interpretation provisional,False
+d84e4301-d94c-4e8f-ad10-77febeebd71f,75.0,unresolved,0.1,300.0,1,300.0,300.0,True,Frame-rate header present,False
+d84e4301-d94c-4e8f-ad10-77febeebd71f,75.0,unresolved,0.1,300.0,2,300.0,300.0,True,Frame-rate header present,False
+d84e4301-d94c-4e8f-ad10-77febeebd71f,75.0,unresolved,0.1,300.0,3,300.0,300.0,True,Frame-rate header present,False
+d84e4301-d94c-4e8f-ad10-77febeebd71f,75.0,unresolved,0.1,300.0,4,300.0,300.0,True,Frame-rate header present,False
+d84e4301-d94c-4e8f-ad10-77febeebd71f,75.0,unresolved,0.1,300.0,5,300.0,300.0,True,Frame-rate header present,False
+e3e48335-3a2f-4c10-88c4-54b9473d3927,20.0,unresolved,0.1,300.0,1,400.0,400.0,True,Frame-rate header present,True
+e3e48335-3a2f-4c10-88c4-54b9473d3927,20.0,unresolved,0.1,300.0,2,600.0,600.0,True,Frame-rate header present,True
+e3e48335-3a2f-4c10-88c4-54b9473d3927,20.0,unresolved,0.1,300.0,3,600.0,600.0,True,Frame-rate header present,True
+e3e48335-3a2f-4c10-88c4-54b9473d3927,20.0,unresolved,0.1,300.0,4,600.0,600.0,True,Frame-rate header present,True
+e3e48335-3a2f-4c10-88c4-54b9473d3927,20.0,unresolved,0.1,300.0,5,600.0,600.0,True,Frame-rate header present,True
+eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8,30.0,unresolved,0.1,300.0,1,400.0,,False,Headerless annotation; frequency interpretation provisional,False
+eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8,30.0,unresolved,0.1,300.0,2,600.0,,False,Headerless annotation; frequency interpretation provisional,False
+eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8,30.0,unresolved,0.1,300.0,3,600.0,,False,Headerless annotation; frequency interpretation provisional,False
+eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8,30.0,unresolved,0.1,300.0,4,600.0,,False,Headerless annotation; frequency interpretation provisional,False
+eedfdc29-cbec-4ac6-aaf3-02f6fe446ae8,30.0,unresolved,0.1,300.0,5,600.0,,False,Headerless annotation; frequency interpretation provisional,False

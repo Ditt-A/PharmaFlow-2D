@@ -1,0 +1,40 @@
+{
+  "access_failures": [
+    {
+      "id": "dryad_BinCenters.txt",
+      "status": 403
+    },
+    {
+      "id": "dryad_Dimensionless_M_std_error.txt",
+      "status": 403
+    },
+    {
+      "id": "dryad_Dimensionless_M.txt",
+      "status": 403
+    },
+    {
+      "id": "dryad_README.md",
+      "status": 403
+    }
+  ],
+  "archive_downloads": 0,
+  "calibration_performed": false,
+  "catalog_acquisition_conflicts": 6,
+  "collection_claimed_experiments": 201,
+  "collection_listed_repetitions": 231,
+  "collection_listed_rows": 35,
+  "decision": "M6A_LIMITED_COMPARISON_ONLY",
+  "delft_files": 56,
+  "delft_linked_children": 7,
+  "dryad_content_bytes": 0,
+  "first_fetch_transferred_bytes": 481002,
+  "ml_training": false,
+  "parameter_fitting": false,
+  "provisional_acquisition_rows": 10,
+  "quantitative_matched_comparisons": 0,
+  "raw_cached_bytes": 480530,
+  "reused_zenodo_bytes": 30393158,
+  "small_delft_text_bytes": 13794,
+  "solver_attempts": 0,
+  "verified_acquisition_rows": 25
+}

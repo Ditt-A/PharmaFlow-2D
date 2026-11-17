@@ -1,0 +1,32 @@
+{
+  "experimental": [
+    {
+      "parsed_pairs": 43,
+      "sheet": "D=2 cm: Profiles",
+      "total_rows": 160,
+      "units_verified": false
+    },
+    {
+      "parsed_pairs": 43,
+      "sheet": "D=3 cm: Profiles",
+      "total_rows": 160,
+      "units_verified": false
+    }
+  ],
+  "note": "No missing-cell repair, rescaling, error metric or fit",
+  "simulation_particle_time_counts": [
+    81,
+    98,
+    91,
+    50,
+    8,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_md5": "c701fb415580d6ffa6d9fc9945bce0fe"
+}

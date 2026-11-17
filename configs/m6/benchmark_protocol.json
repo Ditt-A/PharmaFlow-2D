@@ -1,0 +1,119 @@
+{
+  "version": "m6-physics-benchmarks-v1",
+  "scope": "No solver calls, fitting, training or held-out parameter selection. Descriptive source and training-run audit only.",
+  "decision": "M6A_LIMITED_COMPARISON_ONLY",
+  "historical_selection": "M3 intersection of training runs in both frozen benchmarks; M4B development-train runs only; no M5 demos",
+  "steady_flow": {
+    "post_gate_buffer_s": 0.1,
+    "minimum_retained_fraction": 0.2,
+    "minimum_window_s": 1.0,
+    "minimum_crossings": 200,
+    "block_s": 0.2,
+    "minimum_blocks": 5,
+    "maximum_crossing_gap_s": 0.05,
+    "maximum_block_cv": 0.2,
+    "maximum_end_block_drift": 0.2,
+    "interpretation": "Prospective diagnostic screening thresholds, not externally calibrated physics. Sensitivity must be reported in a future larger-fill study. Zero-flow/arch windows are excluded, never free-flow regression points."
+  },
+  "benchmarks": [
+    {
+      "id": "discharge_scaling",
+      "definition": "Sustained downward passage rate against outlet width D divided by explicitly named particle diameter d",
+      "units": ["particles/s", "kg/s", "dimensionless QN*sqrt(d/g)", "dimensionless Qm/(rho_A_bulk*sqrt(g)*d^1.5)"],
+      "geometry": "Same dimensionality, outlet boundary, wall inclination/convention, side/front/back walls, particle mixture and filling/replenishment protocol",
+      "source_required": "Independent sustained-flow windows, D, particle diameters/masses, passage definition, g and bulk areal density if mass-normalized",
+      "simulation_required": "Actual crossing times and masses, retained counts, config, numerical diagnostics",
+      "aggregation": "One rate per eligible independent run; aggregate by identical physical configuration; no pooling zero-flow clogs with rates",
+      "uncertainty": "Independent-run bootstrap plus geometry, mass, timestamp and bulk-density uncertainty; no frame bootstrap",
+      "invalid_if": "Unknown units/boundary, mixture diameter undefined, mismatched 2D/3D density, short depleted fill, no sustained flow or fit using clogged zeros"
+    },
+    {
+      "id": "discharge_history",
+      "definition": "Cumulative observed outlet passages and counts/mass in fixed (a,b] physical-time bins",
+      "units": ["particles", "kg", "particles/s", "kg/s"],
+      "geometry": "Common observation plane and startup reference; impact/load-cell force is not automatically discharged mass",
+      "source_required": "Calibrated time and mass or reconciled particle crossing events, initial fill, gate/vibration time and sensor transfer function",
+      "simulation_required": "Cumulative first-crossing count and per-particle crossing times; distinguish first passage from recirculating repeat passages",
+      "aggregation": "Align physical release times, display individual repeats and group summaries; preserve censored intervals",
+      "uncertainty": "Clock/frame quantization and mass calibration, clustered by independent fill/experimental session",
+      "invalid_if": "Divide mean avalanche mass by mean duration and call it sustained rate; compare semicircle versus outlet-plane without reconciliation; infer mass from dynamic support force without load-cell model"
+    },
+    {
+      "id": "velocity_profile",
+      "definition": "Signed vertical/horizontal velocity in specified outlet-relative spatial bins and time window",
+      "units": ["m/s", "x/d", "y/d", "v/sqrt(g*d)"],
+      "geometry": "Same spatial ROI and origin/sign, common relative heights, averaging and surface/volume/center selection",
+      "source_required": "Particle positions/velocities with units or calibrated PIV fields, frame rates, optical calibration and tracking uncertainty",
+      "simulation_required": "Active particle centers/velocities, explicit center-assigned bin selection and number of independent runs",
+      "aggregation": "Particle-time mean within each bin per run; report counts/missing bins, then equal-run averaging",
+      "uncertainty": "Tracking/PIV bias, finite spatial bins, run-level bootstrap; correlated frames do not increase independent event count",
+      "invalid_if": "Unverified Numbers units, fragmented strings, unknown PIV scale, or mixing surface velocity with disk center velocity as an exact match"
+    },
+    {
+      "id": "exit_occupancy",
+      "definition": "Explicitly defined occupied area or line fraction in a matched ROI; center-assigned occupancy is a separate estimator",
+      "units": ["area/area", "length/length"],
+      "geometry": "Identical ROI and clipping/projection convention; 2D disk area is not 3D volume solid fraction",
+      "source_required": "Calibrated disk geometry and exact occupancy algorithm or documented profile/map fraction",
+      "simulation_required": "Positions/radii and matched clipped-area or exit-line estimator; M3 center-assigned estimator alone cannot validate another definition",
+      "aggregation": "Time-weighted fraction per run; independent run means and missing-ROI flags",
+      "uncertainty": "Segmentation, boundary clipping, overlapping projections and independent repeat variation",
+      "invalid_if": "Unknown phi meaning; compare 3D solid fraction, projected gravel coverage and center-assigned disk occupancy directly"
+    },
+    {
+      "id": "startup_arch",
+      "definition": "Separate startup blockage, post-discharge arch and preceding established-flow arch under unchanged operational-observation-v1",
+      "units": ["independent events/run", "s", "particles discharged before onset"],
+      "geometry": "Matched startup preparation, observed boundary, retained material and finite persistence definition",
+      "source_required": "Unselected complete startup-to-outcome histories, retained-grain evidence, arch geometry, motion and observation duration",
+      "simulation_required": "Existing M3 first-persistent-arch-v1 labels plus separate M5 descriptive annotations; no relabeling",
+      "aggregation": "Independent event counts by configuration/type with binomial uncertainty only when run independence and sampling denominator are justified",
+      "uncertainty": "Onset versus confirmation, tracking-based contact ambiguity, temporal quantization and right censoring",
+      "invalid_if": "Treat one crossing as established flow; merge 5s experimental exit-stop with 0.4s DEM common-contact label; call external Emptied an empty hopper"
+    },
+    {
+      "id": "inclination_friction",
+      "definition": "Changes in independently aggregated rate/velocity at fixed geometry/fill except the named inclination or friction factor",
+      "units": ["degrees from vertical", "dimensionless friction", "particles/s", "m/s"],
+      "geometry": "Maintain actual angle when varying D; verify external angle reference before conversion; isolate sidewall and front/back friction",
+      "source_required": "Characterized wall/particle material pairs, angle convention, repeat data and controlled comparisons",
+      "simulation_required": "Config-verified geometry and same initial conditions for numerical pairs; independent seeds for physical repeats",
+      "aggregation": "Within-configuration independent-run summaries; report confounding factors, never infer causal friction from unmatched curves",
+      "uncertainty": "Friction/material uncertainty, angle machining tolerances and between-fill variance",
+      "invalid_if": "Unknown friction or angle reference; outlet variation unintentionally changes angle; 3D roughness modeled only by a tuned 2D friction"
+    },
+    {
+      "id": "intermittency",
+      "definition": "Observed crossing pause followed by observed resumption with retained grains; finite arch confirmation is a separate outcome",
+      "units": ["gap s", "episodes/run", "episodes/observed s"],
+      "geometry": "Same observation boundary, sampling resolution and uninterrupted operating window",
+      "source_required": "Full unscreened passage/motion histories including temporary static states, resumption and retained material",
+      "simulation_required": "Causal M5 pause/resumption history; complete hopper emptying handled separately",
+      "aggregation": "Gap distributions by independent run/configuration; preserve truncated/censored gaps",
+      "uncertainty": "Sampling interval bounds, missed crossings, external forcing and between-run variation",
+      "invalid_if": "Use no-crossing alone as a clog; remove metastable pauses as a preprocessing step; compare a selected final-clog dataset with unselected operation"
+    }
+  ],
+  "calibration_plan": {
+    "status": "Prepared only; no fitting authorized or performed",
+    "potential_source": "Dryad circular-grain experiments, conditional on recoverable raw data and verified geometry/units; not currently matched",
+    "independent_characterization": ["particle diameters/species fractions and physical thickness/density", "particle-wall and particle-particle friction tests", "single-collision restitution for the actual approach-only dashpot convention", "wall gap/roughness and optical/time calibration"],
+    "conditional_parameter_bounds": {"friction": [0.0, 1.0], "wall_friction": [0.0, 1.0], "restitution_assay_range": [0.1, 0.95], "normal_stiffness_sensitivity_N_m": [4000, 8000, 16000], "kt_over_kn": 0.25, "overlap_guard_R": 0.15},
+    "bounds_note": "Broad screening/assay ranges, not measured material priors. Reject an unmeasured adjustable front/back correction. Choose stiffness numerically rather than fitting a soft overlap to match discharge.",
+    "candidate_calibration_observables": ["steady mass flow at two prespecified matched outlets", "independent local velocity profile on calibration runs"],
+    "independent_validation": ["third outlet held out before fitting", "complete new fills or experimental sessions", "velocity fluctuations, transient mass history and reconciled event types not used in objective"],
+    "objective": "Prespecified residual vector of matched rate and velocity, weighted by experimental covariance plus independently bounded numerical error. Analyze model-form discrepancy separately. Do not fit all parameters to one discharge curve.",
+    "uncertainty": "Propagate independently measured mass/size/geometry/friction intervals and repeat variation; preserve correlated errors; report non-identifiability rather than fabricate precise parameter confidence bounds.",
+    "holdout": "Only a future external cohort may be assigned before fitting. Never reuse M3/M4B validation/locked-test runs for fitting or selection."
+  },
+  "future_m6b_budget_proposal": {
+    "launched": false,
+    "stage_a": "At most 12 author/provider-curated no-fixed-particle MAT flow files, 3 outlet groups, total <=200MB, with README/checksums/units; no solver attempts. Do not download 17.41GB release. If archive-only access persists, obtain an authorized small subset first.",
+    "stage_b_maximum_solver_attempts_including_failures": 12,
+    "stage_b_gate": "Separate approval after schema, boundary, particle mixture, geometry and material characterization review. Existing monodisperse wedge is not a match for the tridisperse flat-floor experiment.",
+    "conditional_allocation": "3 paired numerical sensitivity attempts, then at most 9 larger-fill sustained-flow runs (3 fixed outlet ratios x 3 independent fills) at fixed inclination. Stop at the profiling/resource gate if supported windows cannot be generated.",
+    "internal_scaling_option": "D/d=6,8,10 at fixed 35deg from vertical, sufficient validated fill for >=200 crossings over >=1s before depletion. This would test internal scaling only until externally matched; no universal-exponent or calibration claim.",
+    "wall_budget": "At most 1800 wall seconds per attempt, one CPU worker, at most 6 worker-hours. Runtime is unmeasured for larger fills; profile first, charge failures, no automatic retries.",
+    "m5_demo_attempts_used": 0
+  }
+}
