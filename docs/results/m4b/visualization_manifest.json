@@ -1,0 +1,27 @@
+{
+  "colors": "SI speed; per-scene active-particle q99 used for display only, never model preprocessing",
+  "origin": "Actual new locked-cohort DEM arrays",
+  "representatives": [
+    {
+      "clip_end_s": 0.805,
+      "clip_start_s": 0.0,
+      "fps": 12,
+      "frames": 70,
+      "full_observation_s": 2.5,
+      "gif": "outputs/animations/m4b/event.gif",
+      "kind": "event",
+      "run_id": "m4b_locked_1d57d9cc0902c8a8_hexagonal_s13011"
+    },
+    {
+      "clip_end_s": 0.8,
+      "clip_start_s": 0.0,
+      "fps": 12,
+      "frames": 70,
+      "full_observation_s": 2.5,
+      "gif": "outputs/animations/m4b/resumed_or_completed.gif",
+      "kind": "resumed_or_completed",
+      "run_id": "m4b_locked_1d57d9cc0902c8a8_random_sequential_s13012"
+    }
+  ],
+  "scores": "Full chronological online forecasts; future truth used only as labeled posthoc annotations"
+}

@@ -60,7 +60,7 @@ Two synced panes: solver-generated 2D hopper animation with particles colored by
 - **M2**: convergence/sensitivity and physically comparable reference analyses (or explicitly document non-comparability).
 - **M3**: budgeted scientific dataset, finite first-event labels, causal features, grouped splits and QA.
 - **M4A**: CPU baselines with train-only grouped selection, frame/event warning evaluation and readiness decision. See the M4 reports for the frozen protocol and insufficient-generalization conclusion.
-- **M4B (proposed)**: acquire independent transition events and unseen-configuration evidence under a separately authorized budget before advanced modeling or a polished prediction demo.
+- **M4B**: completed 48-attempt targeted expansion and independent configuration evaluation with chronological warnings. Physics-rule baseline remains competitive; preserve the locked test and resolve event-type, policy and calibration limits before advanced modeling.
 
 ## I. Industry translation
 

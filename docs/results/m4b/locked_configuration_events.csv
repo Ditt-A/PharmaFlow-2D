@@ -1,0 +1,5 @@
+physical_group_id,outlet_ratio,friction,wall_friction,wall_angle_deg,independent_runs,first_events,censored_runs
+1df33e10df90de271129,2.85,0.45,0.35,32.0,3,1,0
+255f904a2f6825e89d7b,2.2,0.45,0.35,32.0,3,3,0
+c787fe7cfd14424435ab,3.3,0.35,0.55,39.0,3,1,0
+e5999bea1b2714f5248d,2.6,0.35,0.55,39.0,3,2,0

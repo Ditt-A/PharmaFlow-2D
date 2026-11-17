@@ -44,3 +44,5 @@ runs/
 # Only the compact solver-generated README animation is published.
 assets/*
 !assets/m2_demo.gif
+# Compact actual M4B DEM preview; full animations remain ignored.
+!docs/results/m4b/demo.gif

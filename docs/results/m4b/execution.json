@@ -1,0 +1,6 @@
+{
+  "adaptive_workers": 8,
+  "locked_workers": 8,
+  "pilot_workers": 4,
+  "rationale": "256 visible cores, cgroup quota 64 cores; eight CPU workers keep per-worker BLAS at one thread. No GPU training. Locked cohort remains undispatched."
+}

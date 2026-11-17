@@ -1,0 +1,935 @@
+{
+  "campaign_source_sha256": "b600baf562b893a3464a383f0543bf13c9c6aa2a621272551b45c488d1170e06",
+  "design": {
+    "adaptive_rule": "Review pilot validity, interruption coverage and outcomes first. Select up to eight controlled physical cases, three independent packing-family seeds each. Prefer mixed-outcome/transition coverage and one-factor friction/angle/fill contrasts; do not target a positive frame quota. Exclude every locked physical group. No failures are replaced.",
+    "adaptive_seed_start": 12001,
+    "allocation": {
+      "adaptive": 24,
+      "locked": 12,
+      "pilot": 12
+    },
+    "duration_s": 2.5,
+    "locked_access": "No locked solver dispatch or dataset read before model_and_policy_freeze.json is written and verified. No outcome-based replacement.",
+    "locked_cases": [
+      {
+        "name": "locked_A_narrow",
+        "physical": {
+          "friction": 0.45,
+          "n_particles": 45,
+          "outlet_ratio": 2.2,
+          "wall_angle_deg": 32,
+          "wall_friction": 0.35
+        }
+      },
+      {
+        "name": "locked_A_wider",
+        "physical": {
+          "friction": 0.45,
+          "n_particles": 45,
+          "outlet_ratio": 2.85,
+          "wall_angle_deg": 32,
+          "wall_friction": 0.35
+        }
+      },
+      {
+        "name": "locked_B_narrow",
+        "physical": {
+          "friction": 0.35,
+          "n_particles": 35,
+          "outlet_ratio": 2.6,
+          "wall_angle_deg": 39,
+          "wall_friction": 0.55
+        }
+      },
+      {
+        "name": "locked_B_wider",
+        "physical": {
+          "friction": 0.35,
+          "n_particles": 35,
+          "outlet_ratio": 3.3,
+          "wall_angle_deg": 39,
+          "wall_friction": 0.55
+        }
+      }
+    ],
+    "locked_seed_start": 13001,
+    "max_duration_s": 3.5,
+    "maximum_attempts": 48,
+    "numerical": {
+      "dt_s": 5e-06,
+      "max_overlap_ratio": 0.15,
+      "normal_damping_kg_s": 0.3,
+      "normal_stiffness_n_m": 4000,
+      "tangential_damping_kg_s": 0.06,
+      "tangential_stiffness_n_m": 1000
+    },
+    "packing_families": [
+      "staggered",
+      "hexagonal",
+      "random_sequential"
+    ],
+    "pilot_cases": [
+      {
+        "name": "outlet_2p1",
+        "physical": {
+          "friction": 0.4,
+          "n_particles": 40,
+          "outlet_ratio": 2.1,
+          "wall_angle_deg": 35,
+          "wall_friction": 0.4
+        }
+      },
+      {
+        "name": "outlet_2p55",
+        "physical": {
+          "friction": 0.4,
+          "n_particles": 40,
+          "outlet_ratio": 2.55,
+          "wall_angle_deg": 35,
+          "wall_friction": 0.4
+        }
+      },
+      {
+        "name": "outlet_2p95",
+        "physical": {
+          "friction": 0.4,
+          "n_particles": 40,
+          "outlet_ratio": 2.95,
+          "wall_angle_deg": 35,
+          "wall_friction": 0.4
+        }
+      },
+      {
+        "name": "outlet_3p4",
+        "physical": {
+          "friction": 0.4,
+          "n_particles": 40,
+          "outlet_ratio": 3.4,
+          "wall_angle_deg": 35,
+          "wall_friction": 0.4
+        }
+      }
+    ],
+    "pilot_seed_start": 11001,
+    "pilot_validation_cases": [
+      "outlet_2p95"
+    ],
+    "protocol": {
+      "gate_buffer_s": 0.02,
+      "minimum_remaining": 2,
+      "persistence_s": 0.4,
+      "stationary_speed_m_s": 0.003
+    },
+    "release": "m4b-v1",
+    "sample_interval_s": 0.005,
+    "starting_commit": "9576bfa9ba17730e068e6185162e0a90929bead5"
+  },
+  "design_sha256": "29c1e6079732bf5a60cda6a88c32dcb214960d74e49be48d773265bacd6fbb51",
+  "frozen_utc": "2026-11-17T05:22:05.159357+00:00",
+  "initial_sha256": {
+    "m4b_locked_1d57d9cc0902c8a8_hexagonal_s13011": "c3698721d1c704bc3d049b8f2109904f4c1d1c43b75a6490daa8a4c3caf72cf7",
+    "m4b_locked_1d57d9cc0902c8a8_random_sequential_s13012": "76e52af0072c3aac13cf33f8f4aa5fd29c0ad4304e507026af94eabce0f57537",
+    "m4b_locked_1d57d9cc0902c8a8_staggered_s13010": "57cc95ea00d4ac304a18493270b3752a95585cfd2de70f3de31dfff01c94c4b1",
+    "m4b_locked_66e7e815dd41b136_hexagonal_s13005": "8bb959e1588341bce810a0bff9c9e991281ec86b73809cbb327e5f727585d656",
+    "m4b_locked_66e7e815dd41b136_random_sequential_s13006": "ed4f5d08c17c754206f60e904bc907a5fc53cb68432ea21fe3eee37b6ecacef9",
+    "m4b_locked_66e7e815dd41b136_staggered_s13004": "4c8a2cfa367f42246fa66eba83826a2b306ab7db84f7bf2aad64d353f977d35a",
+    "m4b_locked_b8cc133c2cb8a78f_hexagonal_s13002": "dc26de7cca327fd2e116d1be840e75e9b9835825959e96c8eb306c806f919dc9",
+    "m4b_locked_b8cc133c2cb8a78f_random_sequential_s13003": "04e914d8a0f52ee8bc442497fdefcc4267bf01e72b9909cb0f3ad045b8590726",
+    "m4b_locked_b8cc133c2cb8a78f_staggered_s13001": "d2180c9e0a3294cea6b7f9b12c0263634b1fea679095733e69e51ebec7edc651",
+    "m4b_locked_ce90233ef9231581_hexagonal_s13008": "210ad6ccfd5a63b64a96d48e8ce36af629f0ea15844ec4b8d3b12af3ad871915",
+    "m4b_locked_ce90233ef9231581_random_sequential_s13009": "5fa6c901a50ea70273c94271499603a94cbad10c0edb8ca09fd0aab21270873d",
+    "m4b_locked_ce90233ef9231581_staggered_s13007": "0211702f7d3353606b9f505d9b2d08fe4f38e4cc6aa65c4a39804c013de96f21",
+    "m4b_pilot_44592a8f2aefe23c_hexagonal_s11005": "c2da954dc4bfa91f090857881bf591d1c90d01a250b31071d95746cd827a6857",
+    "m4b_pilot_44592a8f2aefe23c_random_sequential_s11006": "eae44f0d97995f48a432ee9312633c17dbc1621bc575dce05d0468943703d0e6",
+    "m4b_pilot_44592a8f2aefe23c_staggered_s11004": "7b59dda82d2402b1110296512f07bb028c133c20a00c0717e5a4b758dd484e88",
+    "m4b_pilot_473b7a001686d037_hexagonal_s11002": "f08808441d117096d80c93e8dbf4b734ecc28c09fa5243bafd2d16f7f101651c",
+    "m4b_pilot_473b7a001686d037_random_sequential_s11003": "7da2a473ecce08f5203dde7c84f595b02d6279c4739e9d72a189383c84b22c98",
+    "m4b_pilot_473b7a001686d037_staggered_s11001": "97a33565f6cf1f4b7706655d231c44844044b639d0af6759f47538146931a648",
+    "m4b_pilot_fa8919113e6669f6_hexagonal_s11011": "a9b97d345c85129eb31c658b8eee2c9278e6b02d64b4beea220d4f8c28dcfd1b",
+    "m4b_pilot_fa8919113e6669f6_random_sequential_s11012": "8dd4931bb174d9496f489ee56703bb4c74b918fd54f7900e05eb96a1b2b24514",
+    "m4b_pilot_fa8919113e6669f6_staggered_s11010": "5cc4fe58743d3d2091574123ef8eb3df1552eb85cf1ddeba7258eb3cfc7daf51",
+    "m4b_pilot_fc706491fb5a63ea_hexagonal_s11008": "a4d391dec7a1f4c91f639ac45d4e94932bbeefc803acb921677aba301736c4d6",
+    "m4b_pilot_fc706491fb5a63ea_random_sequential_s11009": "1324fb3e84f6548369dbe9cb260fb709ec0afafe02dda749f1c1a5172eef1ca3",
+    "m4b_pilot_fc706491fb5a63ea_staggered_s11007": "cdfad27ff2858ee498652745d96656632ed65ab57099e70ba1175607cc812bc7"
+  },
+  "locked_physical_groups": [
+    "1df33e10df90de271129",
+    "255f904a2f6825e89d7b",
+    "c787fe7cfd14424435ab",
+    "e5999bea1b2714f5248d"
+  ],
+  "locked_tasks": [
+    {
+      "case_name": "locked_A_narrow",
+      "configuration_id": "b8cc133c2cb8a78f",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.2,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_b8cc133c2cb8a78f_staggered_s13001",
+      "sample_interval_s": 0.005,
+      "seed": 13001
+    },
+    {
+      "case_name": "locked_A_narrow",
+      "configuration_id": "b8cc133c2cb8a78f",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.2,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_b8cc133c2cb8a78f_hexagonal_s13002",
+      "sample_interval_s": 0.005,
+      "seed": 13002
+    },
+    {
+      "case_name": "locked_A_narrow",
+      "configuration_id": "b8cc133c2cb8a78f",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.2,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_b8cc133c2cb8a78f_random_sequential_s13003",
+      "sample_interval_s": 0.005,
+      "seed": 13003
+    },
+    {
+      "case_name": "locked_A_wider",
+      "configuration_id": "66e7e815dd41b136",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.85,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_66e7e815dd41b136_staggered_s13004",
+      "sample_interval_s": 0.005,
+      "seed": 13004
+    },
+    {
+      "case_name": "locked_A_wider",
+      "configuration_id": "66e7e815dd41b136",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.85,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_66e7e815dd41b136_hexagonal_s13005",
+      "sample_interval_s": 0.005,
+      "seed": 13005
+    },
+    {
+      "case_name": "locked_A_wider",
+      "configuration_id": "66e7e815dd41b136",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.45,
+        "n_particles": 45,
+        "outlet_ratio": 2.85,
+        "wall_angle_deg": 32,
+        "wall_friction": 0.35
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_66e7e815dd41b136_random_sequential_s13006",
+      "sample_interval_s": 0.005,
+      "seed": 13006
+    },
+    {
+      "case_name": "locked_B_narrow",
+      "configuration_id": "ce90233ef9231581",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 2.6,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_ce90233ef9231581_staggered_s13007",
+      "sample_interval_s": 0.005,
+      "seed": 13007
+    },
+    {
+      "case_name": "locked_B_narrow",
+      "configuration_id": "ce90233ef9231581",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 2.6,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_ce90233ef9231581_hexagonal_s13008",
+      "sample_interval_s": 0.005,
+      "seed": 13008
+    },
+    {
+      "case_name": "locked_B_narrow",
+      "configuration_id": "ce90233ef9231581",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 2.6,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_ce90233ef9231581_random_sequential_s13009",
+      "sample_interval_s": 0.005,
+      "seed": 13009
+    },
+    {
+      "case_name": "locked_B_wider",
+      "configuration_id": "1d57d9cc0902c8a8",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 3.3,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_1d57d9cc0902c8a8_staggered_s13010",
+      "sample_interval_s": 0.005,
+      "seed": 13010
+    },
+    {
+      "case_name": "locked_B_wider",
+      "configuration_id": "1d57d9cc0902c8a8",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 3.3,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_1d57d9cc0902c8a8_hexagonal_s13011",
+      "sample_interval_s": 0.005,
+      "seed": 13011
+    },
+    {
+      "case_name": "locked_B_wider",
+      "configuration_id": "1d57d9cc0902c8a8",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "locked",
+      "physical": {
+        "friction": 0.35,
+        "n_particles": 35,
+        "outlet_ratio": 3.3,
+        "wall_angle_deg": 39,
+        "wall_friction": 0.55
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_locked_1d57d9cc0902c8a8_random_sequential_s13012",
+      "sample_interval_s": 0.005,
+      "seed": 13012
+    }
+  ],
+  "no_outcomes_inspected": true,
+  "pilot_tasks": [
+    {
+      "case_name": "outlet_2p1",
+      "configuration_id": "473b7a001686d037",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.1,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_473b7a001686d037_staggered_s11001",
+      "sample_interval_s": 0.005,
+      "seed": 11001
+    },
+    {
+      "case_name": "outlet_2p1",
+      "configuration_id": "473b7a001686d037",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.1,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_473b7a001686d037_hexagonal_s11002",
+      "sample_interval_s": 0.005,
+      "seed": 11002
+    },
+    {
+      "case_name": "outlet_2p1",
+      "configuration_id": "473b7a001686d037",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.1,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_473b7a001686d037_random_sequential_s11003",
+      "sample_interval_s": 0.005,
+      "seed": 11003
+    },
+    {
+      "case_name": "outlet_2p55",
+      "configuration_id": "44592a8f2aefe23c",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.55,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_44592a8f2aefe23c_staggered_s11004",
+      "sample_interval_s": 0.005,
+      "seed": 11004
+    },
+    {
+      "case_name": "outlet_2p55",
+      "configuration_id": "44592a8f2aefe23c",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.55,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_44592a8f2aefe23c_hexagonal_s11005",
+      "sample_interval_s": 0.005,
+      "seed": 11005
+    },
+    {
+      "case_name": "outlet_2p55",
+      "configuration_id": "44592a8f2aefe23c",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.55,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_44592a8f2aefe23c_random_sequential_s11006",
+      "sample_interval_s": 0.005,
+      "seed": 11006
+    },
+    {
+      "case_name": "outlet_2p95",
+      "configuration_id": "fc706491fb5a63ea",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.95,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fc706491fb5a63ea_staggered_s11007",
+      "sample_interval_s": 0.005,
+      "seed": 11007
+    },
+    {
+      "case_name": "outlet_2p95",
+      "configuration_id": "fc706491fb5a63ea",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.95,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fc706491fb5a63ea_hexagonal_s11008",
+      "sample_interval_s": 0.005,
+      "seed": 11008
+    },
+    {
+      "case_name": "outlet_2p95",
+      "configuration_id": "fc706491fb5a63ea",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 2.95,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fc706491fb5a63ea_random_sequential_s11009",
+      "sample_interval_s": 0.005,
+      "seed": 11009
+    },
+    {
+      "case_name": "outlet_3p4",
+      "configuration_id": "fa8919113e6669f6",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "staggered",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 3.4,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fa8919113e6669f6_staggered_s11010",
+      "sample_interval_s": 0.005,
+      "seed": 11010
+    },
+    {
+      "case_name": "outlet_3p4",
+      "configuration_id": "fa8919113e6669f6",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "hexagonal",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 3.4,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fa8919113e6669f6_hexagonal_s11011",
+      "sample_interval_s": 0.005,
+      "seed": 11011
+    },
+    {
+      "case_name": "outlet_3p4",
+      "configuration_id": "fa8919113e6669f6",
+      "duration_s": 2.5,
+      "max_duration_s": 3.5,
+      "numerical": {
+        "dt_s": 5e-06,
+        "max_overlap_ratio": 0.15,
+        "normal_damping_kg_s": 0.3,
+        "normal_stiffness_n_m": 4000,
+        "tangential_damping_kg_s": 0.06,
+        "tangential_stiffness_n_m": 1000
+      },
+      "packing_family": "random_sequential",
+      "phase": "pilot",
+      "physical": {
+        "friction": 0.4,
+        "n_particles": 40,
+        "outlet_ratio": 3.4,
+        "wall_angle_deg": 35,
+        "wall_friction": 0.4
+      },
+      "protocol": {
+        "gate_buffer_s": 0.02,
+        "minimum_remaining": 2,
+        "persistence_s": 0.4,
+        "stationary_speed_m_s": 0.003
+      },
+      "run_id": "m4b_pilot_fa8919113e6669f6_random_sequential_s11012",
+      "sample_interval_s": 0.005,
+      "seed": 11012
+    }
+  ],
+  "solver_sha256": "309ed2323b24b6e1c7ff061368f2ef7937560f03c16384021f8c01bcb136862a"
+}

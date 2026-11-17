@@ -6,11 +6,13 @@ Implement **PharmaFlow-2D**, a physically explicit **2D Discrete Element Method 
 
 Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVIDIA A100 80GB if exposed by container. Keep a CPU fallback.
 
-**Current stage:** M4A CPU early-warning baseline research is authorized by the
-explicit M4A request. Preserve the M3 release, labels, checksums and frozen splits.
-Read docs/M4_BASELINES.md, M4_EVALUATION.md and M4_READINESS.md as well as the M3
-reports. Calibration remains unresolved. No new DEM campaign, neural models,
-optimization or recommendation engine is authorized by M4A.
+**Current stage:** the explicit M4B request authorized a maximum of 48 new DEM
+attempts; all 48 are now consumed and evaluated. The result is
+M4B_RULE_BASELINE_REMAINS_COMPETITIVE. Read docs/M4B_EXPANSION.md,
+M4B_GENERALIZATION.md and M4B_READINESS.md as well as the M3/M4A reports.
+Preserve historical labels, splits, models and test results, and the frozen M4B
+model/policy/cohort. No additional campaign, neural model, optimization or
+recommendation engine is authorized by this completed budget.
 
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
@@ -48,7 +50,9 @@ M4A: fit preprocessing and class weights only on training groups, including each
 grouped CV fold. Freeze models/features/alert thresholds from training OOF scores
 before validation/test evaluation. Do not reshuffle M3 splits or silently retune
 against held-out results. Keep models/predictions local; report independent-event
-limitations. M4B is a proposed budget only until separately requested.
+limitations. M4B uses the separately requested 48-attempt ledger, delayed locked
+dispatch, training-only grouped policy selection and full chronological replay.
+Do not delete its ledger, replace locked configurations or retune after test.
 
 ## Quality rules
 

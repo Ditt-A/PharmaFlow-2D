@@ -1,0 +1,7 @@
+{
+  "completed": true,
+  "metrics_sha256": "fda32453c6364e51758700fbfcdfb6b20fe0330a1b597ff13d2a06c7026900de",
+  "model_freeze_sha256": "a5e93b1f461d539665f39719bdb8b51951da62333c7d2183fbb4f7e15e2d5683",
+  "predictions_sha256": "6deab02d1c173c1de2f2d767225beec88d3f4b147feef8d055a24bfd840d6abc",
+  "runs_sha256": "02109812c82e5529af236beb9f11c7758a54da362b11cde83b611fdd09b3f604"
+}

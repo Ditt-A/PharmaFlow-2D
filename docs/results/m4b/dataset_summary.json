@@ -1,0 +1,41 @@
+{
+  "censored_runs": 0,
+  "continuation_runs": 0,
+  "decision": "M4B_RULE_BASELINE_REMAINS_COMPETITIVE",
+  "evaluation_wall_s": 34.18731820676476,
+  "events_below_two_frame_20ms_warning_ceiling": 0,
+  "events_by_persistence": {
+    "0.2": 31,
+    "0.4": 31,
+    "0.6": 31
+  },
+  "events_without_prior_discharge": 17,
+  "failed": 0,
+  "historical_train_runs": 12,
+  "independent_new_events": 31,
+  "locked_event_configurations": 4,
+  "locked_event_runs": 7,
+  "m3_m4a_historical_files_unchanged": 208,
+  "maximum_overlap_over_radius": 0.07811502631636719,
+  "maximum_resumed_crossing_gap_s": 0.09434240827929521,
+  "model_bytes": 1586216,
+  "model_freeze_sha256": "a5e93b1f461d539665f39719bdb8b51951da62333c7d2183fbb4f7e15e2d5683",
+  "new_attempts": 48,
+  "new_feature_rows": 24048,
+  "new_label_rows": 48096,
+  "new_ml_fits": 36,
+  "new_physical_configurations": 15,
+  "phase_elapsed_s": {
+    "adaptive": 1241.8712897268124,
+    "locked": 515.5362118189223,
+    "pilot": 783.0497162570246
+  },
+  "processed_bytes": 2980673,
+  "raw_bytes": 28040399,
+  "resumed_after_confirmed_first_arch": 0,
+  "resumed_gap_runs": 4,
+  "successful": 48,
+  "total_frozen_evaluation_variants": 86,
+  "training_wall_s": 340.0013330229558,
+  "worker_wall_s": 13709.802835217677
+}

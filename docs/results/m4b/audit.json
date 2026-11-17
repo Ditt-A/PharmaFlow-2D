@@ -1,0 +1,29 @@
+{
+  "audited_new_preprocessing_artifacts": 38,
+  "causal_full_run_replay_checks": 1806,
+  "censored_runs": 0,
+  "continued_runs": 0,
+  "duplicate_initial_states": 0,
+  "duplicate_trajectories": 0,
+  "failed": 0,
+  "historical_files_unchanged": 208,
+  "historical_train_runs_used": 12,
+  "initial_packing_reproducibility_checks": 48,
+  "locked_events": 7,
+  "locked_physical_configurations": 4,
+  "max_prediction_replay_absolute_difference": 0.0,
+  "maximum_overlap_over_radius": 0.07811502631636719,
+  "new_events": 31,
+  "oracle_replay_gating": false,
+  "phase_elapsed_s": {
+    "adaptive": 1241.8712897268124,
+    "locked": 515.5362118189223,
+    "pilot": 783.0497162570246
+  },
+  "raw_nonfinite_values_excluding_uncrossed_sentinels": 0,
+  "real_prefix_censoring_checks": 31,
+  "solver_attempts": 48,
+  "status": "pass",
+  "successful": 48,
+  "summed_worker_wall_s": 13709.802835217677
+}

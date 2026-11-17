@@ -1,0 +1,56 @@
+{
+  "0.05": {
+    "intervals": {
+      "ap": {
+        "defined_replicates": 500,
+        "lower": 0.6908761109579832,
+        "upper": 0.9415695571226652
+      },
+      "false_per_operating_s": {
+        "defined_replicates": 500,
+        "lower": 0.7782101167315174,
+        "upper": 1.1307420494699647
+      },
+      "paired_useful_recall_gain": {
+        "defined_replicates": 500,
+        "lower": 0.0,
+        "upper": 0.42857142857142855
+      },
+      "useful_recall": {
+        "defined_replicates": 500,
+        "lower": 0.5555555555555556,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Four test configurations give descriptive, potentially degenerate cluster intervals, not industrial validation.",
+    "physical_clusters": 4,
+    "replicates": 500
+  },
+  "0.1": {
+    "intervals": {
+      "ap": {
+        "defined_replicates": 500,
+        "lower": 0.8663171415005564,
+        "upper": 0.9930303084170021
+      },
+      "false_per_operating_s": {
+        "defined_replicates": 500,
+        "lower": 0.3649635036496351,
+        "upper": 0.8434864104967198
+      },
+      "paired_useful_recall_gain": {
+        "defined_replicates": 500,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "useful_recall": {
+        "defined_replicates": 500,
+        "lower": 1.0,
+        "upper": 1.0
+      }
+    },
+    "limitation": "Four test configurations give descriptive, potentially degenerate cluster intervals, not industrial validation.",
+    "physical_clusters": 4,
+    "replicates": 500
+  }
+}

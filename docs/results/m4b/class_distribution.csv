@@ -1,0 +1,7 @@
+split,horizon_s,independent_runs,physical_configurations,independent_first_events,censored_runs,eligible_rows,positive,negative,prevalence,censored_rows
+train,0.05,39,15,24,0,2046,240,1806,0.11730205278592376,0
+train,0.1,39,15,24,0,2046,472,1574,0.23069403714565004,0
+validation,0.05,9,3,5,0,403,50,353,0.12406947890818859,0
+validation,0.1,9,3,5,0,403,99,304,0.2456575682382134,0
+locked,0.05,12,4,7,0,643,70,573,0.1088646967340591,0
+locked,0.1,12,4,7,0,643,140,503,0.2177293934681182,0

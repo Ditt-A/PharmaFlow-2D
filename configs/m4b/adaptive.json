@@ -1,0 +1,28 @@
+{
+  "phase": "adaptive",
+  "maximum_attempts": 24,
+  "pilot_review": {
+    "reviewed_before_adaptive_dispatch": true,
+    "pilot_attempts": 12,
+    "successful": 12,
+    "failed": 0,
+    "confirmed_first_events": 5,
+    "censored_runs": 0,
+    "persistence_counts": {"0.2": 5, "0.4": 5, "0.6": 5},
+    "maximum_overlap_over_radius": 0.071198,
+    "outlet_results": "D/d=2.1:3/3 event; 2.55:2/3; 2.95 and 3.4:0/3. Mixed outcomes at 2.55 justify controlled contrasts there. No confirmed later-resumed interior gap >=0.05s in the pilot; do not invent positives or interruptions.",
+    "selection_rationale": "Repeat the mixed-outcome control with new independent seeds and vary one parameter at a time: particle friction, wall friction, angle and fill. Three packing families per case. No target positive-frame quota, outcome-based replacements, or locked-data access.",
+    "pilot_manifest": "data/processed/m4b/pilot/dataset_manifest.json"
+  },
+  "validation_cases": ["particle_friction_low", "angle_42"],
+  "cases": [
+    {"name": "transition_control", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.4, "wall_friction": 0.4, "n_particles": 40}},
+    {"name": "particle_friction_low", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.25, "wall_friction": 0.4, "n_particles": 40}},
+    {"name": "particle_friction_high", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.55, "wall_friction": 0.4, "n_particles": 40}},
+    {"name": "wall_friction_low", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.4, "wall_friction": 0.25, "n_particles": 40}},
+    {"name": "wall_friction_high", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.4, "wall_friction": 0.55, "n_particles": 40}},
+    {"name": "angle_28", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 28, "friction": 0.4, "wall_friction": 0.4, "n_particles": 40}},
+    {"name": "angle_42", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 42, "friction": 0.4, "wall_friction": 0.4, "n_particles": 40}},
+    {"name": "fill_50", "physical": {"outlet_ratio": 2.55, "wall_angle_deg": 35, "friction": 0.4, "wall_friction": 0.4, "n_particles": 50}}
+  ]
+}

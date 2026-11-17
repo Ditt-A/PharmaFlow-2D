@@ -1,0 +1,24 @@
+{
+  "protocol": "m4b-chronological-first-event-v1",
+  "seed": 20261118,
+  "threads": 2,
+  "horizons_s": [0.10, 0.05],
+  "cv_folds": 3,
+  "feature_sets": ["A_static", "B_current", "C_temporal", "D_full", "E_without_arch", "F_without_time_discharge"],
+  "thresholds": [0.10, 0.20, 0.30, 0.40, 0.50, 0.60, 0.70, 0.80, 0.90, 1.01],
+  "policies": [
+    {"name": "legacy_m4a", "high_frames": 2, "low_fraction": 1.0, "clear_frames": 1, "cooldown_s": 0.05, "refresh_s": null, "max_reminders": 0},
+    {"name": "hysteresis", "high_frames": 2, "low_fraction": 0.65, "clear_frames": 3, "cooldown_s": 0.10, "refresh_s": null, "max_reminders": 0},
+    {"name": "bounded_refresh", "high_frames": 2, "low_fraction": 0.65, "clear_frames": 2, "cooldown_s": 0.05, "refresh_s": 0.05, "max_reminders": 2},
+    {"name": "debounce4", "high_frames": 4, "low_fraction": 0.70, "clear_frames": 3, "cooldown_s": 0.10, "refresh_s": null, "max_reminders": 0}
+  ],
+  "selection": {"false_per_non_event_run_penalty": 0.25, "false_per_operating_second_penalty": 0.05, "false_per_run_penalty": 0.01},
+  "minimum_useful_lead_s": 0.02,
+  "bootstrap_repeats": 500,
+  "decision": {"minimum_locked_events": 6, "minimum_event_configurations": 3, "minimum_ml_recall_gain": 0.15, "maximum_added_false_per_operating_s": 0.05, "require_positive_paired_cluster_lower_bound": true},
+  "models": {
+    "logistic": {"C": 1.0, "solver": "liblinear", "max_iter": 2000},
+    "forest": {"n_estimators": 120, "max_depth": 4, "min_samples_leaf": 8, "max_features": "sqrt"},
+    "xgboost": {"n_estimators": 100, "max_depth": 2, "learning_rate": 0.05, "min_child_weight": 5, "reg_lambda": 5.0, "subsample": 1.0, "colsample_bytree": 1.0, "tree_method": "hist"}
+  }
+}

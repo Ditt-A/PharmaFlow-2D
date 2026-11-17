@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1-M3 and M4A early-warning baselines are implemented. 89 tests pass, including strict CUDA checks. M4A is complete, but independent-event data is insufficient for generalization. Published-data calibration remains unresolved; no industrial performance or deployment claim.
+> **Status:** M1-M4B are implemented. 116 tests pass, including strict CUDA checks. M4B adds 48 valid DEM runs and an independent locked evaluation: the physics-rule baseline remains competitive. Published-data calibration remains unresolved; no industrial performance or deployment claim.
 
 ## The engineering problem
 
@@ -241,8 +241,61 @@ The local frozen M3 Parquet files are required; these commands launch no DEM
 simulations. See [baseline/data protocol](docs/M4_BASELINES.md),
 [quantitative frame/event evaluation](docs/M4_EVALUATION.md),
 [readiness and proposed M4B budget](docs/M4_READINESS.md), and
-[compact results/figures](docs/results/m4/). M4B proposes at most 48 new attempts
-with a separately locked unseen-configuration cohort; none has been launched.
+[compact results/figures](docs/results/m4/). The 48-attempt expansion proposed
+at the M4A release is now evaluated in M4B below.
+
+## M4B independent dataset expansion and chronological warnings
+
+**M4B_RULE_BASELINE_REMAINS_COMPETITIVE**
+
+The complete budget is **48/48 valid new runs**, zero failures, 31 independent
+first-arch events and zero naturally censored cases. Pilot review precedes 24
+controlled development runs. Twelve evaluation runs from four new physical
+configurations are frozen before outcomes and generated only after model/policy
+selection is frozen. All M3/M4A labels, splits, models and results remain intact.
+
+Full chronological replay uses current observations, never an oracle onset gate.
+For primary H=.10s on **seven locked events**:
+
+| Prespecified candidate | Useful warnings >=20ms | False first-event forecasts | Mean valid lead |
+| --- | --- | ---: | ---: |
+| Selected new full-feature XGBoost | 7/7 | 12 | 77ms |
+| Development-informed physics rule | 7/7 | 8 | 63ms |
+| Original frozen M4A physics rule | 7/7 | **0** | 58ms |
+
+Late post-onset notifications are counted separately and included conservatively
+in false first-event forecast burden. H=.05s selected ML improves useful recall
+to 5/7 versus the informed rule's 4/7, while false forecasts rise to 17 versus 14.
+This does not establish ML superiority. Four test configurations, startup-blocked
+cases and absent natural censoring still limit generalization.
+
+![Actual new DEM with online warning history and labeled posthoc truth](docs/results/m4b/demo.gif)
+
+```bash
+python scripts/run_m4b.py --phase freeze
+python scripts/run_m4b.py --phase pilot --jobs 4
+python scripts/evaluate_m4b.py --stage build-pilot
+# Review pilot before the documented adaptive plan.
+python scripts/run_m4b.py --phase adaptive --jobs 8
+python scripts/evaluate_m4b.py --stage build-development
+python scripts/evaluate_m4b.py --stage train
+# Locked generation requires the completed model/policy freeze.
+python scripts/run_m4b.py --phase locked --jobs 8
+python scripts/evaluate_m4b.py --stage evaluate
+python scripts/evaluate_m4b.py --stage visualize
+python scripts/evaluate_m4b.py --stage audit
+python scripts/summarize_m4b.py
+python scripts/plot_m4b_diagnostics.py
+```
+
+Use the existing conda environment and local M3/M4A assets. Completed phases
+verify cached checksums; training/evaluation refuse overwrite. On an existing
+release, audit/plot saved results instead. Source, numerical guard and Taichi
+1.7.3 are preserved. Observed solver cost is **42.34 summed phase minutes /
+3.81 worker-hours**, excluding training, plots and tests. No additional budget
+or neural model is launched. See [expansion/reproduction](docs/M4B_EXPANSION.md),
+[quantitative generalization evaluation](docs/M4B_GENERALIZATION.md),
+[readiness decision](docs/M4B_READINESS.md) and [compact evidence](docs/results/m4b/).
 
 ## Repository layout
 
@@ -279,8 +332,8 @@ PharmaFlow-2D/
 └── tests/                         # Configuration and physical validation
 ```
 
-The DEM solver, M2 runner, M3 dataset pipeline, M4A CPU baselines and headless
-visualizers are implemented. Reference calibration, expanded independent event
+The DEM solver, M2 runner, M3 dataset pipeline, M4A/M4B CPU baselines and headless
+visualizers are implemented. Reference calibration, broader steady-flow event
 coverage, interactive dashboards and optimization remain future work.
 
 ## Planned milestones
@@ -290,6 +343,7 @@ coverage, interactive dashboards and optimization remain future work.
 3. **M2 — Validation:** reference data schema audit; dimensional consistency; particle conservation; contact stability; discharge-rate and velocity comparisons where valid. Record any non-comparable reference variables.
 4. **M3 — Scientific synthetic dataset:** numerical preparation, budgeted generation, first-event labels, censoring, causal features, grouped splits and QA. Implemented without training.
 5. **M4A — Research baselines:** implemented with train-only preprocessing/OOF selection, frozen held-out evaluation, independent-event warnings and small-sample limitations. Acquire more evidence before advanced modeling.
+6. **M4B — Targeted expansion:** implemented with 48 new runs, independent configuration testing and causal online replay. Physics rules remain competitive; no neural complexity is justified yet.
 
 ## Research integrity
 
@@ -302,7 +356,7 @@ coverage, interactive dashboards and optimization remain future work.
 
 ## Next step for Codex
 
-Preserve M1-M4A tests, M3 source hashes/splits, frozen M4A artifacts and test
-results. Resolve calibration and expand independent event/configuration/censoring
-coverage only under a separately authorized experiment budget. Do not use M4A
-test outcomes to retune the frozen warning policy or launch the proposed M4B.
+Preserve M1-M4B tests, historical source hashes/splits, frozen artifacts and test
+results. Resolve calibration and event-type/policy limitations using development
+groups. Any new campaign requires a separate budget; do not recycle the locked
+M4B cohort for tuning or silently exceed its completed 48-attempt ceiling.

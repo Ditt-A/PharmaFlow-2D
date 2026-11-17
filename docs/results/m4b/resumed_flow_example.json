@@ -1,0 +1,8 @@
+{
+  "confirmed_first_onset_s": 0.34,
+  "gap_start_s": 0.1524800782683979,
+  "interpretation": "Gap end and event annotations are posthoc; all warnings were emitted from full chronological observations.",
+  "next_crossing_s": 0.24682248654769312,
+  "resumed_gap_s": 0.09434240827929521,
+  "run_id": "m4b_locked_b8cc133c2cb8a78f_random_sequential_s13003"
+}
