@@ -1,0 +1,12 @@
+{
+  "maximum_attempts": 6,
+  "maximum_total_simulated_s": 3.0,
+  "maximum_concurrent": 1,
+  "maximum_duration_s": 0.8,
+  "minimum_duration_s": 0.1,
+  "maximum_work_units": 400000000,
+  "wall_timeout_s": 180,
+  "sample_interval_s": 0.005,
+  "numerical": {"normal_stiffness_n_m": 4000, "tangential_stiffness_n_m": 1000, "normal_damping_kg_s": 0.3, "tangential_damping_kg_s": 0.06, "dt_s": 0.000005, "max_overlap_ratio": 0.15},
+  "scope": "Explicit user-triggered demo attempts only, separate from M3/M4B research releases; no UI reset or automatic retries."
+}

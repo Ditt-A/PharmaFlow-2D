@@ -1,0 +1,9 @@
+{
+  "new_simulations": 0,
+  "origin": "Genuine existing M3/M4B DEM arrays",
+  "scenes": {
+    "continuous": "pilot_0151aedb5166ad43_hexagonal_s202",
+    "resumed": "production_a1d8150e7f3d0517_hexagonal_s404",
+    "startup": "pilot_4fb2421c2854241d_hexagonal_s202"
+  }
+}

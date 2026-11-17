@@ -14,6 +14,15 @@ Preserve historical labels, splits, models and test results, and the frozen M4B
 model/policy/cohort. No additional campaign, neural model, optimization or
 recommendation engine is authorized by this completed budget.
 
+M5 authorizes a separate local interactive demo budget of six solver attempts
+and three cumulative simulated seconds, including failures, under
+configs/m5/demo_limits.json. It does not extend the M4B campaign. Preserve the
+original first-persistent-arch-v1 labels; operational-observation-v1 is a separate
+descriptive taxonomy. Keep frozen M4A/M4B policies unchanged and future truth
+outside online monitors. No new training, policy tuning or test-based selection.
+Keep local dashboard caches, demo outputs, HTML trajectories and artifacts out
+of Git; publish only selected compact actual DEM screenshots/animations.
+
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
 2. Run scripts/check_env.py, python -m pytest -q, scripts/download_reference.py --list.

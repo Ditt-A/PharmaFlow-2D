@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Play advances physical timestamps; pause freezes the cursor",
+    "Frame scrub updates actual simulation time",
+    "Eight-input simulation form renders without running the solver",
+    "Research view renders frozen evidence separately",
+    "Calibration limitations render",
+    "Offline HTML plays and scrubs a genuine resumed-flow state at 0.245s"
+  ],
+  "page_errors": [],
+  "runtime": "Chromium, localhost UI with portable genuine DEM portfolio; no local solver invocation"
+}

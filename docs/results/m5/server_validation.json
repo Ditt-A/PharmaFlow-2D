@@ -1,0 +1,7 @@
+{
+  "bind": "127.0.0.1",
+  "environment": "pharmaflow-2d Python 3.11 node680",
+  "health_status": 200,
+  "public_port_required": false,
+  "server_terminated_after_check": true
+}

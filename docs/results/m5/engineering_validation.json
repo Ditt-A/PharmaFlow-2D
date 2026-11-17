@@ -1,0 +1,17 @@
+{
+  "historical_baseline_tests": 116,
+  "m5_tests": 33,
+  "full_suite_passed": 149,
+  "full_suite_failed": 0,
+  "full_suite_skipped": 0,
+  "full_suite_wall_s": 61.45,
+  "strict_taichi_cpu_cuda_checks": true,
+  "warnings": ["Existing Taichi locale.getdefaultlocale deprecation warning"],
+  "command": "PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q",
+  "primary_environment": "Existing pharmaflow-2d conda environment, Python 3.11.18, node680",
+  "additional_solver_attempts": 1,
+  "new_ml_training": false,
+  "new_policy_selection": false,
+  "historical_labels_modified": false,
+  "limitations": "UI browser validation uses a separate local environment and genuine portable states; real DEM execution and full physics tests use the original conda environment."
+}

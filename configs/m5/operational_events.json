@@ -1,0 +1,9 @@
+{
+  "version": "operational-observation-v1",
+  "flow_window_s": 0.10,
+  "minimum_crossings": 5,
+  "minimum_crossing_frames": 3,
+  "maximum_flow_gap_s": 0.04,
+  "pause_s": 0.05,
+  "definition": "Sampled observed cumulative crossings only. Established flow requires a complete post-release trailing window. A temporary interruption requires an earlier observed pause and a later observed crossing. Arch annotations remain retrospective first-persistent-arch-v1."
+}

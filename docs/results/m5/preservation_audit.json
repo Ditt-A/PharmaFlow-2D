@@ -1,0 +1,21 @@
+{
+  "changed_historical_files": [],
+  "core_versions": {
+    "joblib": "1.4.2",
+    "matplotlib": "3.11.2",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pillow": "12.3.0",
+    "pyarrow": "19.0.1",
+    "requests": "2.34.2",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.1",
+    "taichi": "1.7.3",
+    "xgboost-cpu": "2.1.4"
+  },
+  "frozen_candidates_verified": 86,
+  "historical_files_verified": 700,
+  "original_m4b_attempts": 48,
+  "plotly": "5.24.1",
+  "streamlit": "1.67.0"
+}

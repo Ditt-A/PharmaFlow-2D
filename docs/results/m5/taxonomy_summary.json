@@ -1,0 +1,18 @@
+{
+  "completed": 36,
+  "confirmed_first_arches": 42,
+  "established_flow_arches": 7,
+  "frozen_replay_checks": 42,
+  "historical_labels_modified": false,
+  "historical_runs": 78,
+  "limitation": "Established-flow arches are a subset of post-discharge arches; temporary/completed outcomes may overlap.",
+  "locked_established_flow_arches": 2,
+  "max_frozen_score_difference": 0.0,
+  "model_fitting": false,
+  "post_discharge": 23,
+  "startup": 19,
+  "temporary_episodes": 7,
+  "temporary_runs": 4,
+  "unresolved": 0,
+  "version": "operational-observation-v1"
+}

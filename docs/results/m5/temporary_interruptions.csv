@@ -1,0 +1,8 @@
+run_id,cohort,phase,membership,configuration_id,packing_family,seed,kind,gap_start_s,pause_observed_s,resume_observed_s,observed_gap_s,preceding_established_flow
+production_a1d8150e7f3d0517_hexagonal_s404,m3,production,historical,a1d8150e7f3d0517,hexagonal,404,temporary_interruption,0.19,0.24000000000000002,0.24500000000000002,0.05500000000000002,True
+m4b_adaptive_44592a8f2aefe23c_hexagonal_s12002,m4b,adaptive,train,44592a8f2aefe23c,hexagonal,12002,temporary_interruption,0.07,0.12000000000000001,0.13,0.06,False
+m4b_adaptive_44592a8f2aefe23c_hexagonal_s12002,m4b,adaptive,train,44592a8f2aefe23c,hexagonal,12002,temporary_interruption,0.13,0.18000000000000002,0.18500000000000003,0.05500000000000002,False
+m4b_adaptive_44592a8f2aefe23c_hexagonal_s12002,m4b,adaptive,train,44592a8f2aefe23c,hexagonal,12002,temporary_interruption,0.30000000000000004,0.35000000000000003,0.36000000000000004,0.06,True
+m4b_adaptive_44592a8f2aefe23c_staggered_s12001,m4b,adaptive,train,44592a8f2aefe23c,staggered,12001,temporary_interruption,0.43500000000000005,0.48500000000000004,0.49000000000000005,0.05499999999999999,True
+m4b_adaptive_44592a8f2aefe23c_staggered_s12001,m4b,adaptive,train,44592a8f2aefe23c,staggered,12001,temporary_interruption,0.56,0.6100000000000001,0.62,0.05999999999999994,False
+m4b_locked_b8cc133c2cb8a78f_random_sequential_s13003,m4b,locked,locked,b8cc133c2cb8a78f,random_sequential,13003,temporary_interruption,0.155,0.20500000000000002,0.25,0.095,True

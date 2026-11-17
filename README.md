@@ -297,6 +297,69 @@ or neural model is launched. See [expansion/reproduction](docs/M4B_EXPANSION.md)
 [quantitative generalization evaluation](docs/M4B_GENERALIZATION.md),
 [readiness decision](docs/M4B_READINESS.md) and [compact evidence](docs/results/m4b/).
 
+## M5 — Interactive DEM research dashboard
+
+Replay genuine stored DEM states, monitor the unchanged frozen M4A rule beside
+the frozen M4B ML comparator, and run a bounded custom CPU demo explicitly.
+Play/pause, frame scrubbing, contacts, speed colors, physical-time traces,
+warning logs, PNG download and short GIF export are available. Research-only
+onset/confirmation annotations are separated from causal online monitoring.
+
+![Actual Streamlit DEM dashboard](docs/results/m5/dashboard.png)
+
+```bash
+conda activate pharmaflow-2d
+python -m pip install -c configs/m5/existing_node_constraints.txt -e '.[dashboard]'
+python -m streamlit run app/streamlit_app.py --server.address 127.0.0.1 --server.port 8501
+```
+
+Locally open `http://127.0.0.1:8501`. JupyterHub needs its existing authenticated
+proxy route; where none is available, the self-contained notebook/offline HTML
+viewer needs no web port. Historical trajectories/models are deliberately kept
+out of Git: restore local release assets or copy the small local portfolio
+bundle described in [launch and fallback instructions](docs/M5_DASHBOARD.md).
+
+The separate `operational-observation-v1` audit preserves all original labels:
+
+| Historical category | M3 + M4B |
+|---|---:|
+| Independent runs | 78 |
+| Startup blockage | 19 |
+| Post-discharge first arch | 23 |
+| Established-flow arch, subset of post-discharge | 7 |
+| Temporary interruption episodes / affected runs | 7 / 4 |
+| Completed discharge / unresolved runs | 36 / 0 |
+
+One crossing does not establish flow: the new criterion requires five crossings
+across at least three frames in a complete 100ms window with no gap >40ms.
+Only **two** locked-test arches meet this preceding-flow criterion. The original
+rule's 7/7 useful warnings and zero false first-event forecasts remain a specific
+M4B observation, not proof of generalization.
+
+Three genuine scenes include [continuous discharge](docs/results/m5/continuous.gif),
+[startup blockage](docs/results/m5/startup.gif), and a
+[temporary pause followed by resumed discharge](docs/results/m5/resumed.gif).
+Recreate them without solving or training:
+
+```bash
+python scripts/audit_m5.py
+python scripts/export_m5.py
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+```
+
+**149 tests pass** (116 historical + 33 M5). All 700 snapshotted historical files
+and all core dependency versions remain unchanged. One explicit .12s/30-disk
+Run-button validation took 16.14 CPU seconds; its local output is separate from
+research releases. The workspace demo budget is six attempts and three total
+requested simulated seconds, including failures; five attempts remain on the
+existing node. Slider changes never launch the solver.
+
+These are uncalibrated dry 2D disks and warning scores, not validated industrial
+risk probabilities. No neural model, new training or research campaign is added.
+See [operational taxonomy](docs/M5_OPERATIONAL_EVENTS.md),
+[dashboard and exports](docs/M5_DASHBOARD.md), and the separate
+[physics calibration gap analysis](docs/M5_CALIBRATION_GAPS.md).
+
 ## Repository layout
 
 ```text
@@ -333,8 +396,9 @@ PharmaFlow-2D/
 ```
 
 The DEM solver, M2 runner, M3 dataset pipeline, M4A/M4B CPU baselines and headless
-visualizers are implemented. Reference calibration, broader steady-flow event
-coverage, interactive dashboards and optimization remain future work.
+visualizers and M5 interactive research dashboard are implemented. Reference
+calibration and broader established-flow event coverage remain unresolved.
+Optimization is outside the current scope.
 
 ## Planned milestones
 
@@ -344,6 +408,7 @@ coverage, interactive dashboards and optimization remain future work.
 4. **M3 — Scientific synthetic dataset:** numerical preparation, budgeted generation, first-event labels, censoring, causal features, grouped splits and QA. Implemented without training.
 5. **M4A — Research baselines:** implemented with train-only preprocessing/OOF selection, frozen held-out evaluation, independent-event warnings and small-sample limitations. Acquire more evidence before advanced modeling.
 6. **M4B — Targeted expansion:** implemented with 48 new runs, independent configuration testing and causal online replay. Physics rules remain competitive; no neural complexity is justified yet.
+7. **M5 — Operational diagnostics:** implemented with a separate causal taxonomy, interactive actual-state viewer, bounded CPU demos, frozen warning comparison and explicit calibration gaps.
 
 ## Research integrity
 
@@ -356,7 +421,7 @@ coverage, interactive dashboards and optimization remain future work.
 
 ## Next step for Codex
 
-Preserve M1-M4B tests, historical source hashes/splits, frozen artifacts and test
+Preserve M1-M5 tests, historical source hashes/splits, frozen artifacts and test
 results. Resolve calibration and event-type/policy limitations using development
 groups. Any new campaign requires a separate budget; do not recycle the locked
 M4B cohort for tuning or silently exceed its completed 48-attempt ceiling.

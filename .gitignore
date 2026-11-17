@@ -46,3 +46,10 @@ assets/*
 !assets/m2_demo.gif
 # Compact actual M4B DEM preview; full animations remain ignored.
 !docs/results/m4b/demo.gif
+
+# M5 local replay bundles and bounded demos never enter research releases.
+outputs/dashboard/
+outputs/demos/
+!docs/results/m5/continuous.gif
+!docs/results/m5/startup.gif
+!docs/results/m5/resumed.gif
