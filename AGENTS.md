@@ -40,12 +40,21 @@ M6B-A is now explicitly authorized and completed as data-access/schema recovery
 only: M6B_QUALITATIVE_COMPARISON_ONLY. Read docs/M6B_DATA_ACCESS.md,
 M6B_EXPERIMENTAL_SCHEMA.md, M6B_COMPATIBILITY.md and M6B_READINESS.md.
 Its hard budget is 12 curated files including failed reservations and 200MB;
-seven reservations are charged, six files retained. No new solver attempts,
+the original release charged seven reservations and retained six files. No new solver attempts,
 calibration, ML training or design optimization. Preserve acquisition/catalog
 ledgers: do not silently retry failures, reset budgets, bypass denials or mirror
 archives. Author code is inspected statically, never executed or substituted for
 measurements. Unknown units/geometry fail quantitative gates. No follow-on stage
 is authorized; retain the M5 ledger and all historical scientific releases.
+
+The user subsequently supplied four checksum-verified browser downloads. Read
+docs/M6B_RECOVERY.md: combined conservative reservations are now 11/12, with
+10 retained curated files. Preserve the original HTTP failures and release
+reports; write recovery evidence under new recovery paths only. Documented
+tracking units are pixels/seconds; dx/dy are interframe displacements and raw
+massflow.M is cumulative ejected area. The 17 normalized fixed-grain summary
+bins are not particle trajectories or independent events. The current solver
+does not represent a matched fixed-grain experiment; do not fit or claim agreement.
 
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.

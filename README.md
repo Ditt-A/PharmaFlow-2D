@@ -410,6 +410,9 @@ M6B had not been launched; the later data-only M6B-A result follows.
 
 ## M6B-A: external recovery and compatibility
 
+The findings below record the original release at `b822828`. Subsequent
+browser-supplied recovery is documented in the supplement below.
+
 **M6B_QUALITATIVE_COMPARISON_ONLY**. No new DEM runs, calibration or ML training.
 The original M1-M6A releases, model freezes, labels and M5 demo ledger are intact.
 
@@ -447,6 +450,32 @@ flat-floor geometry, front/back confinement, reset/recirculation and unknown
 contact parameters prevent direct calibration. Continue only as a clearly labeled
 **uncalibrated engineering simulation study** until matched measurements exist.
 The existing M5 dashboard remains the interactive simulation/replay application.
+
+### M6B recovery supplement
+
+The user supplied the original Dryad README and three TXT files; **all four
+match official SHA-256 checksums**. We now have **17 genuine experimental
+fixed-grain summary bins**, including reported standard errors. The author's
+README and notebook establish dimensionless x/d_FG and normalized ejected mass.
+Tracking positions/radii are documented in pixels, timestamps in seconds,
+and dx/dy are interframe displacements. Raw `massflow.M` is cumulative ejected
+**area**, so it must not be treated as kilograms.
+
+![Actual recovered experimental summary; no DEM calibration](docs/results/m6b/recovery/fixed_grain_summary.png)
+
+This fixed-grain experiment is not directly represented by our current
+monodisperse wedge. No MAT trajectory, physical calibration, simulation or ML
+fit is added. The original 403 records remain unchanged; browser access succeeded
+and the specific client-response difference is unverified. Combined reservations
+are **11/12**, with **6,699 bytes** recovered in this supplement.
+
+```bash
+python scripts/recover_m6b.py  # offline; four verified raw inputs in data/raw/m6b/recovery/
+```
+
+**209 tests pass** including 7 new recovery checks. See the
+[recovery/units supplement](docs/M6B_RECOVERY.md) and
+[compact provenance](docs/results/m6b/recovery/provenance.json).
 
 ## Repository layout
 

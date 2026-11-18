@@ -1,0 +1,16 @@
+{
+  "tests_passed": 209,
+  "prior_tests": 202,
+  "new_recovery_tests": 7,
+  "strict_taichi_cpu_cuda": true,
+  "prior_m6b_files_unchanged": 43,
+  "historical_integrity": {
+    "status": "PASS",
+    "historical_files": 863,
+    "unchanged_core_packages": 13,
+    "frozen_candidates": 86,
+    "unchanged_m5_charged_attempts": 2,
+    "new_campaign_or_demo_attempts": 0
+  },
+  "command": "PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q"
+}

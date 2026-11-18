@@ -1,0 +1,69 @@
+{
+  "author_notebook_executed": false,
+  "author_notebook_sha256": "75065886b9e811e1d6972e17bfb1a21139253f0f89a9a79a0d7a0780b638ad13",
+  "axis_evidence": "Source README plus companion notebook cells 14 and 18: x/d_FG; distance from outlet edge. No conversion to m.",
+  "calibration_performed": false,
+  "combined_curated_reservations": 11,
+  "combined_reserved_bytes_including_local_inputs": 17139579,
+  "combined_retained_curated_bytes": 8147652,
+  "comparison_classification": "INCOMPATIBLE_MODEL_FORM",
+  "comparison_reason": "Current finite-fill monodisperse wedge has no matched fixed-grain obstacle experiment; confinement/forcing/materials also unmatched.",
+  "files": [
+    {
+      "access_method": "user_supplied_local_download",
+      "bytes": 5424,
+      "file": "README.md",
+      "http_status_observed_by_pipeline": null,
+      "license": "CC0 1.0",
+      "provider_checksum_verified": true,
+      "provider_version": 376462,
+      "sha256": "d84a2a16eac6a1e8d34d9425375063a3a6fbbcad9cfa14993f7c0ce7ed397fe3"
+    },
+    {
+      "access_method": "user_supplied_local_download",
+      "bytes": 425,
+      "file": "BinCenters.txt",
+      "http_status_observed_by_pipeline": null,
+      "license": "CC0 1.0",
+      "provider_checksum_verified": true,
+      "provider_version": 376462,
+      "sha256": "d4d983b80f5b35592aca1024d71e507de7ef861bdfdb1e2179b043723a9e3ec4"
+    },
+    {
+      "access_method": "user_supplied_local_download",
+      "bytes": 425,
+      "file": "Dimensionless_M.txt",
+      "http_status_observed_by_pipeline": null,
+      "license": "CC0 1.0",
+      "provider_checksum_verified": true,
+      "provider_version": 376462,
+      "sha256": "a8afd9b86ccd7180b027d8556fb804db4a90795a89d4f12cf6ac3f54451c189f"
+    },
+    {
+      "access_method": "user_supplied_local_download",
+      "bytes": 425,
+      "file": "Dimensionless_M_std_error.txt",
+      "http_status_observed_by_pipeline": null,
+      "license": "CC0 1.0",
+      "provider_checksum_verified": true,
+      "provider_version": 376462,
+      "sha256": "528a57b77f8ef14ea83123ac0614d63a3a6c6c91db7d6e2daa23ea0e60b8cba3"
+    }
+  ],
+  "independent_run_counts": null,
+  "maximum_curated_files": 12,
+  "maximum_transfer_bytes": 200000000,
+  "milestone_decision": "M6B_QUALITATIVE_COMPARISON_ONLY",
+  "new_ml_fits": 0,
+  "new_provider_requests": 0,
+  "new_solver_attempts": 0,
+  "observable_evidence": "README: mean ejected mass divided by mean without a fixed grain at the same outlet; reported standard error uses the same normalization.",
+  "original_failed_download_unchanged": true,
+  "original_release": "b8228281578f5675dc15f7beef1be25ddb711cb0",
+  "provider_version": 376462,
+  "recovered_file_bytes": 6699,
+  "recovered_numeric_summary_bytes": 1275,
+  "source_doi": "10.5061/dryad.cvdncjtb5",
+  "uncertainty": "Reported SEM only; n/session covariance/normalizer uncertainty unavailable.",
+  "version": "m6b-user-recovery-v1"
+}

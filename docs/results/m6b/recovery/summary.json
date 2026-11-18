@@ -1,0 +1,27 @@
+{
+  "all_finite": true,
+  "figure": "fixed_grain_summary.png",
+  "independent_runs": null,
+  "maximum_bin": {
+    "bin_index": 5,
+    "fixed_grain_distance_over_dFG": 0.6599999999999999,
+    "normalized_mean_ejected_mass": 1.704679980957189,
+    "reported_standard_error": 0.07697811656707769
+  },
+  "normalized_mean_range": [
+    0.34377343012039807,
+    1.704679980957189
+  ],
+  "particle_trajectory_files": 0,
+  "physical_agreement_scores": 0,
+  "position_range_dimensionless": [
+    0.06,
+    1.98
+  ],
+  "reported_sem_range": [
+    0.027757881822152584,
+    0.1356527735726731
+  ],
+  "rows": 17,
+  "strictly_increasing_bins": true
+}
