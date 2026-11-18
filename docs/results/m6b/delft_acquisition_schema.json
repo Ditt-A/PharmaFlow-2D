@@ -1,0 +1,78 @@
+{
+  "attribution": "Fransen, Schott and Langelaar, TU Delft Hopper Discharge Experiments",
+  "rows": [
+    {
+      "coordinate_units": null,
+      "header_verified": true,
+      "kind": "acquisition_metadata_not_flow",
+      "mass_discharge_kg_s": null,
+      "note": "Frame-rate header present",
+      "particle_id": null,
+      "recorded_rate_value": 400.0,
+      "run_index": 1,
+      "sampling_hz": 400.0,
+      "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5",
+      "timestamp_s": null,
+      "velocity_m_s": null
+    },
+    {
+      "coordinate_units": null,
+      "header_verified": true,
+      "kind": "acquisition_metadata_not_flow",
+      "mass_discharge_kg_s": null,
+      "note": "Frame-rate header present",
+      "particle_id": null,
+      "recorded_rate_value": 600.0,
+      "run_index": 2,
+      "sampling_hz": 600.0,
+      "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5",
+      "timestamp_s": null,
+      "velocity_m_s": null
+    },
+    {
+      "coordinate_units": null,
+      "header_verified": true,
+      "kind": "acquisition_metadata_not_flow",
+      "mass_discharge_kg_s": null,
+      "note": "Frame-rate header present",
+      "particle_id": null,
+      "recorded_rate_value": 600.0,
+      "run_index": 3,
+      "sampling_hz": 600.0,
+      "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5",
+      "timestamp_s": null,
+      "velocity_m_s": null
+    },
+    {
+      "coordinate_units": null,
+      "header_verified": true,
+      "kind": "acquisition_metadata_not_flow",
+      "mass_discharge_kg_s": null,
+      "note": "Frame-rate header present",
+      "particle_id": null,
+      "recorded_rate_value": 600.0,
+      "run_index": 4,
+      "sampling_hz": 600.0,
+      "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5",
+      "timestamp_s": null,
+      "velocity_m_s": null
+    },
+    {
+      "coordinate_units": null,
+      "header_verified": true,
+      "kind": "acquisition_metadata_not_flow",
+      "mass_discharge_kg_s": null,
+      "note": "Frame-rate header present",
+      "particle_id": null,
+      "recorded_rate_value": 600.0,
+      "run_index": 5,
+      "sampling_hz": 600.0,
+      "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5",
+      "timestamp_s": null,
+      "velocity_m_s": null
+    }
+  ],
+  "source_doi": "10.4121/e3e48335-3a2f-4c10-88c4-54b9473d3927.v1",
+  "source_license": "CC BY-SA 4.0",
+  "source_sha256": "f8596b312edf1ee8f250927468bf4e52371acbb261fc42ddf41f6d28fa2c85d5"
+}

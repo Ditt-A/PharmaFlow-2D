@@ -1,0 +1,191 @@
+{
+  "version": "m6b-a-compatibility-v1",
+  "gate_names": [
+    "measurement_accessible",
+    "units_and_coordinates_verified",
+    "geometry_and_boundaries_documented",
+    "observable_definition_matched",
+    "repeats_or_uncertainty_limitations_explicit",
+    "model_form_considered"
+  ],
+  "policy": "All six gates must be literal true and no fatal unmatched model form may remain; unknown is not pass. Metadata alone never establishes flow agreement. No fitting or physical agreement score for blocked/qualitative/incompatible pairs.",
+  "pairs": [
+    {
+      "id": "dryad_positions",
+      "source": "dryad",
+      "observable": "particle centers, IDs and velocities",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "No MATLAB run acquired; public README returned HTTP 403.",
+        "Author code documents a candidate field contract, not raw field units or a verified run.",
+        "Tridisperse confined flat-floor recirculated/vibration-reset system differs from monodisperse finite-fill wedge."
+      ]
+    },
+    {
+      "id": "dryad_mass_history",
+      "source": "dryad",
+      "observable": "cumulative ejected mass and derived discharge rate",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "massflow.M/T are code-evidenced names, not accessible observations.",
+        "Semicircular observation boundary and species masses require reconciliation; no conversion to unique plane crossing count."
+      ]
+    },
+    {
+      "id": "dryad_arches",
+      "source": "dryad",
+      "observable": "source five-second no-exit clog outcome",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "No complete raw time series or original event annotations retrieved.",
+        "5 s no-exit protocol and vibration/recirculation are not first-persistent-arch-v1 at 0.4 s.",
+        "The final-state selection in author code uses future information and is not an online monitor."
+      ]
+    },
+    {
+      "id": "delft_mass",
+      "source": "delft",
+      "observable": "load-cell mass discharge time series",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "Collection describes load cells but no mass-history table is located in inspected file inventories.",
+        "README/acquisition annotations are not load-cell readings; support force cannot be assumed to be discharged mass.",
+        "Irregular 3D gravel, unknown particle properties and out-of-plane stresses require separate model treatment."
+      ]
+    },
+    {
+      "id": "delft_velocity",
+      "source": "delft",
+      "observable": "physically calibrated velocity field",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "Only acquisition text and catalog inventories obtained; no PIV vectors or calibrated image sequence acquired.",
+        "Physical pixel scale, coordinate axes, time synchronization, calibration uncertainty and angle reference unresolved."
+      ]
+    },
+    {
+      "id": "delft_frame_rate",
+      "source": "delft",
+      "observable": "image acquisition sampling metadata",
+      "gates": {
+        "measurement_accessible": true,
+        "units_and_coordinates_verified": true,
+        "geometry_and_boundaries_documented": true,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": true,
+      "evidence_and_limitations": [
+        "Explicit framerate header in selected 20 degree / 100 mm info file: five rows with 400/600 Hz annotations; these conflict with the catalog's uniform 600 Hz.",
+        "This is acquisition metadata, not a granular flow validation target.",
+        "Full experiment geometry and contact properties remain unresolved; this gate only concerns acquisition metadata."
+      ]
+    },
+    {
+      "id": "yogi_profile",
+      "source": "yogi",
+      "observable": "published experimental y/uy spatial profile",
+      "gates": {
+        "measurement_accessible": true,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": true,
+      "evidence_and_limitations": [
+        "Four actual experimental Numbers tables are accessible and provider MD5 verified.",
+        "Only 43/160 y/uy pairs per outlet are directly parseable; all strings/rows retained.",
+        "Units, normalization, origin/sign, averaging and error-column definitions unresolved.",
+        "Independent repeats not identified; this limitation is explicit.",
+        "Quasi-2D spheres/front-back effects differ from strict 2D disks. Native profile inspection only, no overlay or error score."
+      ]
+    },
+    {
+      "id": "yogi_density",
+      "source": "yogi",
+      "observable": "exit-region phi / density map",
+      "gates": {
+        "measurement_accessible": true,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": true,
+      "evidence_and_limitations": [
+        "Accessible native map columns are not a verified 2D disk packing fraction.",
+        "Volume fraction versus area fraction, spatial normalization, confinement and averaging remain unresolved."
+      ]
+    },
+    {
+      "id": "yogi_events",
+      "source": "yogi",
+      "observable": "time-resolved crossings and operational events",
+      "gates": {
+        "measurement_accessible": false,
+        "units_and_coordinates_verified": false,
+        "geometry_and_boundaries_documented": false,
+        "observable_definition_matched": false,
+        "repeats_or_uncertainty_limitations_explicit": true,
+        "model_form_considered": true
+      },
+      "fatal_unmatched_model_form": false,
+      "native_qualitative_interpretation_supported": false,
+      "evidence_and_limitations": [
+        "Spatial summary tables supply no particle IDs, time-indexed particle trajectories or event histories."
+      ]
+    }
+  ]
+}

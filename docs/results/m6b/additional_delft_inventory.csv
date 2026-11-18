@@ -1,0 +1,17 @@
+catalog,name,bytes,published_md5,downloaded,source_url,kind
+outlet150,alp_20_d_150_calib.7z,17824596,5a5ef505683be2487fe48f8ddde3904a,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,alp_20_d_150_run_1.7z,3454940027,cc3b7dfd48f85915150ef22ec2bfcebb,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,alp_20_d_150_run_3.7z,3592583079,f1f62770e12aa7116dd5f60ce59e8970,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,alp_20_d_150_run_4.7z,3592582983,4c6400cb045601002afdc33b390d6b30,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,alp_20_d_150_run_5.7z,4062774569,2018f11ad399e61bdf76cb28719962fb,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,alp_20_d_150_run_2.7z,3583331403,0390b1ef04c008cc94de7402752de4f1,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,README.txt,1713,fa18ce08f5b8bea8e762beee5893f217,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet150,info_alp_20_d_150.txt,345,238c355049257c63a99d32add1c60dba,False,https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd,advertised_file_not_acquired
+outlet200,alp_20_d_200.7z,10373272396,98b2b9ee06f07c10a5202773532ded9d,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_30_d_200.7z,13731831422,ce619add9e0ae0c5abcc7c4ba3d25f66,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_45_d_200.7z,14811319501,5844e8388a4b15b1415133fc3ca54497,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_60_d_200.7z,24181609282,b4d5d71f3e07b997b756379c7f4c0484,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_90_d_200.7z,18060105854,2231dcfc64c744d0cd566cc1440989f1,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_75_d_200.7z,34632650577,8d17511b99214d369661c539331f0d30,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,alp_825_d_200.7z,32847060721,5d1e4f97f897e219b7bf92578542a001,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired
+outlet200,README.txt,1743,99780cc741257f43114e926807789ea7,False,https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1,advertised_file_not_acquired

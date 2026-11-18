@@ -1,0 +1,84 @@
+{
+  "attempts": [
+    {
+      "completed_utc": "2026-11-18T05:58:55.555972+00:00",
+      "id": "hopper_search",
+      "method": "POST",
+      "path": "hopper_search.json",
+      "request_json": {
+        "is_latest": 1,
+        "page": 1,
+        "page_size": 20,
+        "search_for": "hopper discharge",
+        "search_operator": "AND",
+        "search_scope": [
+          "title",
+          "description",
+          "tag",
+          "author"
+        ]
+      },
+      "reserved_bytes": 1008192,
+      "sha256": "5f126d8ccdb0e7543e897f2038b4e97566b115ca4d2a03ea8be2f1386ee135ba",
+      "started_utc": "2026-11-18T05:58:54.368400+00:00",
+      "state": "complete",
+      "status": 200,
+      "transfer_bytes": 24186,
+      "url": "https://data.4tu.nl/v3/datasets/search"
+    },
+    {
+      "completed_utc": "2026-11-18T05:58:55.818925+00:00",
+      "id": "author_search",
+      "method": "POST",
+      "request_json": {
+        "is_latest": 1,
+        "page": 1,
+        "page_size": 20,
+        "search_for": "Fransen",
+        "search_operator": "AND",
+        "search_scope": [
+          "title",
+          "description",
+          "tag",
+          "author"
+        ]
+      },
+      "reserved_bytes": 1008192,
+      "started_utc": "2026-11-18T05:58:55.557565+00:00",
+      "state": "access_failed",
+      "status": 503,
+      "transfer_bytes": 197,
+      "url": "https://data.4tu.nl/v3/datasets/search"
+    },
+    {
+      "completed_utc": "2026-11-18T05:58:59.947021+00:00",
+      "id": "outlet150",
+      "method": "GET",
+      "path": "outlet150.json",
+      "request_json": null,
+      "reserved_bytes": 1008192,
+      "sha256": "afbd0ab14f3fd1f6d0efc21c9640dc4f894e5fb8d617b82e1c5bf6c00af41baf",
+      "started_utc": "2026-11-18T05:58:55.823242+00:00",
+      "state": "complete",
+      "status": 200,
+      "transfer_bytes": 5818,
+      "url": "https://data.4tu.nl/v2/articles/ea3e3e6e-67ce-4629-a889-be0b04c735dd"
+    },
+    {
+      "completed_utc": "2026-11-18T05:59:00.522209+00:00",
+      "id": "outlet200",
+      "method": "GET",
+      "path": "outlet200.json",
+      "request_json": null,
+      "reserved_bytes": 1008192,
+      "sha256": "3e29291c39039aff83c50e5ab3ccaa15daa5fc68d626392aba540fc67f2f23c4",
+      "started_utc": "2026-11-18T05:58:59.958240+00:00",
+      "state": "complete",
+      "status": 200,
+      "transfer_bytes": 5814,
+      "url": "https://data.4tu.nl/v2/articles/4fc30415-6463-490b-ba87-032ae94b39d1"
+    }
+  ],
+  "maximum_requests": 4,
+  "maximum_reserved_bytes": 4032768
+}

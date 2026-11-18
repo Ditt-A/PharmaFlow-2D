@@ -1,0 +1,18 @@
+{
+  "tests_passed": 202,
+  "historical_tests": 172,
+  "new_m6b_tests": 30,
+  "skipped": 0,
+  "strict_taichi_cpu_cuda": true,
+  "taichi_pin": "1.7.3",
+  "historical_integrity": {
+    "frozen_candidates": 86,
+    "historical_files": 863,
+    "new_campaign_or_demo_attempts": 0,
+    "status": "PASS",
+    "unchanged_core_packages": 13,
+    "unchanged_m5_charged_attempts": 2
+  },
+  "warnings": "One upstream Taichi locale.getdefaultlocale DeprecationWarning",
+  "command": "PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q"
+}

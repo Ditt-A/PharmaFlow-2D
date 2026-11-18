@@ -1,0 +1,123 @@
+[
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "dryad_positions",
+    "observable": "particle centers, IDs and velocities",
+    "source": "dryad",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "dryad_mass_history",
+    "observable": "cumulative ejected mass and derived discharge rate",
+    "source": "dryad",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "dryad_arches",
+    "observable": "source five-second no-exit clog outcome",
+    "source": "dryad",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "delft_mass",
+    "observable": "load-cell mass discharge time series",
+    "source": "delft",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "delft_velocity",
+    "observable": "physically calibrated velocity field",
+    "source": "delft",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "QUALITATIVE_ONLY",
+    "id": "delft_frame_rate",
+    "observable": "image acquisition sampling metadata",
+    "source": "delft",
+    "unmet_gates": [
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "QUALITATIVE_ONLY",
+    "id": "yogi_profile",
+    "observable": "published experimental y/uy spatial profile",
+    "source": "yogi",
+    "unmet_gates": [
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "QUALITATIVE_ONLY",
+    "id": "yogi_density",
+    "observable": "exit-region phi / density map",
+    "source": "yogi",
+    "unmet_gates": [
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  },
+  {
+    "agreement_score_allowed": false,
+    "calibration_claim_allowed": false,
+    "classification": "BLOCKED_BY_MISSING_INFORMATION",
+    "id": "yogi_events",
+    "observable": "time-resolved crossings and operational events",
+    "source": "yogi",
+    "unmet_gates": [
+      "measurement_accessible",
+      "units_and_coordinates_verified",
+      "geometry_and_boundaries_documented",
+      "observable_definition_matched"
+    ]
+  }
+]

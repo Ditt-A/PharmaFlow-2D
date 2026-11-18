@@ -1,0 +1,82 @@
+{
+  "attribution": "Yogi and Khakhar, Zenodo 20554446",
+  "parsing": "Literal strings plus nullable native floats. No cell repair, units/sign conversion or trajectory construction.",
+  "source_license": "CC BY 4.0",
+  "source_sha256": "5944aa8f407cc0a1978fb6bb9036daee6c6dda45220a5b6387d32621d0c4b4db",
+  "tables": [
+    {
+      "columns": [
+        "y",
+        "phi",
+        "dphi",
+        "uy",
+        "duy",
+        "ay",
+        "day"
+      ],
+      "coordinate_origin_sign": null,
+      "native_parseable_y_uy_pairs": 43,
+      "physical_units_verified": false,
+      "profile_rows": 160,
+      "rows": 161,
+      "sheet": "D=2 cm: Profiles",
+      "table": "Profiles",
+      "time_or_particle_ids_supplied": false
+    },
+    {
+      "columns": [
+        "x",
+        "y",
+        "phi",
+        "vx",
+        "vy",
+        "ay"
+      ],
+      "coordinate_origin_sign": null,
+      "native_parseable_y_uy_pairs": 0,
+      "physical_units_verified": false,
+      "profile_rows": 0,
+      "rows": 25601,
+      "sheet": "D=2 cm: 2D map",
+      "table": "va",
+      "time_or_particle_ids_supplied": false
+    },
+    {
+      "columns": [
+        "y",
+        "phi",
+        "dphi",
+        "uy",
+        "duy",
+        "ay",
+        "day"
+      ],
+      "coordinate_origin_sign": null,
+      "native_parseable_y_uy_pairs": 43,
+      "physical_units_verified": false,
+      "profile_rows": 160,
+      "rows": 161,
+      "sheet": "D=3 cm: Profiles",
+      "table": "ua",
+      "time_or_particle_ids_supplied": false
+    },
+    {
+      "columns": [
+        "x",
+        "y",
+        "phi",
+        "vx",
+        "vy",
+        "ay"
+      ],
+      "coordinate_origin_sign": null,
+      "native_parseable_y_uy_pairs": 0,
+      "physical_units_verified": false,
+      "profile_rows": 0,
+      "rows": 25601,
+      "sheet": "D=3 cm: 2D map",
+      "table": "va",
+      "time_or_particle_ids_supplied": false
+    }
+  ]
+}

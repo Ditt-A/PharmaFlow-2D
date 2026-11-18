@@ -1,0 +1,104 @@
+{
+  "response_bytes": 231490,
+  "responses": [
+    {
+      "path": "data/raw/m6b/discovery/dryad_docs.txt",
+      "url": "https://datadryad.org/api/v2/docs",
+      "bytes": 147,
+      "sha256": "8f1ae73a475c4cd413894cfe011a042e9cd5fd3070968652a6b2d0e5c1a7897f",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/dryad_api_guide.txt",
+      "url": "https://raw.githubusercontent.com/datadryad/dryad-app/main/documentation/apis/README.md",
+      "bytes": 3242,
+      "sha256": "7eaf2c0961c1111fb9df187208db108f8586856e574cb9d2df0eb87b8d39c573",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/author_zenodo.txt",
+      "url": "https://zenodo.org/api/records/10895419",
+      "bytes": 5984,
+      "sha256": "dae6986f67bd8eba20e6f8cb2be6a3a995d9fe7edfaaf7d25c5ac79f0825657b",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/author_zenodo_concept.txt",
+      "url": "https://zenodo.org/api/records/10895418",
+      "bytes": 5984,
+      "sha256": "dae6986f67bd8eba20e6f8cb2be6a3a995d9fe7edfaaf7d25c5ac79f0825657b",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/delft_search.txt",
+      "url": "https://data.4tu.nl/search?searchscope=all&search=hopper%20discharge",
+      "bytes": 127703,
+      "sha256": "31a58f1af4850109fcb680cc87e3d08a4172a1a8664698fd3ca2ea370fe89f40",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/delft_search.js",
+      "url": "https://data.4tu.nl/static/js/search.js?cache=1748245458",
+      "bytes": 38121,
+      "sha256": "804e44ca89238693c2d2ef43a0d8fe10bde251be4062934df5386b2a7aa938c4",
+      "method": "GET",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data"
+    },
+    {
+      "path": "data/raw/m6b/discovery/delft_query_0.json",
+      "url": "https://data.4tu.nl/v3/datasets/search",
+      "bytes": 24186,
+      "sha256": "5f126d8ccdb0e7543e897f2038b4e97566b115ca4d2a03ea8be2f1386ee135ba",
+      "method": "POST",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data",
+      "request_json": {
+        "search_for": "hopper discharge",
+        "search_scope": [
+          "title",
+          "description",
+          "tag",
+          "author"
+        ],
+        "search_operator": "AND",
+        "page_size": 20,
+        "page": 1,
+        "is_latest": 1
+      }
+    },
+    {
+      "path": "data/raw/m6b/discovery/delft_query_1.json",
+      "url": "https://data.4tu.nl/v3/datasets/search",
+      "bytes": 26123,
+      "sha256": "d16d4bee158efeb6d62305584d39bb2dbb3d5b491fdcfd1103d3ada24092324c",
+      "method": "POST",
+      "status": 200,
+      "kind": "workstation_discovery_metadata_not_experimental_data",
+      "request_json": {
+        "search_for": "Fransen",
+        "search_scope": [
+          "title",
+          "description",
+          "tag",
+          "author"
+        ],
+        "search_operator": "AND",
+        "page_size": 20,
+        "page": 1,
+        "is_latest": 1
+      }
+    }
+  ],
+  "experimental_measurement_bytes": 0
+}

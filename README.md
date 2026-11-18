@@ -405,7 +405,48 @@ all numerical/model-form/material/experimental uncertainties are distinguished.
 See [external audit](docs/M6_EXTERNAL_DATA_AUDIT.md),
 [benchmark definitions](docs/M6_PHYSICS_BENCHMARKS.md),
 [calibration feasibility](docs/M6_CALIBRATION_FEASIBILITY.md), and
-[readiness / bounded M6B proposal](docs/M6_READINESS.md). M6B is not launched.
+[readiness / bounded M6B proposal](docs/M6_READINESS.md). At the M6A release,
+M6B had not been launched; the later data-only M6B-A result follows.
+
+## M6B-A: external recovery and compatibility
+
+**M6B_QUALITATIVE_COMPARISON_ONLY**. No new DEM runs, calibration or ML training.
+The original M1-M6A releases, model freezes, labels and M5 demo ledger are intact.
+
+- **202 tests pass** (172 historical + 30 M6B); Taichi stays pinned to 1.7.3.
+- Six curated files / **8,140,953 retained bytes**, including three author
+  software files, two Delft documentation/acquisition files and the reused
+  experimental Numbers container. Seven reservations including the failed
+  Dryad README, within the 12-file / 200MB budget.
+- **0 new experimental measurement bytes**, no raw particle trajectory recovered.
+  The official software reveals a candidate MATLAB layout but cannot verify
+  raw coordinate/velocity units. Dryad README returns 403; the documented
+  token-required API is not bypassed. A curator request is drafted, not sent.
+- Five Delft acquisition rows preserve **400/600 Hz** annotations and the catalog
+  conflict. New 150/200mm inventories still expose image archives/text rather
+  than a retrieved mass/PIV series. A metadata query returned 503, without retry.
+- The four genuine Yogi experimental tables remain native: all **320** profile
+  rows retained, **86** directly parseable y/uy pairs, unresolved physical units.
+  No physical agreement score, inferred conversion or external event label.
+
+```bash
+conda activate pharmaflow-2d
+python scripts/acquire_m6b.py --delft-catalog  # bounded IO; cached successes verified, failures not retried
+python scripts/audit_m6b.py                  # offline parsing, checksums and comparison gates
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+```
+
+Raw inputs: `data/raw/m6b/`; derived native profiles/metadata:
+`data/processed/m6b/`. Both stay out of Git. See
+[access/provenance](docs/M6B_DATA_ACCESS.md), [schema](docs/M6B_EXPERIMENTAL_SCHEMA.md),
+[physical compatibility](docs/M6B_COMPATIBILITY.md), [readiness](docs/M6B_READINESS.md)
+and the [unsent request](docs/M6B_DATA_REQUEST.md).
+
+There are **zero quantitatively eligible physical comparisons**. Tridispersity,
+flat-floor geometry, front/back confinement, reset/recirculation and unknown
+contact parameters prevent direct calibration. Continue only as a clearly labeled
+**uncalibrated engineering simulation study** until matched measurements exist.
+The existing M5 dashboard remains the interactive simulation/replay application.
 
 ## Repository layout
 
@@ -469,9 +510,10 @@ Optimization is outside the current scope.
 
 ## Next step for Codex
 
-Preserve M1-M6A tests, historical source hashes/splits, frozen artifacts and test
+Preserve M1-M6B-A tests, historical source hashes/splits, frozen artifacts and test
 results. Resolve calibration and event-type/policy limitations using development
 groups. Any new campaign requires a separate budget; do not recycle the locked
 M4B cohort for tuning or silently exceed its completed 48-attempt ceiling.
-The data-first M6B proposal requires separate authorization; do not launch it
-or use the remaining M5 dashboard attempts for external benchmarking.
+M6B-A's authorized recovery audit is complete. No subsequent calibration,
+simulation, model extension or training stage is automatically authorized.
+Do not use the remaining M5 dashboard attempts for external benchmarking.

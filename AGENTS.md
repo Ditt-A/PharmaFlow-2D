@@ -36,6 +36,17 @@ clogged zeros or use historical held-out results for fitting/selection. M6B's
 conditional budget is a proposal, not authorization to execute it.
 Existing physics verification tests remain required and are separate from campaign attempts.
 
+M6B-A is now explicitly authorized and completed as data-access/schema recovery
+only: M6B_QUALITATIVE_COMPARISON_ONLY. Read docs/M6B_DATA_ACCESS.md,
+M6B_EXPERIMENTAL_SCHEMA.md, M6B_COMPATIBILITY.md and M6B_READINESS.md.
+Its hard budget is 12 curated files including failed reservations and 200MB;
+seven reservations are charged, six files retained. No new solver attempts,
+calibration, ML training or design optimization. Preserve acquisition/catalog
+ledgers: do not silently retry failures, reset budgets, bypass denials or mirror
+archives. Author code is inspected statically, never executed or substituted for
+measurements. Unknown units/geometry fail quantitative gates. No follow-on stage
+is authorized; retain the M5 ledger and all historical scientific releases.
+
 ## Before changes
 1. Read README.md and docs/RESEARCH_PLAN.md.
 2. Run scripts/check_env.py, python -m pytest -q, scripts/download_reference.py --list.

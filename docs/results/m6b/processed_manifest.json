@@ -1,0 +1,17 @@
+[
+  {
+    "bytes": 27382,
+    "path": "data/processed/m6b/author_schema_evidence.json",
+    "sha256": "2a18f72447dc8994126da2dced4abf73a769dcf796b5c888eeab54c5909a0266"
+  },
+  {
+    "bytes": 7399,
+    "path": "data/processed/m6b/delft_acquisition_metadata.parquet",
+    "sha256": "fbb9b27b550aa0f026f0d244320554e95782e97428054946b10e99532d522ecf"
+  },
+  {
+    "bytes": 36402,
+    "path": "data/processed/m6b/yogi_native_profiles.parquet",
+    "sha256": "908a355045146376419e76052fc74fc600f6177a990f8fcf705f712f6a4f8a9e"
+  }
+]

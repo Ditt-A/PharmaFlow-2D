@@ -1,0 +1,38 @@
+{
+  "acquisition_observed_response_bytes": 1269263,
+  "additional_delft_advertised_files": 16,
+  "calibration_performed": false,
+  "catalog_observed_response_bytes": 36015,
+  "charged_curated_reservations": 7,
+  "combined_reserved_transfer_upper_bound_bytes": 17132880,
+  "compatibility_counts": {
+    "BLOCKED_BY_MISSING_INFORMATION": 6,
+    "QUALITATIVE_ONLY": 3
+  },
+  "curated_bytes_on_disk": 8140953,
+  "decision": "M6B_QUALITATIVE_COMPARISON_ONLY",
+  "delft_acquisition_annotation_rows": 5,
+  "directly_parseable_native_y_uy_pairs": 86,
+  "historical_integrity": {
+    "frozen_candidates": 86,
+    "historical_files": 863,
+    "new_campaign_or_demo_attempts": 0,
+    "status": "PASS",
+    "unchanged_core_packages": 13,
+    "unchanged_m5_charged_attempts": 2
+  },
+  "maximum_curated_files": 12,
+  "maximum_transfer_bytes": 200000000,
+  "new_author_code_bytes": 1196267,
+  "new_ml_fits": 0,
+  "new_solver_attempts": 0,
+  "newly_downloaded_experimental_measurement_bytes": 0,
+  "particle_trajectory_files": 0,
+  "physical_agreement_scores_computed": 0,
+  "quantitative_comparisons": 0,
+  "raw_mat_files": 0,
+  "reused_experimental_profile_bytes": 6942628,
+  "successful_curated_files": 6,
+  "version": "m6b-a-v1",
+  "yogi_native_profile_rows": 320
+}
