@@ -1,0 +1,23 @@
+{
+  "actual_solver_cpu_s": 4755.774729515,
+  "actual_worker_wall_s": 4763.308432524558,
+  "attempts": 12,
+  "completed_discharge": 0,
+  "confirmed_finite_arches": 0,
+  "decision": "M7A_NUMERICAL_ANALOGUE_FEASIBLE",
+  "experimental_comparison": "Qualitative mechanism comparison only; geometry, forcing, boundary and stopping are unmatched",
+  "failed": 0,
+  "historical_integrity": {
+    "frozen_candidates": 86,
+    "unchanged_historical_files": 930,
+    "unchanged_m5_attempts": 2
+  },
+  "larger_campaign_automatically_authorized": false,
+  "maximum_overlap": 0.040336994150058564,
+  "physical_agreement_score": null,
+  "right_censored_no_confirmed_arch": 12,
+  "startup_blockages": 0,
+  "successful": 12,
+  "unattempted": 0,
+  "unresolved_no_confirmed_arch": 12
+}

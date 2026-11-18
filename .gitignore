@@ -17,7 +17,12 @@ dist/
 # Runtime data, never push raw archives or trajectories
 data/raw/
 data/processed/
-data/simulated/
+# Preserve only the compact M7A design freeze and attempt ledger; trajectories stay local.
+data/simulated/*
+!data/simulated/m7a/
+data/simulated/m7a/*
+!data/simulated/m7a/attempts.sqlite3
+!data/simulated/m7a/design_freeze.json
 outputs/figures/
 outputs/animations/
 outputs/rollouts/
@@ -53,3 +58,7 @@ outputs/demos/
 !docs/results/m5/continuous.gif
 !docs/results/m5/startup.gif
 !docs/results/m5/resumed.gif
+# Compact actual solver-generated fixed-grain research scenes.
+!docs/results/m7a/control.gif
+!docs/results/m7a/near.gif
+!docs/results/m7a/far.gif

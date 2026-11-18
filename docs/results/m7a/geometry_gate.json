@@ -1,0 +1,25 @@
+{
+  "actual_smallest_mass_timestep_limit_s": 2.967140157222725e-06,
+  "approved_for_exploratory_pilot_only": true,
+  "experimental_geometry_matched": false,
+  "experimental_mismatches": [
+    "unknown exact floor/lip dimensions and tolerances",
+    "unknown species fractions (equal-count mixture assumed)",
+    "no front/back friction",
+    "no vibration or recirculation",
+    "60-grain finite fill rather than approximately 35cm source fill",
+    "outlet-plane unique passages rather than source semicircular observation boundary",
+    "0.4s finite-arch criterion rather than source 5s no-exit rule",
+    "friction/stiffness/damping uncalibrated"
+  ],
+  "idealization": "Chosen coordinates y_floor=0, y_FG=R_FG; x_FG=-D/2-q*dFG. Not measured source wall coordinates.",
+  "numerical_geometry_representable": true,
+  "paired_initial_state_sha256": {
+    "77001": "d398075e081726cc00866c8cae21031af8d00849d5241cca36703df191651b8e",
+    "77002": "fa115ffe2401bbe422654b09a692538b1ba4a3f15fcec6c1cc7c6848b03b50a7",
+    "77003": "0a321ae535d58ffa6b165ae304920f68049a083541b0edfe6fddd43faa4bb052"
+  },
+  "physical_agreement_score_allowed": false,
+  "representable_geometry": "Ideal flat floor with central outlet and vertical sides; circle rigidly fixed to floor",
+  "version": "m7a-geometry-v1"
+}

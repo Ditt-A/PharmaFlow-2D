@@ -103,3 +103,18 @@ Do not delete its ledger, replace locked configurations or retune after test.
 - Run tests after changes, show failures candidly.
 - Never state the project is validated on proprietary Kalbe operations; it is a public-data research proof of concept for pharmaceutical powder handling.
 - No exaggerated speedups or predictive performance.
+
+M7A fixed-grain extension and feasibility pilot are complete. Read
+`docs/M7A_GEOMETRY.md`, `docs/M7A_FIXED_GRAIN_PHYSICS.md`,
+`docs/M7A_PILOT_RESULTS.md` and `docs/M7A_READINESS.md`. The verdict is
+`M7A_NUMERICAL_ANALOGUE_FEASIBLE` for the implementation only; no source-matched
+arch or avalanche-mass result was obtained. All 12 solver attempts are charged,
+all succeeded, and all are right-censored for a confirmed arch at 1.0s. Do not
+run, retry, extend or replace M7A conditions. Preserve `data/simulated/m7a/`
+ledger/freeze metadata, compact checksums/results, and the original M6B 17-bin
+measurements. Full NPZ trajectories remain ignored and local. The fixed-grain
+classes/flat-floor geometry are separate from legacy wedge behavior; do not edit
+source files hash-bound in `data/simulated/m7a/design_freeze.json` without a new
+versioned extension and explicit study scope. The M5 demo ledger is independent;
+its two charged attempts remain unchanged. Do not train ML or infer calibration,
+physical optimum, or source-matched event labels from this pilot.

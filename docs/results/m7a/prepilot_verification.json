@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "historical_baseline_tests": 209,
+  "new_physics_tests": 26,
+  "strict_taichi_cpu_cuda": true,
+  "command": "PHARMAFLOW_TEST_TAICHI=1 python -m pytest tests/test_m7a.py -q"
+}

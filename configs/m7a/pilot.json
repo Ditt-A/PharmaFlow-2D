@@ -1,0 +1,71 @@
+{
+  "version": "m7a-pilot-v1",
+  "scope": "uncalibrated numerical analogue; no experimental fit",
+  "budget": {
+    "maximum_attempts": 12,
+    "maximum_worker_hours": 6,
+    "maximum_wall_s_per_attempt": 1800,
+    "workers": 3
+  },
+  "positions_over_dFG": [
+    null,
+    0.3,
+    0.66,
+    1.14
+  ],
+  "seeds": [
+    77001,
+    77002,
+    77003
+  ],
+  "common": {
+    "config": {
+      "width_m": 0.227,
+      "height_m": 0.5,
+      "outlet_width_m": 0.033196,
+      "particle_radius_m": 0.0037,
+      "gravity_m_s2": 9.81,
+      "dt_s": 2.5e-06,
+      "funnel_height_m": 0.1,
+      "density_kg_m3": 940.0,
+      "thickness_m": 0.00318,
+      "normal_stiffness_n_m": 4000.0,
+      "tangential_stiffness_n_m": 1000.0,
+      "normal_damping_kg_s": 0.15,
+      "tangential_damping_kg_s": 0.03,
+      "friction": 0.4,
+      "wall_friction": 0.4,
+      "n_particles": 60,
+      "seed": 77001,
+      "gate_open_time_s": 0.05,
+      "removal_y_m": -0.04,
+      "neighbor_skin_m": 0.001,
+      "max_overlap_ratio": 0.15,
+      "initial_lift_m": 0.0
+    },
+    "duration_s": 1.0,
+    "sample_every": 1000,
+    "diameters_m": [
+      0.006,
+      0.0074,
+      0.0086
+    ],
+    "packing_bottom_m": 0.025,
+    "fixed_radius_m": 0.0037,
+    "fixed_friction": 0.4
+  },
+  "assumptions": {
+    "species_counts": "20 each; experimental fractions unknown",
+    "initial_fill": "60 grains from independent seeded mixture ordering; identical paired states across obstacle conditions",
+    "obstacle_frame": "left outlet edge; positive outward; center=(-D/2-q*dFG,RFG), ideal floor y=0",
+    "startup": "gate removed at 0.05s; no vibration or recirculation",
+    "termination": "fixed 1.0s observation; finite arch requires persistent structure and quiet state over 0.4s",
+    "ejection": "unique first downward center crossing of y=0 inside outlet; actual particle mass",
+    "normalization": "ratio of group mean fixed-horizon ejected masses, with matched no-obstacle controls; NOT source five-second avalanche mass",
+    "position_selection": "post-inspection of published curve; not independent validation or optimization"
+  },
+  "profile_stop": {
+    "immediate_exhaustion_fraction_of_duration": 0.5,
+    "rule": "Do not dispatch remaining runs after immediate complete finite-fill exhaustion or numerical profile failure"
+  }
+}

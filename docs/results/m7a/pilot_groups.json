@@ -1,0 +1,42 @@
+[
+  {
+    "confirmed_finite_arches": 0,
+    "mean_ejected_count": 27.0,
+    "mean_ejected_mass_kg": 0.0034500413203186367,
+    "n": 3,
+    "normalization_scope": "1.0s finite-fill outlet-plane mass; not source avalanche mass or flow rate",
+    "normalized_fixed_horizon_mass": 1.0,
+    "position_over_dFG": null,
+    "sample_sd_kg": 0.00037269349839394087
+  },
+  {
+    "confirmed_finite_arches": 0,
+    "mean_ejected_count": 21.666666666666668,
+    "mean_ejected_mass_kg": 0.0027923688788188904,
+    "n": 3,
+    "normalization_scope": "1.0s finite-fill outlet-plane mass; not source avalanche mass or flow rate",
+    "normalized_fixed_horizon_mass": 0.8093725899378488,
+    "position_over_dFG": 0.3,
+    "sample_sd_kg": 0.0004861083128391939
+  },
+  {
+    "confirmed_finite_arches": 0,
+    "mean_ejected_count": 23.666666666666668,
+    "mean_ejected_mass_kg": 0.0030057915683070033,
+    "n": 3,
+    "normalization_scope": "1.0s finite-fill outlet-plane mass; not source avalanche mass or flow rate",
+    "normalized_fixed_horizon_mass": 0.8712334981626818,
+    "position_over_dFG": 0.66,
+    "sample_sd_kg": 0.0004958432736645752
+  },
+  {
+    "confirmed_finite_arches": 0,
+    "mean_ejected_count": 23.0,
+    "mean_ejected_mass_kg": 0.0029050590639402175,
+    "n": 3,
+    "normalization_scope": "1.0s finite-fill outlet-plane mass; not source avalanche mass or flow rate",
+    "normalized_fixed_horizon_mass": 0.8420360205053758,
+    "position_over_dFG": 1.14,
+    "sample_sd_kg": 0.0005058155932997873
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "dt_s": 1e-05,
+    "duration_s": 0.006,
+    "final_relative_kinetic_error": 2.440260661207283e-05,
+    "final_velocity_x_m_s": 0.1000012201228871,
+    "maximum_overlap_over_radius": 0.02802606342177088,
+    "maximum_relative_energy_error": 0.009000497470776248,
+    "mobile_plus_obstacle_impulse_residual_kg_m_s": 6.776263578034403e-20
+  },
+  {
+    "dt_s": 5e-06,
+    "duration_s": 0.006,
+    "final_relative_kinetic_error": 1.1271422331038394e-05,
+    "final_velocity_x_m_s": 0.10000056356952851,
+    "maximum_overlap_over_radius": 0.028025226721359667,
+    "maximum_relative_energy_error": 0.004480232969773512,
+    "mobile_plus_obstacle_impulse_residual_kg_m_s": 2.710505431213761e-20
+  },
+  {
+    "dt_s": 2.5e-06,
+    "duration_s": 0.006,
+    "final_relative_kinetic_error": 4.4856412435567705e-06,
+    "final_velocity_x_m_s": 0.10000022428181067,
+    "maximum_overlap_over_radius": 0.02802501755689961,
+    "maximum_relative_energy_error": 0.00223512984508889,
+    "mobile_plus_obstacle_impulse_residual_kg_m_s": 6.776263578034403e-20
+  }
+]

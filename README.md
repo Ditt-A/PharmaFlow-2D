@@ -2,7 +2,7 @@
 
 **DEM-based granular hopper simulation and AI-assisted flow diagnostics** — a research-oriented proof of concept for powder handling in pharmaceutical manufacturing.
 
-> **Status:** M1-M6A are implemented. 172 tests pass, including strict CUDA checks. M4B's frozen physics rule remains competitive; M5 provides an interactive research dashboard. M6A audits three external sources and establishes **limited comparison only**: quantitative physical calibration remains unresolved. No industrial performance or deployment claim.
+> **Status:** M1–M7A are implemented. 237 tests pass, including strict Taichi CPU/CUDA contact checks. M4B’s frozen physics rule remains competitive with ML; M7A adds an uncalibrated fixed-grain numerical feasibility study. External physical calibration remains unresolved. No industrial performance or deployment claim.
 
 ## The engineering problem
 
@@ -477,6 +477,34 @@ python scripts/recover_m6b.py  # offline; four verified raw inputs in data/raw/m
 [recovery/units supplement](docs/M6B_RECOVERY.md) and
 [compact provenance](docs/results/m6b/recovery/provenance.json).
 
+## M7A fixed-grain numerical feasibility study
+
+M7A adds an immobile circular obstacle and separately selectable ideal flat-floor geometry; legacy wedge behavior is preserved. The bounded pilot used 12 attempts (three paired seeds per control/q condition), all successful. The maximum overlap was 0.04034 under the unchanged 0.15 guard. No arch, startup blockage or completed discharge was confirmed; all 12 one-second runs are right-censored for an arch event. Fixed-grain/control mass ratios over that finite horizon were 0.809, 0.871 and 0.842 at q=x/dFG of 0.30, 0.66 and 1.14. These small-sample, unmatched numerical outcomes are not physical calibration or reproduction of the published avalanche-mass curve.
+
+The three lightweight scenes are actual stored solver frames, and the source's 17-bin curve is shown separately:
+
+![Actual uncalibrated fixed-grain DEM snapshot](docs/results/m7a/near.png)
+
+See the [geometry audit](docs/M7A_GEOMETRY.md), [fixed-grain physics](docs/M7A_FIXED_GRAIN_PHYSICS.md), [pilot outcomes](docs/M7A_PILOT_RESULTS.md), and [readiness decision](docs/M7A_READINESS.md). Raw NPZ trajectories remain local under `data/simulated/m7a/trajectories/`; checksums, compact run records and selected figures are versioned.
+
+The read-only M7A viewer is part of the M5 Streamlit application. On JupyterHub, from the repository directory:
+
+```bash
+conda activate pharmaflow-2d
+python -m streamlit run app/streamlit_app.py --server.address 127.0.0.1 --server.port 8501
+```
+
+Open the JupyterHub proxy URL for port 8501, choose **M7A fixed grain**, select one of the saved local pilot runs, then use Play/Pause, one-frame step buttons, the stored-frame slider and contact overlay. The page reports physical timestamps, discharged count and ejected mass, with PNG/GIF downloads. The separate Cornerstones tab shows its original normalized mass and SEM. This page only replays data; it does not launch new M7A solver attempts. The existing M5 bounded demo page retains its own ledger and budget.
+
+Offline audit commands (trajectory NPZs are needed for the full audit):
+
+```bash
+python scripts/audit_m7a.py
+PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q
+```
+
+The 12-attempt M7A budget is exhausted. Do not rerun or extend it without a new, explicit frozen experiment design. M7A does not establish an experimental optimum, a 70% discharge-rate increase, or pharmaceutical/industrial readiness.
+
 ## Repository layout
 
 ```text
@@ -512,10 +540,10 @@ PharmaFlow-2D/
 └── tests/                         # Configuration and physical validation
 ```
 
-The DEM solver, M2 runner, M3 dataset pipeline, M4A/M4B CPU baselines and headless
-visualizers and M5 interactive research dashboard are implemented. Reference
-calibration and broader established-flow event coverage remain unresolved.
-Optimization is outside the current scope.
+The DEM solver, M2 runner, M3 dataset pipeline, M4A/M4B CPU baselines, M5 dashboard
+and M7A fixed-grain numerical extension are implemented. Reference calibration and
+broader established-flow event coverage remain unresolved. Optimization is outside
+the current scope.
 
 ## Planned milestones
 
@@ -527,6 +555,7 @@ Optimization is outside the current scope.
 6. **M4B — Targeted expansion:** implemented with 48 new runs, independent configuration testing and causal online replay. Physics rules remain competitive; no neural complexity is justified yet.
 7. **M5 — Operational diagnostics:** implemented with a separate causal taxonomy, interactive actual-state viewer, bounded CPU demos, frozen warning comparison and explicit calibration gaps.
 8. **M6A — External physics:** implemented with bounded independent-source audits, explicit physical benchmark gates and a conditional calibration plan. Limited comparison only; no fitted material parameters or new campaign.
+9. **M7A — Fixed-grain analogue:** implemented with a separate immobile-contact extension and 12 frozen numerical feasibility runs. No source-matched arch events or quantitative calibration were established; the attempt budget is exhausted.
 
 ## Research integrity
 
@@ -539,10 +568,9 @@ Optimization is outside the current scope.
 
 ## Next step for Codex
 
-Preserve M1-M6B-A tests, historical source hashes/splits, frozen artifacts and test
-results. Resolve calibration and event-type/policy limitations using development
-groups. Any new campaign requires a separate budget; do not recycle the locked
-M4B cohort for tuning or silently exceed its completed 48-attempt ceiling.
-M6B-A's authorized recovery audit is complete. No subsequent calibration,
-simulation, model extension or training stage is automatically authorized.
-Do not use the remaining M5 dashboard attempts for external benchmarking.
+Preserve M1-M7A tests, historical source hashes/splits, frozen artifacts, test
+results and experiment ledgers. M7A used all 12 authorized attempts; no additional
+fixed-grain pilot or larger campaign is authorized. Resolve the documented source
+geometry/protocol gaps before proposing a new, separately budgeted validation
+study. Do not recalibrate on the M4B locked cohort or use M5 dashboard demo attempts
+for research benchmarking.

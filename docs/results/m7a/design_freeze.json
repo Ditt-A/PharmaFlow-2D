@@ -1,0 +1,501 @@
+{
+  "design_sha256": "e42de488e0a79b920e6360ae19b104e8ee107e6bf13c55693506962b10999ac2",
+  "entries": [
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77001,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": null,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_control_s77001"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77001,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.3,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q030_s77001"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77001,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.66,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q066_s77001"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77001,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 1.14,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q114_s77001"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77002,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": null,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_control_s77002"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77002,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.3,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q030_s77002"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77002,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.66,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q066_s77002"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77002,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 1.14,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q114_s77002"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77003,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": null,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_control_s77003"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77003,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.3,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q030_s77003"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77003,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 0.66,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q066_s77003"
+    },
+    {
+      "parameters": {
+        "config": {
+          "density_kg_m3": 940.0,
+          "dt_s": 2.5e-06,
+          "friction": 0.4,
+          "funnel_height_m": 0.1,
+          "gate_open_time_s": 0.05,
+          "gravity_m_s2": 9.81,
+          "height_m": 0.5,
+          "initial_lift_m": 0.0,
+          "max_overlap_ratio": 0.15,
+          "n_particles": 60,
+          "neighbor_skin_m": 0.001,
+          "normal_damping_kg_s": 0.15,
+          "normal_stiffness_n_m": 4000.0,
+          "outlet_width_m": 0.033196,
+          "particle_radius_m": 0.0037,
+          "removal_y_m": -0.04,
+          "seed": 77003,
+          "tangential_damping_kg_s": 0.03,
+          "tangential_stiffness_n_m": 1000.0,
+          "thickness_m": 0.00318,
+          "wall_friction": 0.4,
+          "width_m": 0.227
+        },
+        "diameters_m": [
+          0.006,
+          0.0074,
+          0.0086
+        ],
+        "duration_s": 1.0,
+        "fixed_friction": 0.4,
+        "fixed_radius_m": 0.0037,
+        "packing_bottom_m": 0.025,
+        "position_over_dFG": 1.14,
+        "sample_every": 1000
+      },
+      "run_id": "m7a_q114_s77003"
+    }
+  ],
+  "frozen_utc": "2026-11-18T07:17:04.647218+00:00",
+  "geometry_gate_sha256": "ed82cafd24adcddb7f59427f808282cf0d52cec7400ffb779c0b4e29bed66d25",
+  "prepilot_verification_sha256": "61b2e4469f3bb7b8f39cb83c201686b686c1c994ef27011c5960fca44a7376a5",
+  "source_sha256": {
+    "scripts/run_m7a.py": "ee1c2441c6589a4ff4e8214ede33bffdbe316a6279d07ddc49b5ce382f209dc0",
+    "src/pharmaflow/config.py": "afd4298ee09f068aebce2fd394747f0edb7061d2acee619abfe85c520fdf9d53",
+    "src/pharmaflow/contact.py": "1e9c26d90332b5a763a569ea7bf61f53f107b9e8f0a7258e41fce91a4b64924f",
+    "src/pharmaflow/dem.py": "1b4ac15c3504ac41d06ec904b3f522d54c0d1804add5121203ad4e18fc7264a0",
+    "src/pharmaflow/fixed_grain.py": "e1257e739e902e09dd164055385c0e80bddc52549fd70d86bc89b9a2e9e3edf4",
+    "src/pharmaflow/geometry.py": "c930a09597e71c5c276982f3d77e176070f57ad7cd2b6abd3a4bb5294ac6c1ce",
+    "src/pharmaflow/m7a_campaign.py": "aab0112b05ef073ab54a70909f8b9e90566c1c339220370c3466cbb9a248348a",
+    "src/pharmaflow/m7a_simulation.py": "11cbc5ea8c274cd7d067c3eadcf8c3a690e7d002c1f795194221af399d01f87c",
+    "src/pharmaflow/neighbors.py": "d70814e32ceba52c1587414ccb165642cc81f7f495611f6ec23fc7847cd4fb02",
+    "src/pharmaflow/taichi_backend.py": "1bb391fdad0cf1e5207fae6637523cad8daace1accd2af507536b4b2ad97f5a2"
+  },
+  "starting_commit": "e9e0d4ae642fe5b36e84aa5cc45b345f43a87308"
+}

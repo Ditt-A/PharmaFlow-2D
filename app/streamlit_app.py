@@ -19,7 +19,7 @@ st.caption('Actual dry-disk DEM states · frozen warning comparators · research
 def replay(serialized_record):
     return load_bundle(json.loads(serialized_record),ROOT)
 
-page=st.sidebar.radio('Workspace',['Trajectory replay','Run a DEM demo','Research analysis','Calibration gaps'])
+page=st.sidebar.radio('Workspace',['Trajectory replay','Run a DEM demo','Research analysis','M7A fixed grain','Calibration gaps'])
 st.sidebar.caption('Historical data, labels and models remain frozen. Demo runs are unevaluated and never enter research metrics.')
 
 def set_play(value):
@@ -180,9 +180,13 @@ def research_page():
 if page=='Trajectory replay':replay_page()
 elif page=='Run a DEM demo':demo_page()
 elif page=='Research analysis':research_page()
+elif page=='M7A fixed grain':
+    from pharmaflow.m7a_dashboard import fixed_grain_page
+    fixed_grain_page(ROOT)
 else:
     st.subheader('Physics calibration gaps')
-    st.write('The simulator uses uncalibrated dry 2D disks. Cohesion, humidity sensitivity, irregular shape and size polydispersity are absent. '
+    st.write('The simulator uses uncalibrated dry 2D disks. Cohesion, humidity sensitivity and irregular shape are absent. '
+             'Legacy M5 scenes use equal-sized disks; M7A separately adds an exploratory three-size mixture and immobile obstacle. '
              'Published reference data describe a quasi-2D system of 3D particles; quantitative calibration remains unresolved. '
              'Startup blockage differs from interruption during established flow. No pharmaceutical or industrial deployment readiness is claimed.')
     st.markdown((ROOT/'docs/M5_CALIBRATION_GAPS.md').read_text() if (ROOT/'docs/M5_CALIBRATION_GAPS.md').exists() else

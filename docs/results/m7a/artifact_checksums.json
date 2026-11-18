@@ -1,0 +1,195 @@
+{
+  "scope": "M7A compact source, reports, ledger and selected figures; full trajectory NPZs excluded",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 1252,
+      "sha256": "7e057a3332b8d021f72b70d015313d8f94e31483e0f7fab8785d6ea6c9b936ad"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 9302,
+      "sha256": "e87a283f3a67dab50f28449880741226670ccb1afa1f61451e2c08c878a685ed"
+    },
+    {
+      "path": "README.md",
+      "bytes": 32676,
+      "sha256": "361b9484a23e264aba3c79c612a70ff30ca99846318233223dc438795ec3dfd6"
+    },
+    {
+      "path": "app/streamlit_app.py",
+      "bytes": 13071,
+      "sha256": "278886ac426b8a29fe158695ff9ad07e8fafb7ae9576dcad641d1a1766706d69"
+    },
+    {
+      "path": "configs/m7a/pilot.json",
+      "bytes": 2317,
+      "sha256": "8e66f1bd6b725346a19942ddc525fa6b5f570e70729ead77474af89ea227a79b"
+    },
+    {
+      "path": "data/simulated/m7a/attempts.sqlite3",
+      "bytes": 24576,
+      "sha256": "d2e2cfa27055ec02a5b56f98357121de3114b82c6fddaf01a9618c7fac180ab3"
+    },
+    {
+      "path": "data/simulated/m7a/design_freeze.json",
+      "bytes": 15121,
+      "sha256": "e05cfb985ee0ba5b0dadb0c681bae86ad2d58b52e91889810608123f6ebad6a6"
+    },
+    {
+      "path": "scripts/run_m7a.py",
+      "bytes": 889,
+      "sha256": "ee1c2441c6589a4ff4e8214ede33bffdbe316a6279d07ddc49b5ce382f209dc0"
+    },
+    {
+      "path": "scripts/audit_m7a.py",
+      "bytes": 10367,
+      "sha256": "49ac86969377a0158fb4d26e97e1deb36ca1222117524db3e9f6d81d59b6d06e"
+    },
+    {
+      "path": "src/pharmaflow/fixed_grain.py",
+      "bytes": 8496,
+      "sha256": "e1257e739e902e09dd164055385c0e80bddc52549fd70d86bc89b9a2e9e3edf4"
+    },
+    {
+      "path": "src/pharmaflow/m7a_campaign.py",
+      "bytes": 9038,
+      "sha256": "aab0112b05ef073ab54a70909f8b9e90566c1c339220370c3466cbb9a248348a"
+    },
+    {
+      "path": "src/pharmaflow/m7a_simulation.py",
+      "bytes": 10037,
+      "sha256": "11cbc5ea8c274cd7d067c3eadcf8c3a690e7d002c1f795194221af399d01f87c"
+    },
+    {
+      "path": "src/pharmaflow/m7a_visuals.py",
+      "bytes": 8890,
+      "sha256": "755c8817e809775b9ecea1131c056784644132da8aa9d846f627b01ac368df8e"
+    },
+    {
+      "path": "src/pharmaflow/m7a_dashboard.py",
+      "bytes": 4783,
+      "sha256": "8b1692ecc0630fc116879a9da1cab9ab4fe6b21b7f4469a7b68e3bc00a2400f0"
+    },
+    {
+      "path": "docs/M7A_GEOMETRY.md",
+      "bytes": 5395,
+      "sha256": "e7326f08794ea2c146c9ec04e586c1d19935c6f28e5afbd26106a75f6b3adec6"
+    },
+    {
+      "path": "docs/M7A_FIXED_GRAIN_PHYSICS.md",
+      "bytes": 5156,
+      "sha256": "8487f8cf16d667955eaa60b59b20b7f798c933ccbd3fa74817783ecb7b013384"
+    },
+    {
+      "path": "docs/M7A_PILOT_RESULTS.md",
+      "bytes": 7010,
+      "sha256": "e534541b8125a165a1614a61d3f397426722f543f12b6ff4053319803be0db46"
+    },
+    {
+      "path": "docs/M7A_READINESS.md",
+      "bytes": 3235,
+      "sha256": "ec5bed518ca525ca630ff5bf094ea661a77e557a79549dc582332df2d81281bf"
+    },
+    {
+      "path": "tests/test_m7a.py",
+      "bytes": 13538,
+      "sha256": "6e87697ba86f041b22671cc63a5b9cd4013c5742b92ec02ffba6b3b7c1833a6c"
+    },
+    {
+      "path": "docs/results/m7a/animation_provenance.json",
+      "bytes": 3539,
+      "sha256": "88a0ba0e78c07a19ab1cf46289b223efe70a624960eedea57923d0e5f9250b6d"
+    },
+    {
+      "path": "docs/results/m7a/attempt_ledger.json",
+      "bytes": 12457,
+      "sha256": "518d46069fa27fb38903a3ec26e06ed5da8088d005095dbda0343ebc7ffb7b0d"
+    },
+    {
+      "path": "docs/results/m7a/audit_summary.json",
+      "bytes": 767,
+      "sha256": "3b44124442bd8a3ae3e22c73bf33b313f98aedb27d4ce9bd31c0d935ca475577"
+    },
+    {
+      "path": "docs/results/m7a/control.gif",
+      "bytes": 376149,
+      "sha256": "2379b02da08d07d36ced32be802c544e16c53444cb0478c91af1f951e78aee48"
+    },
+    {
+      "path": "docs/results/m7a/control.png",
+      "bytes": 84705,
+      "sha256": "b9c239772d7cbeb60131d5f1ee4242e3eca5c6f2d865b53b2d5608160c3aa9ba"
+    },
+    {
+      "path": "docs/results/m7a/design_freeze.json",
+      "bytes": 15121,
+      "sha256": "e05cfb985ee0ba5b0dadb0c681bae86ad2d58b52e91889810608123f6ebad6a6"
+    },
+    {
+      "path": "docs/results/m7a/elastic_contact_verification.json",
+      "bytes": 1056,
+      "sha256": "439f6fe2674ccbfb17923dcc19f56b9f883aa47945921e202b9c235a4d313163"
+    },
+    {
+      "path": "docs/results/m7a/far.gif",
+      "bytes": 336784,
+      "sha256": "3be047bc23ec545427a66ca441bb8720b4355a93ca74bd2744f8353339b5f8ab"
+    },
+    {
+      "path": "docs/results/m7a/far.png",
+      "bytes": 84385,
+      "sha256": "8ed0e1f0533afaff15778e2c7fb85e1dad0ee07d94c5266c97fc0605a4232567"
+    },
+    {
+      "path": "docs/results/m7a/geometry_gate.json",
+      "bytes": 1294,
+      "sha256": "ed82cafd24adcddb7f59427f808282cf0d52cec7400ffb779c0b4e29bed66d25"
+    },
+    {
+      "path": "docs/results/m7a/near.gif",
+      "bytes": 343736,
+      "sha256": "3db75d386875b60c0bb59fa02fa7337694e94ca7a0c075c914156f3e8dfbc84a"
+    },
+    {
+      "path": "docs/results/m7a/near.png",
+      "bytes": 85224,
+      "sha256": "d116e6ddc9a8be0c49b08c7c68f3cbac9087dc45ae072d8510c247175c659eb6"
+    },
+    {
+      "path": "docs/results/m7a/pilot_diagnostics.png",
+      "bytes": 133970,
+      "sha256": "467461edebf3aad916dfc508bc54aa1beb55ceb103d4c688d9f07cb7fea142cd"
+    },
+    {
+      "path": "docs/results/m7a/pilot_groups.json",
+      "bytes": 1508,
+      "sha256": "dd9ca8db5339df1bb6387565217334f22be28f0b505af48f48382ca1251e3456"
+    },
+    {
+      "path": "docs/results/m7a/pilot_runs.csv",
+      "bytes": 5862,
+      "sha256": "babccd60ff769cfba749cb0e36156c6c366f2a1145e60d7806a5b28e0d6f4ba4"
+    },
+    {
+      "path": "docs/results/m7a/prepilot_verification.json",
+      "bytes": 199,
+      "sha256": "61b2e4469f3bb7b8f39cb83c201686b686c1c994ef27011c5960fca44a7376a5"
+    },
+    {
+      "path": "docs/results/m7a/profile_review.json",
+      "bytes": 457,
+      "sha256": "ec7422f1586ff1a76e7a3d63b315b3373377f59f8b2dee91c4aa4bb6f6047548"
+    },
+    {
+      "path": "docs/results/m7a/separate_observables.png",
+      "bytes": 81028,
+      "sha256": "eec5eff855b0c6335033157a667d2ba036bf60ab78bf8bbe93641071f321d0e3"
+    },
+    {
+      "path": "docs/results/m7a/verification.json",
+      "bytes": 509,
+      "sha256": "cecad9487878a134be85f8e89bc0f9ae524ab42dba35048cab9b7ebc69c54f13"
+    }
+  ]
+}

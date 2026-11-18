@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "command": "PHARMAFLOW_TEST_TAICHI=1 python -m pytest -q",
+  "tests_passed": 237,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "historical_m1_m6b_tests": 209,
+  "m7a_contact_physics_tests": 26,
+  "m7a_visual_dashboard_tests": 2,
+  "strict_taichi_cpu_cuda": true,
+  "taichi_version": "1.7.3",
+  "warning": "One Taichi dependency DeprecationWarning from locale.getdefaultlocale; no test failures.",
+  "elapsed_s": 165.0,
+  "starting_commit": "e9e0d4ae642fe5b36e84aa5cc45b345f43a87308"
+}

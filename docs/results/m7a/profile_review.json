@@ -1,0 +1,12 @@
+{
+  "profile_run": "m7a_control_s77001",
+  "ejected_count": 29,
+  "remaining_count": 31,
+  "profile_solver_wall_s": 318.7459055390209,
+  "projected_total_worker_hours": 1.0624863517967362,
+  "maximum_overlap": 0.03827038813940708,
+  "finite_arch_confirmed": false,
+  "immediate_finite_fill_exhaustion": false,
+  "dispatch_remaining_unchanged_design": true,
+  "scientific_limit": "No source five-second arch/avalanche comparison; fixed horizon stays 1.0s"
+}

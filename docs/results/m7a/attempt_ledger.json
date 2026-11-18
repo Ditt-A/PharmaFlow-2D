@@ -1,0 +1,110 @@
+[
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:22:24.005780+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77001, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": null, \"sample_every\": 1000}",
+    "run_id": "m7a_control_s77001",
+    "started_utc": "2026-11-18T07:17:04.949720+00:00",
+    "status": "success",
+    "wall_s": 319.0547559787519
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:30:43.372145+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77001, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.3, \"sample_every\": 1000}",
+    "run_id": "m7a_q030_s77001",
+    "started_utc": "2026-11-18T07:23:41.924605+00:00",
+    "status": "success",
+    "wall_s": 421.4428790337406
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:30:54.698366+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77001, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.66, \"sample_every\": 1000}",
+    "run_id": "m7a_q066_s77001",
+    "started_utc": "2026-11-18T07:23:41.931708+00:00",
+    "status": "success",
+    "wall_s": 432.7646240880713
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:30:38.123195+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77001, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 1.14, \"sample_every\": 1000}",
+    "run_id": "m7a_q114_s77001",
+    "started_utc": "2026-11-18T07:23:41.936294+00:00",
+    "status": "success",
+    "wall_s": 416.1844007507898
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:36:05.311447+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77002, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": null, \"sample_every\": 1000}",
+    "run_id": "m7a_control_s77002",
+    "started_utc": "2026-11-18T07:30:38.138461+00:00",
+    "status": "success",
+    "wall_s": 327.17008708557114
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:37:55.549990+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77002, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.3, \"sample_every\": 1000}",
+    "run_id": "m7a_q030_s77002",
+    "started_utc": "2026-11-18T07:30:43.385185+00:00",
+    "status": "success",
+    "wall_s": 432.15970529522747
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:37:46.515111+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77002, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.66, \"sample_every\": 1000}",
+    "run_id": "m7a_q066_s77002",
+    "started_utc": "2026-11-18T07:30:54.703267+00:00",
+    "status": "success",
+    "wall_s": 411.8102868660353
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:43:38.195964+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77002, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 1.14, \"sample_every\": 1000}",
+    "run_id": "m7a_q114_s77002",
+    "started_utc": "2026-11-18T07:36:05.317317+00:00",
+    "status": "success",
+    "wall_s": 452.87645739270374
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:42:52.691034+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77003, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": null, \"sample_every\": 1000}",
+    "run_id": "m7a_control_s77003",
+    "started_utc": "2026-11-18T07:37:46.525594+00:00",
+    "status": "success",
+    "wall_s": 306.1630959077738
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:44:45.248463+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77003, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.3, \"sample_every\": 1000}",
+    "run_id": "m7a_q030_s77003",
+    "started_utc": "2026-11-18T07:37:55.554335+00:00",
+    "status": "success",
+    "wall_s": 409.6924886200577
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:50:05.642956+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77003, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 0.66, \"sample_every\": 1000}",
+    "run_id": "m7a_q066_s77003",
+    "started_utc": "2026-11-18T07:42:52.694566+00:00",
+    "status": "success",
+    "wall_s": 432.9466717862524
+  },
+  {
+    "error": null,
+    "finished_utc": "2026-11-18T07:50:19.246629+00:00",
+    "parameters": "{\"config\": {\"density_kg_m3\": 940.0, \"dt_s\": 2.5e-06, \"friction\": 0.4, \"funnel_height_m\": 0.1, \"gate_open_time_s\": 0.05, \"gravity_m_s2\": 9.81, \"height_m\": 0.5, \"initial_lift_m\": 0.0, \"max_overlap_ratio\": 0.15, \"n_particles\": 60, \"neighbor_skin_m\": 0.001, \"normal_damping_kg_s\": 0.15, \"normal_stiffness_n_m\": 4000.0, \"outlet_width_m\": 0.033196, \"particle_radius_m\": 0.0037, \"removal_y_m\": -0.04, \"seed\": 77003, \"tangential_damping_kg_s\": 0.03, \"tangential_stiffness_n_m\": 1000.0, \"thickness_m\": 0.00318, \"wall_friction\": 0.4, \"width_m\": 0.227}, \"diameters_m\": [0.006, 0.0074, 0.0086], \"duration_s\": 1.0, \"fixed_friction\": 0.4, \"fixed_radius_m\": 0.0037, \"packing_bottom_m\": 0.025, \"position_over_dFG\": 1.14, \"sample_every\": 1000}",
+    "run_id": "m7a_q114_s77003",
+    "started_utc": "2026-11-18T07:43:38.202213+00:00",
+    "status": "success",
+    "wall_s": 401.04297971958295
+  }
+]
