@@ -1,0 +1,35 @@
+flowchart LR
+  subgraph SIM[Simulation and stored physics]
+    S[2D DEM solver<br/>NumPy CPU / optional Taichi contact kernel] --> T[Physical trajectories<br/>positions, velocity, spin, contacts, crossings]
+  end
+  subgraph DATA[Research dataset construction and training]
+    T --> F[Causal feature extraction<br/>current state and trailing windows]
+    T -. future frames for retrospective confirmation only .-> L[Event labels<br/>onset, confirmation, censoring]
+    F --> G[Run- and configuration-grouped splits]
+    L --> G
+    G --> TR[Training only<br/>fold-local transforms and weighting]
+    TR --> MOD[Frozen physics rule and ML baseline]
+  end
+  subgraph ONLINE[Chronological inference and visualization]
+    F --> C[Current causal prefix at time t]
+    C --> R[Physics-rule score]
+    C --> M[Frozen ML score, if local artifact exists]
+    MOD --> M
+    R --> MON[Chronological monitor<br/>alerts and observed discharge state]
+    M --> MON
+    T --> V[Trajectory viewer<br/>actual frames, contacts, speed]
+    MON --> DASH[Interactive dashboard]
+    V --> DASH
+  end
+  subgraph EXT[Separate external evidence path]
+    E[Cornerstones / Delft / Yogi data] --> AUD[Provenance, schema and unit audit]
+    AUD --> GATE[Geometry and observable compatibility gates]
+    GATE --> LIMIT[Current conclusion<br/>qualitative or blocked; no calibration]
+  end
+  classDef sim fill:#dbeafe,stroke:#2563eb,color:#0f172a;
+  classDef data fill:#dcfce7,stroke:#16a34a,color:#0f172a;
+  classDef model fill:#fef3c7,stroke:#d97706,color:#0f172a;
+  classDef online fill:#ede9fe,stroke:#7c3aed,color:#0f172a;
+  classDef ext fill:#f1f5f9,stroke:#64748b,color:#0f172a;
+  class S,T,V sim; class F,L,G data; class TR,MOD model;
+  class C,R,M,MON,DASH online; class E,AUD,GATE,LIMIT ext;

@@ -6,13 +6,13 @@ Implement **PharmaFlow-2D**, a physically explicit **2D Discrete Element Method 
 
 Environment: managed Docker JupyterHub, writable user workspace, conda/pip, NVIDIA A100 80GB if exposed by container. Keep a CPU fallback.
 
-**Current stage:** the explicit M4B request authorized a maximum of 48 new DEM
-attempts; all 48 are now consumed and evaluated. The result is
-M4B_RULE_BASELINE_REMAINS_COMPETITIVE. Read docs/M4B_EXPANSION.md,
-M4B_GENERALIZATION.md and M4B_READINESS.md as well as the M3/M4A reports.
-Preserve historical labels, splits, models and test results, and the frozen M4B
-model/policy/cohort. No additional campaign, neural model, optimization or
-recommendation engine is authorized by this completed budget.
+**Current stage:** M8 is the research portfolio and reproducible release. The
+verified baseline is 237 passing tests, including strict Taichi CPU/CUDA checks.
+Preserve all M1–M7A historical evidence and the frozen M4B cohort/model/policies.
+M8 permits documentation and packaging only: no DEM campaign, M5 demo attempt,
+ML training, parameter tuning, physical calibration, optimization, or deployment
+claim. Do not create a public GitHub release/tag until a separately authorized
+release review.
 
 M5 authorizes a separate local interactive demo budget of six solver attempts
 and three cumulative simulated seconds, including failures, under
@@ -118,3 +118,18 @@ source files hash-bound in `data/simulated/m7a/design_freeze.json` without a new
 versioned extension and explicit study scope. The M5 demo ledger is independent;
 its two charged attempts remain unchanged. Do not train ML or infer calibration,
 physical optimum, or source-matched event labels from this pilot.
+
+
+## M8 research portfolio and release integrity
+
+Read `docs/M8_RELEASE_CHECKLIST.md`, `docs/M8_RELEASE_NOTES.md`,
+`docs/PHARMAFLOW_TECHNICAL_REPORT.md`, and `docs/PORTFOLIO_CASE_STUDY.md` for
+the current evidence summary. README/gallery images must come from committed
+solver-generated outputs with their original provenance. The M4B locked rule/ML
+metrics remain historical, one-time results; do not reselect a model or policy.
+The M6 conclusion remains no matched quantitative physical calibration. M7A
+remains 12 valid attempts, 12 right-censored arch observations, and no external
+phenomenon reproduction. A clean clone lacks local NPZ, Parquet, and model
+artifacts; the dashboard must explain missing files and must never synthesize
+replay data or prediction scores. Preserve the live M5 demo ledger (two of six
+attempts charged in the M7A audit) and all historical dataset/model manifests.
